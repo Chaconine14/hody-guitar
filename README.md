@@ -36,7 +36,7 @@ Node.js / npm を使わない場合は、このプロジェクトの単純なSCS
 ## 未完了・要確認
 
 - **店舗情報の地図画像は未提供**です。`assets/images/store-map-pc.png` と `store-map-sp.png` は未配置のため、サイト内では画像が表示されません。正式素材のご提供後に挿入できます。
-- 予約完了・内容確認画面、診断の質問・結果画面、他ページの詳細は未実装です。
+- 予約完了・内容確認画面、送信APIは未実装です。診断の質問・結果はTOP内に実装済みです。
 - カンプに対する最終的な文字位置・細かな余白・画像トリミングの調整は引き続き必要です。
 - Figmaに固定の切り替え周期が明記されていないため、FVの6秒間隔は仮の設定です。
 
@@ -61,4 +61,13 @@ Node.js / npm を使わない場合は、このプロジェクトの単純なSCS
 python3 scripts/check_data.py
 # Playwright / Pillowのある検証用Python環境で実行
 python3 scripts/verify-selection.py --base-url http://localhost:8000
+```
+
+## おすすめギター診断
+
+TOPの「おすすめギター診断を始める」から、同じセクション内で3問に回答できます。結果の予約ボタンだけが既存モーダルを開きます。[実装・判定条件・検証記録](docs/FINDER_IMPLEMENTATION.md)、[PC／SP比較画像](artifacts/finder/comparison.html) を参照してください。
+
+```bash
+# Playwright / Pillowのある検証用Python環境で実行
+python3 scripts/verify-finder.py --base-url http://localhost:8000
 ```

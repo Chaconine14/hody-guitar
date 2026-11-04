@@ -8,6 +8,7 @@
     const form = dialog?.querySelector('.js-reservation-form');
     if (!dialog || !panel || !closeButton || !form) return;
     let lastFocus = null;
+    let finderOptions = null;
 
     function openReservation(product = '') {
         if (dialog.classList.contains('is-open')) return;
@@ -27,8 +28,37 @@
         dialog.setAttribute('aria-hidden', 'true');
         dialog.inert = true;
         document.body.classList.remove('is-locked');
+        if (finderOptions) {
+            productInput.replaceChildren(...finderOptions.options);
+            productInput.value = finderOptions.value;
+            finderOptions = null;
+        }
         if (lastFocus?.isConnected) lastFocus.focus();
     }
+
+    // 診断から開いた間だけ推薦候補を表示し、通常の予約選択肢へ戻せるよう保持する。
+    window.addEventListener('hody:finder-reservation', event => {
+        if (dialog.classList.contains('is-open')) return;
+        const { products, returnFocus } = event.detail || {};
+        if (!Array.isArray(products) || !products.length) return;
+        const unique = products.filter((product, index) => product.id && product.brand && product.model &&
+            products.findIndex(candidate => candidate.id === product.id) === index);
+        if (!unique.length) return;
+        finderOptions = {
+            options: [...productInput.options].map(option => option.cloneNode(true)),
+            value: productInput.value
+        };
+        const undecided = productInput.options[0].cloneNode(true);
+        const options = unique.map(product => {
+            const name = product.display_name || `${product.brand} ${product.model}`;
+            const option = new Option(name, name);
+            option.dataset.productId = product.id;
+            return option;
+        });
+        productInput.replaceChildren(undecided, ...options);
+        openReservation(options[0].value);
+        if (returnFocus instanceof HTMLElement && returnFocus.isConnected) lastFocus = returnFocus;
+    });
 
     // JSONから再描画されたカードにも対応。既存の静的ボタンも同じ入口を使う。
     document.addEventListener('click', event => {

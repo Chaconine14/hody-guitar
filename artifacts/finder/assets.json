@@ -1,0 +1,65 @@
+[
+    {
+        "source_layer_asset": "intro-pc-img1.png",
+        "local_path": "assets/images/finder/intro.png",
+        "bytes_identical": true,
+        "dimensions": [
+            1024,
+            1536
+        ]
+    },
+    {
+        "source_layer_asset": "intro-pc-imgGuitarSolidFull11.svg",
+        "local_path": "assets/images/finder/guitar-pc.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "52",
+            "52"
+        ]
+    },
+    {
+        "source_layer_asset": "intro-sp-imgGuitarSolidFull11.svg",
+        "local_path": "assets/images/guide/guitar-ivory.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "32",
+            "32"
+        ]
+    },
+    {
+        "source_layer_asset": "intro-pc-imgArrow2.svg",
+        "local_path": "assets/images/guide/arrow-ivory.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "10.5",
+            "7.36396"
+        ]
+    },
+    {
+        "source_layer_asset": "result-sp-imgArrow1.svg",
+        "local_path": "assets/images/finder/arrow-light.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "16.5",
+            "7.36396"
+        ]
+    },
+    {
+        "source_layer_asset": "result-sp-imgArrow2.svg",
+        "local_path": "assets/images/guide/arrow-header.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "16.5",
+            "7.36396"
+        ]
+    },
+    {
+        "source_layer_asset": "result-sp-imgLine8.svg",
+        "local_path": "assets/images/finder/result-line.svg",
+        "bytes_identical": true,
+        "root_dimensions": [
+            "298",
+            "1"
+        ]
+    }
+]

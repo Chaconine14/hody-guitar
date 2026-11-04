@@ -1,0 +1,1243 @@
+{
+    "data": {
+        "images": {
+            "gibson-j-45": "assets/images/guitar01.jpg",
+            "martin-d-28": "assets/images/guitar02.jpg",
+            "taylor-114ce": "assets/images/guitar03.jpg",
+            "gibson-b-25": "assets/images/products/gibson-b-25.jpg",
+            "martin-000-18": "assets/images/products/martin-000-18.jpg",
+            "martin-000-28": "assets/images/products/martin-000-28.jpg",
+            "taylor-214ce": "assets/images/products/taylor-214ce.jpg",
+            "taylor-gs-mini": "assets/images/products/taylor-gs-mini.jpg",
+            "k-yairi-rf-65": "assets/images/products/k-yairi-rf-65.jpg",
+            "yamaha-ll16-are": "assets/images/products/yamaha-ll16-are.jpg",
+            "yamaha-ls16-are": "assets/images/products/yamaha-ls16-are.jpg",
+            "cole-clark-fl2ec": "assets/images/products/cole-clark-fl2ec.jpg"
+        }
+    },
+    "viewports": {
+        "1440": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 205,
+                    "h": 256
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1440,
+                    "height": 93
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 93,
+                    "width": 1440,
+                    "height": 155
+                },
+                ".p-selection-page__filters": {
+                    "x": 170,
+                    "y": 304,
+                    "width": 267,
+                    "height": 730
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 495,
+                    "y": 358,
+                    "width": 758,
+                    "height": 29
+                },
+                ".p-selection-page__photo": {
+                    "x": 495,
+                    "y": 408,
+                    "width": 204.65625,
+                    "height": 255.71875
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 3059,
+                    "width": 1440,
+                    "height": 335
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 3394,
+                    "width": 1440,
+                    "height": 506
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 3900,
+                    "width": 1440,
+                    "height": 547
+                }
+            },
+            "price_boundaries": {
+                "": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "lt150000": [
+                    "1"
+                ],
+                "150000_299999": [
+                    "2",
+                    "3"
+                ],
+                "300000_499999": [
+                    "4",
+                    "5"
+                ],
+                "gte500000": [
+                    "6"
+                ]
+            },
+            "all_products_search_and_reservation": 12,
+            "results": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1440,
+                    "height": 93
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 93,
+                    "width": 1440,
+                    "height": 155
+                },
+                ".p-selection-page__filters": {
+                    "x": 170,
+                    "y": 456,
+                    "width": 267,
+                    "height": 730
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 495,
+                    "y": 510,
+                    "width": 758,
+                    "height": 29
+                },
+                ".p-selection-page__photo": {
+                    "x": 495,
+                    "y": 560,
+                    "width": 204.65625,
+                    "height": 255.71875
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 1893.5,
+                    "width": 1440,
+                    "height": 335
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 2228.5,
+                    "width": 1440,
+                    "height": 506
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 2734.5,
+                    "width": 1440,
+                    "height": 547
+                }
+            },
+            "empty": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1440,
+                    "height": 93
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 93,
+                    "width": 1440,
+                    "height": 155
+                },
+                ".p-selection-page__filters": {
+                    "x": 170,
+                    "y": 495,
+                    "width": 267,
+                    "height": 730
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 495,
+                    "y": 549,
+                    "width": 758,
+                    "height": 29
+                },
+                ".p-selection-page__photo": null,
+                ".p-selection-page__empty": {
+                    "x": 479,
+                    "y": 599,
+                    "width": 790,
+                    "height": 307
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 1281,
+                    "width": 1440,
+                    "height": 335
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 1616,
+                    "width": 1440,
+                    "height": 506
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 2122,
+                    "width": 1440,
+                    "height": 547
+                }
+            },
+            "passed": true
+        },
+        "375": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 343,
+                    "h": 429
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 375,
+                    "height": 81
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 82,
+                    "width": 375,
+                    "height": 114
+                },
+                ".p-selection-page__filters": {
+                    "x": 16,
+                    "y": 197,
+                    "width": 343,
+                    "height": 655.21875
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 16,
+                    "y": 907.21875,
+                    "width": 343,
+                    "height": 25
+                },
+                ".p-selection-page__photo": {
+                    "x": 16,
+                    "y": 958.21875,
+                    "width": 343,
+                    "height": 428.59375
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 10304.65625,
+                    "width": 375,
+                    "height": 415
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 10719.65625,
+                    "width": 375,
+                    "height": 487
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 11206.65625,
+                    "width": 375,
+                    "height": 419.625
+                }
+            },
+            "price_boundaries": {
+                "": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "lt150000": [
+                    "1"
+                ],
+                "150000_299999": [
+                    "2",
+                    "3"
+                ],
+                "300000_499999": [
+                    "4",
+                    "5"
+                ],
+                "gte500000": [
+                    "6"
+                ]
+            },
+            "all_products_search_and_reservation": 12,
+            "results": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 375,
+                    "height": 81
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 139,
+                    "width": 375,
+                    "height": 114
+                },
+                ".p-selection-page__filters": {
+                    "x": 16,
+                    "y": 254,
+                    "width": 343,
+                    "height": 177
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 16,
+                    "y": 486,
+                    "width": 343,
+                    "height": 27
+                },
+                ".p-selection-page__photo": {
+                    "x": 16,
+                    "y": 539,
+                    "width": 343,
+                    "height": 428.59375
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 5218.21875,
+                    "width": 375,
+                    "height": 415
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 5693.21875,
+                    "width": 375,
+                    "height": 487
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 6180.21875,
+                    "width": 375,
+                    "height": 419.625
+                }
+            },
+            "empty": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 375,
+                    "height": 81
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 139,
+                    "width": 375,
+                    "height": 114
+                },
+                ".p-selection-page__filters": {
+                    "x": 16,
+                    "y": 254,
+                    "width": 343,
+                    "height": 216
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 16,
+                    "y": 525,
+                    "width": 343,
+                    "height": 27
+                },
+                ".p-selection-page__photo": null,
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 578,
+                    "width": 375,
+                    "height": 358
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 992,
+                    "width": 375,
+                    "height": 415
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 1467,
+                    "width": 375,
+                    "height": 487
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 1954,
+                    "width": 375,
+                    "height": 419.625
+                }
+            },
+            "passed": true
+        },
+        "320": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 288,
+                    "h": 360
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 320,
+                    "height": 81
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 82,
+                    "width": 320,
+                    "height": 114
+                },
+                ".p-selection-page__filters": {
+                    "x": 16,
+                    "y": 197,
+                    "width": 288,
+                    "height": 655.21875
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 16,
+                    "y": 907.21875,
+                    "width": 288,
+                    "height": 25
+                },
+                ".p-selection-page__photo": {
+                    "x": 16,
+                    "y": 958.21875,
+                    "width": 288,
+                    "height": 359.859375
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 9534.25,
+                    "width": 320,
+                    "height": 448.390625
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 9982.640625,
+                    "width": 320,
+                    "height": 487
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 10469.640625,
+                    "width": 320,
+                    "height": 419.625
+                }
+            },
+            "passed": true
+        },
+        "768": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 736,
+                    "h": 920
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 768,
+                    "height": 81
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 82,
+                    "width": 768,
+                    "height": 114
+                },
+                ".p-selection-page__filters": {
+                    "x": 16,
+                    "y": 197,
+                    "width": 736,
+                    "height": 655.21875
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 16,
+                    "y": 907.21875,
+                    "width": 736,
+                    "height": 25
+                },
+                ".p-selection-page__photo": {
+                    "x": 16,
+                    "y": 958.21875,
+                    "width": 736,
+                    "height": 919.671875
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 15871.15625,
+                    "width": 768,
+                    "height": 415
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 16286.15625,
+                    "width": 768,
+                    "height": 487
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 16773.15625,
+                    "width": 768,
+                    "height": 419.625
+                }
+            },
+            "passed": true
+        },
+        "769": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 223,
+                    "h": 278
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 769,
+                    "height": 93
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 93,
+                    "width": 769,
+                    "height": 155
+                },
+                ".p-selection-page__filters": {
+                    "x": 40,
+                    "y": 304,
+                    "width": 200,
+                    "height": 755
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 264,
+                    "y": 358,
+                    "width": 465,
+                    "height": 29
+                },
+                ".p-selection-page__photo": {
+                    "x": 264,
+                    "y": 408,
+                    "width": 222.5,
+                    "height": 278.015625
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 4388.578125,
+                    "width": 769,
+                    "height": 393.3125
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 4781.890625,
+                    "width": 769,
+                    "height": 506
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 5287.890625,
+                    "width": 769,
+                    "height": 547
+                }
+            },
+            "passed": true
+        },
+        "1024": {
+            "images": [
+                {
+                    "id": "gibson-j-45",
+                    "src": "assets/images/guitar01.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "martin-d-28",
+                    "src": "assets/images/guitar02.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "taylor-114ce",
+                    "src": "assets/images/guitar03.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "gibson-b-25",
+                    "src": "assets/images/products/gibson-b-25.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "martin-000-18",
+                    "src": "assets/images/products/martin-000-18.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "martin-000-28",
+                    "src": "assets/images/products/martin-000-28.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "taylor-214ce",
+                    "src": "assets/images/products/taylor-214ce.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "taylor-gs-mini",
+                    "src": "assets/images/products/taylor-gs-mini.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "k-yairi-rf-65",
+                    "src": "assets/images/products/k-yairi-rf-65.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "yamaha-ll16-are",
+                    "src": "assets/images/products/yamaha-ll16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "yamaha-ls16-are",
+                    "src": "assets/images/products/yamaha-ls16-are.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                },
+                {
+                    "id": "cole-clark-fl2ec",
+                    "src": "assets/images/products/cole-clark-fl2ec.jpg",
+                    "loaded": true,
+                    "fit": "contain",
+                    "w": 327,
+                    "h": 409
+                }
+            ],
+            "initial": {
+                ".l-header": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1024,
+                    "height": 93
+                },
+                ".p-selection-page__intro": {
+                    "x": 0,
+                    "y": 93,
+                    "width": 1024,
+                    "height": 155
+                },
+                ".p-selection-page__filters": {
+                    "x": 40,
+                    "y": 304,
+                    "width": 245.75,
+                    "height": 730
+                },
+                ".p-selection-page__results-heading": {
+                    "x": 309.75,
+                    "y": 358,
+                    "width": 674.25,
+                    "height": 29
+                },
+                ".p-selection-page__photo": {
+                    "x": 309.75,
+                    "y": 408,
+                    "width": 327.125,
+                    "height": 408.75
+                },
+                ".p-selection-page__empty": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0,
+                    "height": 0
+                },
+                ".c-trial-invite": {
+                    "x": 0,
+                    "y": 4928.15625,
+                    "width": 1024,
+                    "height": 335
+                },
+                ".l-footer__visual": {
+                    "x": 0,
+                    "y": 5263.15625,
+                    "width": 1024,
+                    "height": 506
+                },
+                ".l-footer__bottom": {
+                    "x": 0,
+                    "y": 5769.15625,
+                    "width": 1024,
+                    "height": 547
+                }
+            },
+            "passed": true
+        }
+    },
+    "scenarios": {
+        "1440": {
+            "passed": 8
+        },
+        "375": {
+            "passed": 8
+        }
+    },
+    "regression": {},
+    "fetch_failure": [
+        "HTTP 503",
+        "invalid JSON: distinct from zero; search disabled"
+    ],
+    "slider": "Automatic transition to slide 2; exactly one active slide/progress bar.",
+    "passed": true
+}

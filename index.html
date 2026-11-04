@@ -12,6 +12,7 @@
     <script defer src="js/menu.js"></script>
     <script defer src="js/reservation.js"></script>
     <script defer src="js/slider.js"></script>
+    <script type="module" src="js/finder.js"></script>
 </head>
 <body>
     <header class="l-header" id="top">
@@ -57,28 +58,30 @@
             </div>
         </section>
 
-        <section class="p-finder" id="finder" aria-labelledby="finder-heading">
-            <div class="p-finder__inner">
-                <div class="p-finder__content">
-                    <div class="c-section-heading p-finder__heading">
-                        <h2 class="c-section-heading__en" id="finder-heading">GUITAR FINDER</h2>
-                        <p class="c-section-heading__ja">おすすめギター診断</p>
+        <section class="p-finder js-finder" id="finder" aria-labelledby="finder-heading">
+            <div class="p-finder__inner js-finder-screen">
+                <div class="p-finder__intro">
+                    <div class="p-finder__content">
+                        <div class="c-section-heading p-finder__heading">
+                            <h2 class="c-section-heading__en" id="finder-heading">GUITAR FINDER</h2>
+                            <p class="c-section-heading__ja">おすすめギター診断</p>
+                        </div>
+                        <p class="p-finder__copy">「どんな音が好き？」などの簡単な質問から、あなたにぴったりなタイプを探します。</p>
+                        <button class="c-button c-button--finder js-finder-start" type="button">
+                            <small>3 QUESTIONS</small><span>おすすめギター診断を始める</span>
+                        </button>
                     </div>
-                    <p class="p-finder__copy">「どんな音が好き？」などの簡単な質問から、あなたにぴったりなタイプを探します。</p>
-                    <a href="#finder" class="c-button c-button--finder" aria-label="おすすめギター診断を始める（診断画面は次の制作工程で実装予定）">
-                        <small>3 QUESTIONS</small><span>おすすめギター診断を始める</span>
-                    </a>
+                    <picture class="p-finder__illustration">
+                        <img src="assets/images/finder/intro.png" width="290" height="436" alt="ギターのシルエット">
+                    </picture>
                 </div>
-                <picture class="p-finder__illustration">
-                    <source media="(max-width: 768px)" srcset="assets/images/guitar-outline.png">
-                    <img src="assets/images/guitar-outline.png" alt="ギターのシルエット">
-                </picture>
             </div>
             <button class="p-finder__reservation js-open-reservation" type="button" aria-label="試奏予約をする">
-                <img src="assets/images/guitar-icon.png" alt="" width="52" height="52">
+                <picture><source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52"></picture>
                 <span class="p-finder__reservation-text"><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
-                <span class="p-finder__reservation-arrow" aria-hidden="true">→</span>
+                <img class="p-finder__reservation-arrow" src="assets/images/guide/arrow-ivory.svg" width="10.5" height="7.36396" alt="">
             </button>
+            <p class="p-finder__status js-finder-status" role="status" aria-live="polite" aria-atomic="true"></p>
         </section>
 
         <section class="p-selection" id="selection" aria-labelledby="selection-heading">

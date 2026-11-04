@@ -1,0 +1,138 @@
+{
+    "viewports": {
+        "1440": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 310
+                },
+                "flow": {
+                    "y": 403,
+                    "height": 1515
+                },
+                "faq": {
+                    "y": 1918,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 2910,
+                    "height": 335
+                }
+            },
+            "js_errors": []
+        },
+        "375": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 270.015625
+                },
+                "flow": {
+                    "y": 351.015625,
+                    "height": 1411.921875
+                },
+                "faq": {
+                    "y": 1762.9375,
+                    "height": 897.921875
+                },
+                "invite": {
+                    "y": 2660.859375,
+                    "height": 415
+                }
+            },
+            "js_errors": []
+        },
+        "320": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 297.21875
+                },
+                "flow": {
+                    "y": 378.21875,
+                    "height": 1527.65625
+                },
+                "faq": {
+                    "y": 1905.875,
+                    "height": 921.71875
+                },
+                "invite": {
+                    "y": 2827.59375,
+                    "height": 448.390625
+                }
+            },
+            "js_errors": []
+        },
+        "768": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 215.609375
+                },
+                "flow": {
+                    "y": 296.609375,
+                    "height": 1364.328125
+                },
+                "faq": {
+                    "y": 1660.9375,
+                    "height": 826.53125
+                },
+                "invite": {
+                    "y": 2487.46875,
+                    "height": 415
+                }
+            },
+            "js_errors": []
+        },
+        "769": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 337.09375
+                },
+                "flow": {
+                    "y": 430.09375,
+                    "height": 1803.796875
+                },
+                "faq": {
+                    "y": 2233.890625,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 3225.890625,
+                    "height": 393.3125
+                }
+            },
+            "js_errors": []
+        },
+        "1024": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 310
+                },
+                "flow": {
+                    "y": 403,
+                    "height": 1515
+                },
+                "faq": {
+                    "y": 1918,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 2910,
+                    "height": 335
+                }
+            },
+            "js_errors": []
+        }
+    },
+    "regression": {},
+    "slider": "Passed: first-to-second automatic transition; one active slide and bar."
+}

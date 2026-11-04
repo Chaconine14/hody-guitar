@@ -83,3 +83,21 @@
 和文フォントは `assets/fonts/selection-noto-jp-{400,500,700}.ttf`。Google FontsのNoto Sans JPから使用文字を取得し、既存の `OFL-NotoSansJP.txt` のライセンスで配信。別名 `HODY Selection JP` とし、商品一覧の本体だけに適用しています。
 
 検証画像は `artifacts/selection/product-images.png`、素材照合は `artifacts/selection/asset-comparison.json`、詳細は `docs/SELECTION_IMPLEMENTATION.md` を参照してください。
+
+## GUITAR FINDER（2026-11-04）
+
+診断の推薦画像は共通JSONの `image_src` を使用し、商品一覧と同じ商品IDに同じ画像を表示します。4:5枠にcontainで中央配置し、別機種の写真で代替しません。
+
+| 用途 | 参照先 | 原寸 |
+| --- | --- | --- |
+| 導入シルエット | `assets/images/finder/intro.png` | 1024×1536 PNG、PC／SP共通 |
+| PC導入予約アイコン | `assets/images/finder/guitar-pc.svg` | 52×52 |
+| 結果の予約矢印 | `assets/images/finder/arrow-light.svg` | 16.5×7.36396 |
+| SP結果の罫線 | `assets/images/finder/result-line.svg` | 298×1 |
+| SP導入予約アイコン | `assets/images/guide/guitar-ivory.svg` | 32×32、Figma原本と一致 |
+| 導入予約バナーの矢印 | `assets/images/guide/arrow-ivory.svg` | 10.5×7.36396、Figma原本と一致 |
+| 再診断の矢印 | `assets/images/guide/arrow-header.svg` | 16.5×7.36396、Figma原本と一致 |
+
+新規4点はFigmaの正式素材をそのまま保存しました。既存の低解像度シルエットPNGを加工せず、診断セクションの参照だけ原本に変更しています。選択肢の三角はカンプで文字として指定された `▶︎` を使用します。
+
+和文は `assets/fonts/finder-noto-jp-{400,500,700}.ttf` を別名 `HODY Finder JP` で登録し、診断内に限定。既存の `OFL-NotoSansJP.txt` を適用します。素材の一致は `artifacts/finder/assets.json`、描画フォントは `artifacts/finder/fonts-and-extra-checks.json`、画面比較は `artifacts/finder/comparison.html` に記録しています。

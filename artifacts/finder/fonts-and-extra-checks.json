@@ -1,0 +1,32 @@
+{
+    "fonts": {
+        ".p-finder .c-section-heading__en": [
+            {
+                "familyName": "Source Sans 3 ExtraLight",
+                "postScriptName": "SourceSans3-Roman_Bold",
+                "isCustomFont": true,
+                "glyphCount": 13
+            }
+        ],
+        ".p-finder .c-section-heading__ja": [
+            {
+                "familyName": "Noto Sans JP Medium",
+                "postScriptName": "NotoSansJP-Medium",
+                "isCustomFont": true,
+                "glyphCount": 9
+            }
+        ],
+        ".p-finder__copy": [
+            {
+                "familyName": "Noto Sans JP",
+                "postScriptName": "NotoSansJP-Regular",
+                "isCustomFont": true,
+                "glyphCount": 39
+            }
+        ]
+    },
+    "extra_logic": {
+        "fallbackType": "compare",
+        "maxScore": 10
+    }
+}
