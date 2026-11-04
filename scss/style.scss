@@ -5,6 +5,7 @@
 @use "layout/footer";
 @use "object/component/buttons";
 @use "object/component/heading";
+@use "object/component/trial-invite";
 @use "object/project/hero";
 @use "object/project/finder";
 @use "object/project/selection";
@@ -16,4 +17,5 @@
 @use "object/project/mobile-menu";
 @use "object/project/reservation";
 @use "object/project/guide-page";
+@use "object/project/selection-page";
 @use "object/utility/display";

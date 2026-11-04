@@ -1,0 +1,452 @@
+{
+  "schema_version": "1.0.0",
+  "project": "HODY GUITAR",
+  "source": {
+    "lineup": "user-provided table 2026-11-04",
+    "card_states": "PC/SP screenshots 2026-11-04",
+    "manufacturer_reference": "sources URLs per product"
+  },
+  "data_notes": {
+    "price_yen": "架空の店舗用に仮置きした税込価格。実店舗やメーカーの販売価格・定価ではない。公開前に全件承認すること。",
+    "tagline": "添付のブランド／モデル／サイト内での役割一覧から転記。",
+    "description": "今回新規に作成した提案文。",
+    "body_size": "UIの3区分への編集上の分類。公式サイズ名は body_shape_reference を参照。",
+    "playing_styles_tone_impressions": "試奏の入口としての編集上の提案。客観的なスペック・演奏の可否の断定ではない。",
+    "amp_connection": "true=標準仕様の接続可、false=標準仕様の接続なし、null=販売する個体が特定できず要確認。"
+  },
+  "filter_options": {
+    "price_band": [
+      {
+        "value": "",
+        "label": "すべて"
+      },
+      {
+        "value": "lt150000",
+        "label": "15万円未満"
+      },
+      {
+        "value": "150000_299999",
+        "label": "15万円以上30万円未満"
+      },
+      {
+        "value": "300000_499999",
+        "label": "30万円以上50万円未満"
+      },
+      {
+        "value": "gte500000",
+        "label": "50万円以上"
+      }
+    ],
+    "body_size": [
+      {
+        "value": "",
+        "label": "すべて"
+      },
+      {
+        "value": "小さめ",
+        "label": "小さめ"
+      },
+      {
+        "value": "標準",
+        "label": "標準"
+      },
+      {
+        "value": "大きめ",
+        "label": "大きめ"
+      }
+    ],
+    "playing_style": [
+      {
+        "value": "",
+        "label": "すべて"
+      },
+      {
+        "value": "ストローク",
+        "label": "コード・ストローク"
+      },
+      {
+        "value": "指弾き",
+        "label": "指弾き"
+      },
+      {
+        "value": "どちらも",
+        "label": "どちらも"
+      }
+    ],
+    "tone_impression": [
+      {
+        "value": "",
+        "label": "すべて"
+      },
+      {
+        "value": "明るい",
+        "label": "明るい"
+      },
+      {
+        "value": "力強い",
+        "label": "力強い"
+      },
+      {
+        "value": "バランス",
+        "label": "バランスのよい"
+      }
+    ],
+    "amp_connection": [
+      {
+        "value": "",
+        "label": "すべて"
+      },
+      {
+        "value": "yes",
+        "label": "アンプ接続できる"
+      },
+      {
+        "value": "no",
+        "label": "アンプ接続しない"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "gibson-j-45",
+      "brand": "Gibson",
+      "model": "J-45",
+      "display_name": "Gibson J-45",
+      "site_role": "憧れの定番",
+      "tagline": "憧れの定番",
+      "description": "力強いストロークを楽しみたい方へ。歌声に寄り添う存在感のある響きを、まずは店頭で確かめてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "大きめ",
+      "body_shape_reference": "Round Shoulder（J-45）",
+      "image_expected_path": "assets/images/guitar01.jpg",
+      "image_status": "EXISTING_TOP_IMAGE_REUSE",
+      "source_url": "https://www.gibson.com/products/gibson-j-45-standard-vintage-sunburst",
+      "verification_note": "J-45 Standardにはピックアップ搭載仕様があるが、店頭個体の型番が未確定",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 398000,
+      "image_src": "assets/images/guitar01.jpg",
+      "playing_styles": [
+        "ストローク"
+      ],
+      "tone_impressions": [
+        "力強い",
+        "バランス"
+      ],
+      "amp_connection": null,
+      "sort_order": 1
+    },
+    {
+      "id": "martin-d-28",
+      "brand": "Martin",
+      "model": "D-28",
+      "display_name": "Martin D-28",
+      "site_role": "王道ドレッドノート",
+      "tagline": "王道ドレッドノート",
+      "description": "豊かな響きと低音の存在感を求める方に。コードを鳴らしたときの広がりを、ほかのモデルと弾き比べてみてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "大きめ",
+      "body_shape_reference": "ドレッドノート",
+      "image_expected_path": "assets/images/guitar02.jpg",
+      "image_status": "EXISTING_TOP_IMAGE_REUSE",
+      "source_url": "https://www.martinguitar.com/guitars/standard-series/D-28.html",
+      "verification_note": "標準仕様のピックアップなしを前提とする",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 528000,
+      "image_src": "assets/images/guitar02.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "力強い",
+        "バランス"
+      ],
+      "amp_connection": false,
+      "sort_order": 2
+    },
+    {
+      "id": "taylor-114ce",
+      "brand": "Taylor",
+      "model": "114ce",
+      "display_name": "Taylor 114ce",
+      "site_role": "2本目の候補",
+      "tagline": "2本目の候補",
+      "description": "コード弾きにも指弾きにも挑戦したい方へ。弾きやすさと扱いやすいバランスを、実際に持って確かめられます。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "標準",
+      "body_shape_reference": "Grand Auditorium",
+      "image_expected_path": "assets/images/guitar03.jpg",
+      "image_status": "EXISTING_TOP_IMAGE_REUSE",
+      "source_url": "https://www.taylorguitars.com/guitars/acoustic/114ce",
+      "verification_note": "現行114ceのES2搭載仕様",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 145000,
+      "image_src": "assets/images/guitar03.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "明るい",
+        "バランス"
+      ],
+      "amp_connection": true,
+      "sort_order": 3
+    },
+    {
+      "id": "gibson-b-25",
+      "brand": "Gibson",
+      "model": "B-25",
+      "display_name": "Gibson B-25",
+      "site_role": "小ぶりなヴィンテージ",
+      "tagline": "小ぶりなヴィンテージ",
+      "description": "少し小ぶりなボディが魅力。肩の力を抜いて抱えながら、ヴィンテージならではの個性を楽しめる一本です。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "スモールボディ（ヴィンテージ）",
+      "image_expected_path": "assets/images/products/gibson-b-25.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.vintageguitarandbass.com/gibson/B25.php",
+      "verification_note": "年式・改造・ピックアップ有無は販売個体ごとに確認",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 298000,
+      "image_src": "assets/images/products/gibson-b-25.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "明るい"
+      ],
+      "amp_connection": null,
+      "sort_order": 4
+    },
+    {
+      "id": "martin-000-18",
+      "brand": "Martin",
+      "model": "000-18",
+      "display_name": "Martin 000-18",
+      "site_role": "小ぶりな定番",
+      "tagline": "小ぶりな定番",
+      "description": "抱えやすさと音の輪郭を大切にしたい方へ。軽やかなタッチから一音ずつ、じっくり音を確かめられます。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "000（Auditorium）",
+      "image_expected_path": "assets/images/products/martin-000-18.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.martinguitar.com/blog-categories/tips-tutorials/blog-062321-What-Does-D-28-Really-Mean.html",
+      "verification_note": "標準仕様のピックアップなしを暫定採用",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 428000,
+      "image_src": "assets/images/products/martin-000-18.jpg",
+      "playing_styles": [
+        "指弾き",
+        "ストローク"
+      ],
+      "tone_impressions": [
+        "バランス"
+      ],
+      "amp_connection": false,
+      "sort_order": 5
+    },
+    {
+      "id": "martin-000-28",
+      "brand": "Martin",
+      "model": "000-28",
+      "display_name": "Martin 000-28",
+      "site_role": "こだわりの一本",
+      "tagline": "こだわりの一本",
+      "description": "小ぶりなサイズの取り回しと、奥行きのある響きを両立したい方に。表現の違いをゆっくり試してみてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "000（Auditorium）",
+      "image_expected_path": "assets/images/products/martin-000-28.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.martinguitar.com/blog-categories/tips-tutorials/blog-062321-What-Does-D-28-Really-Mean.html",
+      "verification_note": "標準仕様のピックアップなしを暫定採用",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 548000,
+      "image_src": "assets/images/products/martin-000-28.jpg",
+      "playing_styles": [
+        "指弾き",
+        "ストローク"
+      ],
+      "tone_impressions": [
+        "バランス"
+      ],
+      "amp_connection": false,
+      "sort_order": 6
+    },
+    {
+      "id": "taylor-214ce",
+      "brand": "Taylor",
+      "model": "214ce",
+      "display_name": "Taylor 214ce",
+      "site_role": "幅広い演奏スタイル",
+      "tagline": "幅広い演奏スタイル",
+      "description": "日常の練習からライブまで、幅広い演奏スタイルを試したい方に。ストロークと指弾きの両方を弾き比べてみてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "標準",
+      "body_shape_reference": "Grand Auditorium",
+      "image_expected_path": "assets/images/products/taylor-214ce.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.taylorguitars.com/guitars/acoustic/214ce",
+      "verification_note": "現行214ceのES2搭載仕様",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 215000,
+      "image_src": "assets/images/products/taylor-214ce.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "バランス"
+      ],
+      "amp_connection": true,
+      "sort_order": 7
+    },
+    {
+      "id": "taylor-gs-mini",
+      "brand": "Taylor",
+      "model": "GS Mini",
+      "display_name": "Taylor GS Mini",
+      "site_role": "コンパクト",
+      "tagline": "コンパクト",
+      "description": "持ち運びやすいサイズで気軽に弾きたい方へ。コンパクトな見た目から想像する以上の響きを試奏で確かめられます。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "GS Mini（小型）",
+      "image_expected_path": "assets/images/products/taylor-gs-mini.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.taylorguitars.com/guitars/acoustic/features/shapes/gs-mini",
+      "verification_note": "GS Mini / GS Mini-eでピックアップ有無が異なる",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 108000,
+      "image_src": "assets/images/products/taylor-gs-mini.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "明るい"
+      ],
+      "amp_connection": null,
+      "sort_order": 8
+    },
+    {
+      "id": "k-yairi-rf-65",
+      "brand": "K.Yairi",
+      "model": "RF-65",
+      "display_name": "K.Yairi RF-65",
+      "site_role": "国産ギターの選択肢",
+      "tagline": "国産ギターの選択肢",
+      "description": "小ぶりな国産モデルを探している方へ。抱え心地や弦の押さえやすさを、普段の弾き方で確かめてみてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "RF系小型ボディ",
+      "image_expected_path": "assets/images/products/k-yairi-rf-65.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://www.yairi.co.jp/guitar/item_21.html",
+      "verification_note": "通常RF-65にはPUなしという販売店情報。限定仕様にはPUあり",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 138000,
+      "image_src": "assets/images/products/k-yairi-rf-65.jpg",
+      "playing_styles": [
+        "指弾き",
+        "ストローク"
+      ],
+      "tone_impressions": [
+        "明るい",
+        "バランス"
+      ],
+      "amp_connection": false,
+      "sort_order": 9
+    },
+    {
+      "id": "yamaha-ll16-are",
+      "brand": "YAMAHA",
+      "model": "LL16 ARE",
+      "display_name": "YAMAHA LL16 ARE",
+      "site_role": "国産・大きめボディ",
+      "tagline": "国産・大きめボディ",
+      "description": "しっかりした音量感を求める方へ。大きめのボディが生み出す響きと、コードを鳴らす楽しさを試してみてください。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "大きめ",
+      "body_shape_reference": "オリジナルジャンボ",
+      "image_expected_path": "assets/images/products/yamaha-ll16-are.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://jp.yamaha.com/musical-instruments/guitars-basses-amps/products/acoustic-guitars/l-series/lineup.html",
+      "verification_note": "メーカーのパッシブピックアップ搭載仕様",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 126500,
+      "image_src": "assets/images/products/yamaha-ll16-are.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "力強い",
+        "バランス"
+      ],
+      "amp_connection": true,
+      "sort_order": 10
+    },
+    {
+      "id": "yamaha-ls16-are",
+      "brand": "YAMAHA",
+      "model": "LS16 ARE",
+      "display_name": "YAMAHA LS16 ARE",
+      "site_role": "国産・小さめボディ",
+      "tagline": "国産・小さめボディ",
+      "description": "抱えやすさと繊細な弾き心地を大切にしたい方へ。一音ずつ鳴らしたときの音のまとまりを確認できます。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "小さめ",
+      "body_shape_reference": "フォークタイプ（スモール）",
+      "image_expected_path": "assets/images/products/yamaha-ls16-are.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://jp.yamaha.com/musical-instruments/guitars-basses-amps/products/acoustic-guitars/l-series/lineup.html",
+      "verification_note": "メーカーのパッシブピックアップ搭載仕様",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 126500,
+      "image_src": "assets/images/products/yamaha-ls16-are.jpg",
+      "playing_styles": [
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "明るい",
+        "バランス"
+      ],
+      "amp_connection": true,
+      "sort_order": 11
+    },
+    {
+      "id": "cole-clark-fl2ec",
+      "brand": "Cole Clark",
+      "model": "FL2EC",
+      "display_name": "Cole Clark FL2EC",
+      "site_role": "エレアコの選択肢",
+      "tagline": "エレアコの選択肢",
+      "description": "ライブでの演奏も見据えて一本を選びたい方に。生音とアンプ接続時の違いを相談しながら確かめられます。",
+      "price_status": "DEMO_PRICE_NOT_APPROVED",
+      "body_size": "大きめ",
+      "body_shape_reference": "Fat Lady / Dreadnought",
+      "image_expected_path": "assets/images/products/cole-clark-fl2ec.jpg",
+      "image_status": "PROVIDED_LOCAL_IMAGE",
+      "source_url": "https://coleclarkguitars.com/about-cole-clark/faq/",
+      "verification_note": "公式FAQ上はピックアップ付き・カッタウェイ仕様",
+      "review_status": "NEEDS_EDITORIAL_APPROVAL",
+      "price_yen": 328000,
+      "image_src": "assets/images/products/cole-clark-fl2ec.jpg",
+      "playing_styles": [
+        "ストローク",
+        "指弾き"
+      ],
+      "tone_impressions": [
+        "力強い",
+        "バランス"
+      ],
+      "amp_connection": true,
+      "sort_order": 12
+    }
+  ]
+}

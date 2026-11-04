@@ -4,7 +4,7 @@ HODY GUITAR の TOP ページを HTML / SCSS / Vanilla JavaScript / FLOCSS で�
 
 ## 表示方法
 
-`index.html` を開くか、開発用ローカルサーバーで確認してください。
+TOPは `index.html`、試奏ガイドは `guide.html`、商品一覧は `selection.html` です。商品一覧はJSONをHTTPで取得するため、以下のローカルサーバーで確認してください（`file://` 直開きは対象外）。
 
 ```bash
 cd hody-guitar
@@ -52,3 +52,13 @@ Node.js / npm を使わない場合は、このプロジェクトの単純なSCS
 - 非表示タブではアニメーションを一時停止します。
 - `prefers-reduced-motion: reduce` の環境では写真の自動切替とプログレスアニメーションを停止します。
 - 変更したい場合は `--hero-slide-duration` を調整してください。HTMLの画像やほかのセクションは変更していません。
+
+## 商品一覧ページ
+
+`http://localhost:8000/selection.html` から確認できます。実装・検証結果と変更ファイル一覧は [docs/SELECTION_IMPLEMENTATION.md](docs/SELECTION_IMPLEMENTATION.md)、6状態の比較は [artifacts/selection/comparison.html](artifacts/selection/comparison.html) を参照してください。全12点の画像は配置済みですが、商品マスターの仮価格・紹介文・分類は公開前の承認が必要です。
+
+```bash
+python3 scripts/check_data.py
+# Playwright / Pillowのある検証用Python環境で実行
+python3 scripts/verify-selection.py --base-url http://localhost:8000
+```

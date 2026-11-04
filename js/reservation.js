@@ -30,8 +30,11 @@
         if (lastFocus?.isConnected) lastFocus.focus();
     }
 
-    document.querySelectorAll('.js-open-reservation').forEach(button => {
-        button.addEventListener('click', () => openReservation(button.dataset.product || ''));
+    // JSONから再描画されたカードにも対応。既存の静的ボタンも同じ入口を使う。
+    document.addEventListener('click', event => {
+        const button = event.target instanceof Element ? event.target.closest('.js-open-reservation') : null;
+        if (!button || button.disabled) return;
+        openReservation(button.dataset.product || '');
     });
     closeButton.addEventListener('click', closeReservation);
     dialog.querySelector('.js-reservation-backdrop').addEventListener('click', closeReservation);

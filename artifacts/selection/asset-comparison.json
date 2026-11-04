@@ -1,0 +1,53 @@
+[
+    {
+        "name": "pc-shop",
+        "url": "https://www.figma.com/api/mcp/asset/6778509f-17fe-41ac-9876-1c0626d2736c.png",
+        "existing": "assets/images/guide/shop-pc.png",
+        "byte_equal": true,
+        "pixels_equal": true
+    },
+    {
+        "name": "sp-shop",
+        "url": "https://www.figma.com/api/mcp/asset/60cee5db-76f2-442e-8a9f-fd41550eb2e3.png",
+        "existing": "assets/images/guide/shop-sp.png",
+        "byte_equal": true,
+        "pixels_equal": true
+    },
+    {
+        "name": "pc-logo",
+        "url": "https://www.figma.com/api/mcp/asset/d601be10-e454-49ce-89c3-29eb5415615d.svg",
+        "existing": "assets/images/guide/logo-charcoal.svg",
+        "byte_equal": true
+    },
+    {
+        "name": "sp-logo",
+        "url": "https://www.figma.com/api/mcp/asset/856faf49-0097-4524-913f-0100d92280f4.svg",
+        "existing": "assets/images/guide/logo-charcoal.svg",
+        "byte_equal": false,
+        "geometry_and_fill_equal": true
+    },
+    {
+        "name": "footer-logo",
+        "url": "https://www.figma.com/api/mcp/asset/9b85e368-967d-469a-8cd0-c0f7e5f85fb1.svg",
+        "existing": "assets/images/guide/logo-white.svg",
+        "byte_equal": true
+    },
+    {
+        "name": "guitar-blue",
+        "url": "https://www.figma.com/api/mcp/asset/2d17e6bd-289a-42b7-826b-fa3ccd76b2ab.svg",
+        "existing": "assets/images/guide/guitar-blue.svg",
+        "byte_equal": true
+    },
+    {
+        "name": "arrow-blue",
+        "url": "https://www.figma.com/api/mcp/asset/d6cdd480-9f02-45d8-8692-44ce8b942c36.svg",
+        "existing": "assets/images/guide/arrow-blue.svg",
+        "byte_equal": true
+    },
+    {
+        "name": "header-arrow",
+        "url": "https://www.figma.com/api/mcp/asset/e45f16c6-8cb4-4d3a-acbb-b672b799714c.svg",
+        "existing": "assets/images/guide/arrow-header.svg",
+        "byte_equal": true
+    }
+]

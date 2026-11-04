@@ -1,0 +1,54 @@
+{
+    "1440": {
+        ".c-section-heading__en": [
+            {
+                "familyName": "Source Sans 3 ExtraLight",
+                "postScriptName": "SourceSans3ExtraLight-Regular_Bold",
+                "isCustomFont": true,
+                "glyphCount": 9
+            }
+        ],
+        ".c-section-heading__ja": [
+            {
+                "familyName": "Noto Sans JP Medium",
+                "postScriptName": "NotoSansJP-Medium",
+                "isCustomFont": true,
+                "glyphCount": 6
+            }
+        ],
+        ".p-selection-page__field label": [
+            {
+                "familyName": "Noto Sans JP",
+                "postScriptName": "NotoSansJP-Bold",
+                "isCustomFont": true,
+                "glyphCount": 3
+            }
+        ]
+    },
+    "375": {
+        ".c-section-heading__en": [
+            {
+                "familyName": "Source Sans 3 ExtraLight",
+                "postScriptName": "SourceSans3-Roman_Bold",
+                "isCustomFont": true,
+                "glyphCount": 9
+            }
+        ],
+        ".c-section-heading__ja": [
+            {
+                "familyName": "Noto Sans JP Medium",
+                "postScriptName": "NotoSansJP-Medium",
+                "isCustomFont": true,
+                "glyphCount": 6
+            }
+        ],
+        ".p-selection-page__field label": [
+            {
+                "familyName": "Noto Sans JP",
+                "postScriptName": "NotoSansJP-Bold",
+                "isCustomFont": true,
+                "glyphCount": 3
+            }
+        ]
+    }
+}

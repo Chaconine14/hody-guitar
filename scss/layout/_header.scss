@@ -92,3 +92,83 @@
     }
 
 }
+
+/* 下層ページ共通。既存ガイドの数値を維持。 */
+:is(.l-header--guide, .l-header--subpage) {
+    position: relative;
+    background: var(--color-ivory);
+    border-bottom: 1px solid #dbdbdb;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__inner {
+    gap: 40px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__nav-list {
+    color: var(--color-charcoal);
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(1) {
+    width: 64px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(2) {
+    width: 144px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(3) {
+    width: 176px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(4) {
+    width: 80px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .l-header__reserve {
+    flex-shrink: 0;
+    height: 56px;
+}
+
+:is(.l-header--guide, .l-header--subpage) .c-arrow {
+    min-width: 16.5px;
+    width: 16.5px;
+    height: 7.36396px;
+    background-image: url('../assets/images/guide/arrow-header.svg');
+    background-size: 16.5px 7.36396px;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    :is(.l-header--guide, .l-header--subpage) .l-header__inner {
+        padding-inline: 24px;
+        gap: 20px;
+    }
+
+    :is(.l-header--guide, .l-header--subpage) .l-header__nav-list {
+        gap: 16px;
+        font-size: 1.2rem;
+    }
+
+    :is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(n) {
+        width: auto;
+    }
+
+    :is(.l-header--guide, .l-header--subpage) .l-header__reserve {
+        padding-inline: 14px;
+        gap: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :is(.l-header--guide, .l-header--subpage) .l-header__inner {
+        gap: 0;
+    }
+
+    :is(.l-header--guide, .l-header--subpage) .l-header__menu-button {
+        background: url('../assets/images/guide/menu.svg') center / 32px 10px no-repeat;
+    }
+
+    :is(.l-header--guide, .l-header--subpage) .l-header__menu-button span {
+        visibility: hidden;
+    }
+}

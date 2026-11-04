@@ -130,3 +130,76 @@
     }
 
 }
+
+/* 下層ページ共通。既存ガイドの数値を維持。 */
+:is(.p-guide-page__hours--sp, .l-footer__hours--sp) {
+    display: none;
+}
+
+:is(.l-footer--guide, .l-footer--subpage) .l-footer__visual img {
+    object-position: center 30.29%;
+}
+
+:is(.l-footer--guide, .l-footer--subpage) .l-footer__brand {
+    background: url('../assets/images/guide/logo-white.svg') left top / 257px 132px no-repeat;
+}
+
+:is(.l-footer--guide, .l-footer--subpage) .l-footer__address {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 20.3px;
+}
+
+:is(.l-footer--guide, .l-footer--subpage) .l-footer__copyright {
+    bottom: 66px;
+    line-height: 12px;
+}
+
+@media (max-width: 768px) {
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__visual img {
+        width: max(100%, 390px);
+        max-width: none;
+        object-position: center;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__bottom {
+        height: 419.633px;
+        padding: 40px 16px 20px;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__brand {
+        height: 60px;
+        background-position: center top;
+        background-size: 117px 60px;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__top {
+        gap: 45px;
+        padding-bottom: 44.156px;
+        border-bottom: 0;
+        background: url('../assets/images/guide/footer-line.svg') left bottom / 100% 1px no-repeat;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__nav ul {
+        line-height: 14px;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__address {
+        margin-top: 16px;
+        gap: 0;
+        line-height: 20.4px;
+    }
+
+    :is(.l-footer--guide, .l-footer--subpage) .l-footer__copyright {
+        bottom: 2.633px;
+    }
+
+    :is(.p-guide-page__hours--pc, .l-footer__hours--pc) {
+        display: none;
+    }
+
+    :is(.p-guide-page__hours--sp, .l-footer__hours--sp) {
+        display: inline;
+    }
+}

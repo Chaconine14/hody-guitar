@@ -47,3 +47,39 @@
 | `guide/menu.svg` / `footer-line.svg` | SPヘッダーの二本線／フッター罫線の原本 |
 
 提供済みステップ素材はFigmaと照合済み。01・02・03・05は描画属性が一致、04は書き出し座標の小数丸め差のみです。既存写真は同じ被写体でも画角・比率が異なるため、ガイドではFigmaから取得した上記原本を使用しています。仮のFigma画像URLは実装に残していません。
+
+## 商品一覧（2026-11-04）
+
+更新済み `data/products.json` の指定画像をPC／SP共通で使用。全12点を確認し、画像自体の編集・差し替えはしていません。
+
+| 商品ID | 機種 | 画像パス |
+| --- | --- | --- |
+| `gibson-j-45` | Gibson J-45 | `assets/images/guitar01.jpg` |
+| `martin-d-28` | Martin D-28 | `assets/images/guitar02.jpg` |
+| `taylor-114ce` | Taylor 114ce | `assets/images/guitar03.jpg` |
+| `gibson-b-25` | Gibson B-25 | `assets/images/products/gibson-b-25.jpg` |
+| `martin-000-18` | Martin 000-18 | `assets/images/products/martin-000-18.jpg` |
+| `martin-000-28` | Martin 000-28 | `assets/images/products/martin-000-28.jpg` |
+| `taylor-214ce` | Taylor 214ce | `assets/images/products/taylor-214ce.jpg` |
+| `taylor-gs-mini` | Taylor GS Mini | `assets/images/products/taylor-gs-mini.jpg` |
+| `k-yairi-rf-65` | K.Yairi RF-65 | `assets/images/products/k-yairi-rf-65.jpg` |
+| `yamaha-ll16-are` | YAMAHA LL16 ARE | `assets/images/products/yamaha-ll16-are.jpg` |
+| `yamaha-ls16-are` | YAMAHA LS16 ARE | `assets/images/products/yamaha-ls16-are.jpg` |
+| `cole-clark-fl2ec` | Cole Clark FL2EC | `assets/images/products/cole-clark-fl2ec.jpg` |
+
+画像枠は `1122 / 1402`、`object-fit: contain` で中央配置し、縦長素材もギター全体を保持します。
+
+| 用途 | 参照先 |
+| --- | --- |
+| カード予約の丸矢印（32×32） | `assets/images/selection/card-arrow.svg` |
+| PC／SPセレクト矢印 | `assets/images/selection/select-pc.svg` / `select-sp.svg` |
+| SP検索パネルの開閉三角 | `assets/images/selection/filter-toggle.svg` |
+| SP適用条件の区切り線 | `assets/images/selection/condition-line.svg` |
+| 0件シルエット | `assets/images/selection/empty-guitar.png` |
+| 共通ロゴ・アイコン・矢印・店舗写真・罫線 | `assets/images/guide/` 内の対応素材 |
+
+上記の新規6点はFigma正式素材です。店舗写真・共通ロゴ・予約アイコン・矢印はFigma書き出しと既存ファイルが一致。SPロゴはレイヤーIDだけが異なり、形状・色・寸法が一致します。メニューとフッター罫線も照合済みです。0件シルエットは既存診断用の画像とは異なるため流用していません。
+
+和文フォントは `assets/fonts/selection-noto-jp-{400,500,700}.ttf`。Google FontsのNoto Sans JPから使用文字を取得し、既存の `OFL-NotoSansJP.txt` のライセンスで配信。別名 `HODY Selection JP` とし、商品一覧の本体だけに適用しています。
+
+検証画像は `artifacts/selection/product-images.png`、素材照合は `artifacts/selection/asset-comparison.json`、詳細は `docs/SELECTION_IMPLEMENTATION.md` を参照してください。

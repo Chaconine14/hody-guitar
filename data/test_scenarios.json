@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "notes": "このファイルはユーザー提供の12モデル＋今回の仮カテゴリ・仮価格で計算したテスト期待値です。商品属性変更時は再生成が必要。",
+  "scenarios": [
+    {
+      "name": "初期：全件表示",
+      "filters": {},
+      "expected_ids": [
+        "gibson-j-45",
+        "martin-d-28",
+        "taylor-114ce",
+        "gibson-b-25",
+        "martin-000-18",
+        "martin-000-28",
+        "taylor-214ce",
+        "taylor-gs-mini",
+        "k-yairi-rf-65",
+        "yamaha-ll16-are",
+        "yamaha-ls16-are",
+        "cole-clark-fl2ec"
+      ]
+    },
+    {
+      "name": "小さめ",
+      "filters": {
+        "body_size": "小さめ"
+      },
+      "expected_ids": [
+        "gibson-b-25",
+        "martin-000-18",
+        "martin-000-28",
+        "taylor-gs-mini",
+        "k-yairi-rf-65",
+        "yamaha-ls16-are"
+      ]
+    },
+    {
+      "name": "小さめ＋明るい：4件",
+      "filters": {
+        "body_size": "小さめ",
+        "tone_impression": "明るい"
+      },
+      "expected_ids": [
+        "gibson-b-25",
+        "taylor-gs-mini",
+        "k-yairi-rf-65",
+        "yamaha-ls16-are"
+      ]
+    },
+    {
+      "name": "小さめ＋力強い：0件",
+      "filters": {
+        "body_size": "小さめ",
+        "tone_impression": "力強い"
+      },
+      "expected_ids": []
+    },
+    {
+      "name": "アンプ接続できる",
+      "filters": {
+        "amp_connection": "yes"
+      },
+      "expected_ids": [
+        "taylor-114ce",
+        "taylor-214ce",
+        "yamaha-ll16-are",
+        "yamaha-ls16-are",
+        "cole-clark-fl2ec"
+      ]
+    },
+    {
+      "name": "アンプ接続しない",
+      "filters": {
+        "amp_connection": "no"
+      },
+      "expected_ids": [
+        "martin-d-28",
+        "martin-000-18",
+        "martin-000-28",
+        "k-yairi-rf-65"
+      ]
+    },
+    {
+      "name": "15万円未満",
+      "filters": {
+        "price_band": "lt150000"
+      },
+      "expected_ids": [
+        "taylor-114ce",
+        "taylor-gs-mini",
+        "k-yairi-rf-65",
+        "yamaha-ll16-are",
+        "yamaha-ls16-are"
+      ]
+    },
+    {
+      "name": "両方弾く",
+      "filters": {
+        "playing_style": "どちらも"
+      },
+      "expected_ids": [
+        "martin-d-28",
+        "taylor-114ce",
+        "gibson-b-25",
+        "martin-000-18",
+        "martin-000-28",
+        "taylor-214ce",
+        "taylor-gs-mini",
+        "k-yairi-rf-65",
+        "yamaha-ll16-are",
+        "cole-clark-fl2ec"
+      ]
+    }
+  ]
+}
