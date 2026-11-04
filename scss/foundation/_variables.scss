@@ -1,0 +1,27 @@
+// 過去コードに合わせて PCファースト。閾値は暫定値。 $color-ivory: #fbf7ef;
+$color-sand: #f4ecdd;
+$color-surface: #f3f0ea;
+$color-charcoal: #4a4a4a;
+$color-blue: #024578;
+$color-muted: #777;
+$color-required: #ed7577;
+@mixin media-md  {
+    @media (max-width: 1300px)  {
+        @content;
+    }
+
+}
+
+@mixin media-tb  {
+    @media (max-width: 1024px)  {
+        @content;
+    }
+
+}
+
+@mixin media-sp  {
+    @media (max-width: 768px)  {
+        @content;
+    }
+
+}

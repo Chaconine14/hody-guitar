@@ -1,0 +1,148 @@
+.p-hero  {
+    position: relative;
+    height: 790px;
+    overflow: hidden;
+    background: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.p-hero__visual, .p-hero__slide, .p-hero__slide img  {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.p-hero__slide  {
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+.p-hero__slide.is-active  {
+    opacity: 1;
+}
+
+.p-hero__slide img  {
+    object-fit: cover;
+    object-position: center;
+}
+
+.p-hero__shade  {
+    position: absolute;
+    inset: 200px 0 0;
+    background: linear-gradient(to bottom, rgb(74 74 74 / 0%), #4a4a4a);
+    pointer-events: none;
+}
+
+.p-hero__inner  {
+    position: relative;
+    width: min(1100px, calc(100% - 80px));
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 520px;
+}
+
+.p-hero__title  {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.p-hero__copy  {
+    margin-top: 12px;
+    font-size: 1.8rem;
+    line-height: 1.45;
+}
+
+.p-hero__progress  {
+    --hero-slide-duration: 6000ms;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 248px;
+    margin-top: 83px;
+}
+
+.p-hero__progress-bar  {
+    position: relative;
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 2px;
+    overflow: hidden;
+    background: rgb(251 247 239 / 45%);
+}
+
+.p-hero__progress-bar::after  {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-ivory);
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+.p-hero__progress-bar.is-active::after  {
+    animation: p-hero-progress var(--hero-slide-duration) linear forwards;
+}
+
+.p-hero__progress.is-paused .p-hero__progress-bar.is-active::after  {
+    animation-play-state: paused;
+}
+
+@keyframes p-hero-progress  {
+    from  {
+        transform: scaleX(0);
+    }
+
+    to  {
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 768px)  {
+    .p-hero  {
+        height: 650px;
+        color: var(--color-sand);
+    }
+
+    .p-hero__slide img  {
+        object-position: center top;
+    }
+
+    .p-hero__shade  {
+        inset: 192px 0 0;
+    }
+
+    .p-hero__inner  {
+        width: auto;
+        padding: 481px 16px 0;
+    }
+
+    .p-hero__title  {
+        font-size: 2.4rem;
+        line-height: 32px;
+    }
+
+    .p-hero__copy  {
+        font-size: 1.4rem;
+        line-height: 22.4px;
+        margin-top: 16px;
+    }
+
+    .p-hero__progress  {
+        margin-top: 49px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce)  {
+    .p-hero__slide  {
+        transition: none;
+    }
+
+    .p-hero__progress-bar.is-active::after  {
+        animation: none;
+        transform: scaleX(1);
+    }
+}

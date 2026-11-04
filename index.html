@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="長く愛せる一本を。アコースティックギター専門店 HODY GUITAR。あなたにぴったりのギターとの出会いをお手伝いします。">
+    <title>HODY GUITAR | 長く愛せる一本を。</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/reservation.js"></script>
+    <script defer src="js/slider.js"></script>
+</head>
+<body>
+    <header class="l-header" id="top">
+        <div class="l-header__inner">
+            <a href="#top" class="l-header__brand" aria-label="HODY GUITAR トップページ">
+                <img class="l-header__logo" src="assets/icons/logo-white.svg" width="117" height="60" alt="HODY GUITAR">
+            </a>
+            <nav class="l-header__nav" aria-label="メインナビゲーション">
+                <ul class="l-header__nav-list">
+                    <li><a href="#top">トップ</a></li>
+                    <li><a href="#selection">取り扱い商品一覧</a></li>
+                    <li><a href="#guide">はじめての試奏ガイド</a></li>
+                    <li><a href="#store">店舗情報</a></li>
+                </ul>
+            </nav>
+            <button class="c-button c-button--light l-header__reserve js-open-reservation" type="button">
+                <span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="l-header__menu-button js-menu-open" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="p-hero" aria-labelledby="hero-heading">
+            <div class="p-hero__visual" aria-hidden="true">
+                <div class="p-hero__slide is-active"><img src="assets/images/top_slider01.jpg" alt="" fetchpriority="high"></div>
+                <div class="p-hero__slide"><img src="assets/images/top_slider02.jpg" alt="" loading="lazy"></div>
+                <div class="p-hero__slide"><img src="assets/images/top_slider03.jpg" alt="" loading="lazy"></div>
+                <div class="p-hero__slide"><img src="assets/images/top_slider04.jpg" alt="" loading="lazy"></div>
+            </div>
+            <div class="p-hero__shade" aria-hidden="true"></div>
+            <div class="p-hero__inner">
+                <h1 id="hero-heading" class="p-hero__title">長く愛せる一本を。</h1>
+                <p class="p-hero__copy">人生を共にする相棒に出会える、<br>アコースティックギター専門店です。</p>
+                <div class="p-hero__progress" role="img" aria-label="スライド 1 / 4">
+                    <span class="p-hero__progress-bar is-active"></span>
+                    <span class="p-hero__progress-bar"></span>
+                    <span class="p-hero__progress-bar"></span>
+                    <span class="p-hero__progress-bar"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-finder" id="finder" aria-labelledby="finder-heading">
+            <div class="p-finder__inner">
+                <div class="p-finder__content">
+                    <div class="c-section-heading p-finder__heading">
+                        <h2 class="c-section-heading__en" id="finder-heading">GUITAR FINDER</h2>
+                        <p class="c-section-heading__ja">おすすめギター診断</p>
+                    </div>
+                    <p class="p-finder__copy">「どんな音が好き？」などの簡単な質問から、あなたにぴったりなタイプを探します。</p>
+                    <a href="#finder" class="c-button c-button--finder" aria-label="おすすめギター診断を始める（診断画面は次の制作工程で実装予定）">
+                        <small>3 QUESTIONS</small><span>おすすめギター診断を始める</span>
+                    </a>
+                </div>
+                <picture class="p-finder__illustration">
+                    <source media="(max-width: 768px)" srcset="assets/images/guitar-outline.png">
+                    <img src="assets/images/guitar-outline.png" alt="ギターのシルエット">
+                </picture>
+            </div>
+            <button class="p-finder__reservation js-open-reservation" type="button" aria-label="試奏予約をする">
+                <img src="assets/images/guitar-icon.png" alt="" width="52" height="52">
+                <span class="p-finder__reservation-text"><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
+                <span class="p-finder__reservation-arrow" aria-hidden="true">→</span>
+            </button>
+        </section>
+
+        <section class="p-selection" id="selection" aria-labelledby="selection-heading">
+            <div class="p-selection__inner">
+                <div class="c-section-heading p-selection__heading">
+                    <h2 class="c-section-heading__en" id="selection-heading">SELECTION</h2>
+                    <p class="c-section-heading__ja">取り扱い商品</p>
+                </div>
+                <div class="p-selection__cards">
+                    <button class="p-selection__card js-open-reservation" type="button" data-product="Gibson J-45" aria-label="Gibson J-45 の試奏予約">
+                        <picture class="p-selection__photo"><source media="(max-width: 768px)" srcset="assets/images/guitar01.jpg"><img src="assets/images/guitar01.jpg" alt="Gibson J-45" loading="lazy"></picture>
+                        <span class="p-selection__text"><span class="p-selection__tagline">憧れの定番</span><span class="p-selection__brand">Gibson</span><strong class="p-selection__name">J-45</strong></span>
+                    </button>
+                    <button class="p-selection__card js-open-reservation" type="button" data-product="Martin D-28" aria-label="Martin D-28 の試奏予約">
+                        <picture class="p-selection__photo"><source media="(max-width: 768px)" srcset="assets/images/guitar02.jpg"><img src="assets/images/guitar02.jpg" alt="Martin D-28" loading="lazy"></picture>
+                        <span class="p-selection__text"><span class="p-selection__tagline">王道ドレッドノート</span><span class="p-selection__brand">Martin</span><strong class="p-selection__name">D-28</strong></span>
+                    </button>
+                    <button class="p-selection__card p-selection__card--sp js-open-reservation" type="button" data-product="Taylor 114ce" aria-label="Taylor 114ce の試奏予約">
+                        <span class="p-selection__photo"><img src="assets/images/guitar03.jpg" alt="Taylor 114ce" loading="lazy"></span>
+                        <span class="p-selection__text"><span class="p-selection__tagline">ライブでも活躍</span><span class="p-selection__brand">Taylor</span><strong class="p-selection__name">114ce</strong></span>
+                    </button>
+                    <button class="p-selection__card p-selection__card--sp js-open-reservation" type="button" data-product="Taylor 114ce" aria-label="Taylor 114ce の試奏予約">
+                        <span class="p-selection__photo"><img src="assets/images/guitar04.jpg" alt="Taylor 114ce" loading="lazy"></span>
+                        <span class="p-selection__text"><span class="p-selection__tagline">ライブでも活躍</span><span class="p-selection__brand">Taylor</span><strong class="p-selection__name">114ce</strong></span>
+                    </button>
+                </div>
+                <a href="#selection" class="c-button c-button--outline p-selection__more"><span>全ての商品を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="p-about" id="about" aria-labelledby="about-heading">
+            <div class="p-about__inner">
+                <picture class="p-about__image">
+                    <source media="(max-width: 768px)" srcset="assets/images/about.jpg">
+                    <img src="assets/images/about.jpg" alt="アコースティックギターのサウンドホール" loading="lazy">
+                </picture>
+                <div class="p-about__body">
+                    <div class="c-section-heading p-about__heading">
+                        <h2 class="c-section-heading__en" id="about-heading">ABOUT</h2>
+                        <p class="c-section-heading__ja">HODY GUITARについて</p>
+                    </div>
+                    <p>HODY（ホーディ）という名前は、<br class="u-pc-only">アコースティックギターの特徴的なパーツである『SOUND HOLE』と、長く付き合える相棒を見つけてほしいという想いを込めた『BUDDY』を組み合わせて生まれました。</p>
+                    <p>ギターを始めたばかりの方も、長年弾き続けている方も。<br class="u-pc-only">どうぞお気軽に、あなたにぴったりの一本を探しに来てください。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-staff" id="staff" aria-labelledby="staff-heading">
+            <div class="p-staff__inner">
+                <div class="c-section-heading p-staff__heading">
+                    <h2 class="c-section-heading__en" id="staff-heading">STAFF</h2>
+                    <p class="c-section-heading__ja">スタッフ紹介</p>
+                </div>
+                <p class="p-staff__lead">私たちが、あなたのギター選びをお手伝いします。</p>
+                <div class="p-staff__grid">
+                    <article class="p-staff__person">
+                        <picture class="p-staff__portrait"><source media="(max-width: 768px)" srcset="assets/images/staff011.jpg"><img src="assets/images/staff011.jpg" alt="ストアマネージャー 飯塚 健" loading="lazy"></picture>
+                        <div class="p-staff__info"><span class="p-staff__role">STORE MANAGER</span><h3 class="p-staff__name">飯塚 健</h3><p class="p-staff__description">弾き語りとヴィンテージギターが好きです。音の違いをわかりやすくお伝えします。</p></div>
+                    </article>
+                    <article class="p-staff__person">
+                        <picture class="p-staff__portrait"><source media="(max-width: 768px)" srcset="assets/images/staff02.jpg"><img src="assets/images/staff02.jpg" alt="ギターアドバイザー 佐藤 芽衣" loading="lazy"></picture>
+                        <div class="p-staff__info"><span class="p-staff__role">GUITAR ADVISER</span><h3 class="p-staff__name">佐藤 芽衣</h3><p class="p-staff__description">小ぶりなギターやフィンガースタイルが得意です。音を出してみるところから一緒に始めましょう。</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-guide" id="guide" aria-labelledby="guide-heading">
+            <div class="p-guide__inner">
+                <div class="p-guide__content">
+                    <div class="c-section-heading p-guide__heading">
+                        <h2 class="c-section-heading__en" id="guide-heading">TEST-PLAYING GUIDE</h2>
+                        <p class="c-section-heading__ja">はじめての試奏ガイド</p>
+                    </div>
+                    <p class="p-guide__copy">試奏は、音を確かめるための時間です。スタッフがギターの持ち方から、音の違いまで、丁寧にご案内します。</p>
+                    <a href="#guide" class="c-button c-button--light p-guide__more"><span>はじめての試奏ガイドへ</span><span class="c-arrow" aria-hidden="true">→</span></a>
+                </div>
+                <picture class="p-guide__image"><source media="(max-width: 768px)" srcset="assets/images/guide.jpg"><img src="assets/images/guide.jpg" alt="店内に並ぶアコースティックギター" loading="lazy"></picture>
+            </div>
+        </section>
+
+        <section class="p-store" id="store" aria-labelledby="store-heading">
+            <div class="p-store__inner">
+                <div class="c-section-heading p-store__heading">
+                    <h2 class="c-section-heading__en" id="store-heading">STORE INFORMATION</h2>
+                    <p class="c-section-heading__ja">店舗情報</p>
+                </div>
+                <div class="p-store__detail">
+                    <picture class="p-store__map"><source media="(max-width: 768px)" srcset="assets/images/store-map-sp.png"><img src="assets/images/store-map-pc.png" alt="HODY GUITARの周辺地図" loading="lazy"></picture>
+                    <dl class="p-store__list">
+                        <div class="p-store__item"><dt>住所</dt><dd>東京都武蔵野市吉祥寺本町 1-XX-X</dd></div>
+                        <div class="p-store__item"><dt>営業時間</dt><dd>12:00〜19:00</dd></div>
+                        <div class="p-store__item"><dt>定休日</dt><dd>水曜日</dd></div>
+                        <div class="p-store__item"><dt>アクセス</dt><dd>JR吉祥寺駅 北口から徒歩6分</dd></div>
+                    </dl>
+                </div>
+                <button class="c-button c-button--outline p-store__reserve js-open-reservation" type="button"><span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span></button>
+            </div>
+        </section>
+
+        <section class="p-instagram" id="instagram" aria-labelledby="instagram-heading">
+            <div class="p-instagram__inner">
+                <div class="p-instagram__head">
+                    <div class="c-section-heading p-instagram__heading"><h2 class="c-section-heading__en" id="instagram-heading">Instagram</h2><p class="c-section-heading__ja">インスタグラム</p></div>
+                    <a class="c-button c-button--outline p-instagram__more p-instagram__more--pc" href="#instagram"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
+                </div>
+                <div class="p-instagram__photos">
+                    <picture><source media="(max-width: 768px)" srcset="assets/images/instagram01.jpg"><img src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 1" loading="lazy"></picture>
+                    <picture><source media="(max-width: 768px)" srcset="assets/images/instagram02.jpg"><img src="assets/images/instagram02.jpg" alt="アコースティックギターの写真 2" loading="lazy"></picture>
+                    <picture><source media="(max-width: 768px)" srcset="assets/images/instagram04.jpg"><img src="assets/images/instagram04.jpg" alt="アコースティックギターの写真 3" loading="lazy"></picture>
+                    <picture><source media="(max-width: 768px)" srcset="assets/images/instagram03.jpg"><img src="assets/images/instagram03.jpg" alt="アコースティックギターの写真 4" loading="lazy"></picture>
+                    <picture class="p-instagram__photo-extra"><img src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 5" loading="lazy"></picture>
+                    <picture class="p-instagram__photo-extra"><img src="assets/images/instagram02.jpg" alt="アコースティックギターの写真 6" loading="lazy"></picture>
+                </div>
+                <a class="c-button c-button--outline p-instagram__more p-instagram__more--sp" href="#instagram"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="l-footer">
+        <picture class="l-footer__visual"><source media="(max-width: 768px)" srcset="assets/images/footer_shop-sp.jpg"><img src="assets/images/footer_shop-pc.jpg" alt="HODY GUITARの店舗外観" loading="lazy"></picture>
+        <div class="l-footer__bottom">
+            <div class="l-footer__inner">
+                <div class="l-footer__top">
+                    <a class="l-footer__brand" href="#top" aria-label="HODY GUITAR トップへ"><img src="assets/icons/logo-white.svg" width="257" height="132" alt="HODY GUITAR"></a>
+                    <nav class="l-footer__nav" aria-label="フッターナビゲーション"><ul><li><a href="#top">トップ</a></li><li><a href="#selection">取り扱い商品一覧</a></li><li><a href="#guide">はじめての試奏ガイド</a></li><li><a href="#store">店舗情報</a></li></ul></nav>
+                </div>
+                <address class="l-footer__address">東京都武蔵野市吉祥寺本町 1-XX-X<br>12:00〜19:00 / 水曜定休</address>
+                <small class="l-footer__copyright">© HODY GUITAR</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SP版のフルスクリーンメニュー -->
+    <div class="p-mobile-menu js-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="サイトメニュー" aria-hidden="true" inert>
+        <div class="p-mobile-menu__head">
+            <img src="assets/icons/logo-charcoal.svg" alt="HODY GUITAR" width="117" height="60">
+            <button class="p-mobile-menu__close js-menu-close" type="button" aria-label="メニューを閉じる"><span></span><span></span></button>
+        </div>
+        <nav class="p-mobile-menu__nav" aria-label="スマートフォンメニュー">
+            <ul><li><a href="#top">トップ</a></li><li><a href="#selection">取り扱い商品一覧</a></li><li><a href="#guide">はじめての試奏ガイド</a></li><li><a href="#store">店舗情報</a></li></ul>
+        </nav>
+        <button class="c-button c-button--outline p-mobile-menu__reserve js-open-reservation" type="button"><span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span></button>
+    </div>
+
+    <!-- 試奏予約ダイアログ。PC: 中央モーダル / SP: 右からスライド -->
+    <div class="p-reservation js-reservation" aria-hidden="true" inert>
+        <div class="p-reservation__backdrop js-reservation-backdrop"></div>
+        <section class="p-reservation__panel" role="dialog" aria-modal="true" aria-labelledby="reservation-heading" tabindex="-1">
+            <button class="p-reservation__close js-close-reservation" type="button" aria-label="試奏予約を閉じる">×</button>
+            <p class="p-reservation__eyebrow">TRIAL RESERVATION</p>
+            <h2 id="reservation-heading" class="p-reservation__title">試奏予約</h2>
+            <p class="p-reservation__lead">わかる範囲でご入力ください。気になる商品が決まっていなくても予約できます。</p>
+            <form class="p-reservation__form js-reservation-form" novalidate>
+                <div class="p-reservation__field p-reservation__field--product">
+                    <label class="p-reservation__label" for="reserve-product">気になる商品 <span class="p-reservation__required">必須</span></label>
+                    <select id="reserve-product" class="p-reservation__control p-reservation__select" name="product" required>
+                        <option value="未定・相談して決めたい">未定・相談して決めたい</option>
+                        <option value="Gibson J-45">Gibson J-45</option>
+                        <option value="Martin D-28">Martin D-28</option>
+                        <option value="Taylor 114ce">Taylor 114ce</option>
+                    </select>
+                </div>
+                <div class="p-reservation__field p-reservation__field--date">
+                    <label class="p-reservation__label" for="reserve-date">希望日時 <span class="p-reservation__required">必須</span></label>
+                    <input id="reserve-date" class="p-reservation__control" type="datetime-local" name="date" required>
+                </div>
+                <div class="p-reservation__field p-reservation__field--message">
+                    <label class="p-reservation__label" for="reserve-message">相談内容</label>
+                    <textarea id="reserve-message" class="p-reservation__control p-reservation__textarea" name="message" placeholder="試してみたいモデルや、気になっていることがあれば、こちらにご記入ください。"></textarea>
+                </div>
+                <div class="p-reservation__field p-reservation__field--name">
+                    <label class="p-reservation__label" for="reserve-name">お名前 <span class="p-reservation__required">必須</span></label>
+                    <input id="reserve-name" class="p-reservation__control" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="p-reservation__field p-reservation__field--email">
+                    <label class="p-reservation__label" for="reserve-email">メールアドレス <span class="p-reservation__required">必須</span></label>
+                    <input id="reserve-email" class="p-reservation__control" type="email" name="email" autocomplete="email" required>
+                </div>
+                <button class="p-reservation__submit" type="submit"><span>送信前に内容を確認する</span><span aria-hidden="true">→</span></button>
+            </form>
+            <p class="p-reservation__note">在庫確認後、店舗からメールが届きます。お急ぎの場合はお電話ください。</p>
+        </section>
+    </div>
+</body>
+</html>

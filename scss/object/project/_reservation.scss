@@ -1,0 +1,279 @@
+.p-reservation  {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.p-reservation.is-open  {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.p-reservation__backdrop  {
+    position: absolute;
+    inset: 0;
+    background: rgb(20 20 20 / 55%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.p-reservation.is-open .p-reservation__backdrop  {
+    opacity: 1;
+}
+
+.p-reservation__panel  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(840px, calc(100% - 48px));
+    max-height: min(980px, calc(100dvh - 48px));
+    overflow-y: auto;
+    padding: 38px 20px 24px;
+    background: var(--color-sand);
+    transform: translate(-50%, -45%) scale(.98);
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+    outline: none;
+}
+
+.p-reservation.is-open .p-reservation__panel  {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.p-reservation__close  {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 20px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-muted);
+    color: var(--color-sand);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.p-reservation__eyebrow  {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.p-reservation__title  {
+    padding-top: 24px;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.p-reservation__lead  {
+    padding-top: 35px;
+    font-size: 1.4rem;
+    line-height: 23.8px;
+}
+
+.p-reservation__form  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.p-reservation__field  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    width: 100%;
+}
+
+.p-reservation__label  {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.p-reservation__required  {
+    display: block;
+    width: 36px;
+    height: 18px;
+    padding: 4px 8px;
+    background: var(--color-required);
+    border-radius: 4px;
+    color: var(--color-sand);
+    font-size: 1rem;
+    line-height: 10px;
+    text-align: center;
+}
+
+.p-reservation__control  {
+    display: block;
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    border: 1px solid var(--color-muted);
+    border-radius: 0;
+    padding: 12px 17px;
+    background: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-size: 1.2rem;
+    line-height: 1.45;
+}
+
+.p-reservation__control:focus  {
+    outline-offset: 0;
+}
+
+.p-reservation__select  {
+    max-width: 343px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('../assets/icons/chevron.svg');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 10px 6px;
+}
+
+.p-reservation__field--date .p-reservation__control  {
+    max-width: 342px;
+}
+
+.p-reservation__textarea  {
+    height: 110px;
+    min-height: 110px;
+    padding: 12px;
+    resize: vertical;
+    font-size: 1.4rem;
+    line-height: 23.8px;
+}
+
+.p-reservation__control::placeholder  {
+    color: #aeaeae;
+    opacity: 1;
+}
+
+.p-reservation__field--name .p-reservation__control  {
+    max-width: 339px;
+}
+
+.p-reservation__field--email .p-reservation__control  {
+    max-width: 443px;
+}
+
+.p-reservation__submit  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 236px;
+    min-height: 54px;
+    margin: 0 auto;
+    padding: 0 24px;
+    border: 1px solid var(--color-blue);
+    border-radius: 100px;
+    background: var(--color-blue);
+    color: var(--color-sand);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 14px;
+    white-space: nowrap;
+}
+
+.p-reservation__submit span:last-child  {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.p-reservation__note  {
+    padding-top: 18px;
+    font-size: 1.2rem;
+    line-height: 19.2px;
+}
+
+@media (max-width: 768px)  {
+    .p-reservation__backdrop  {
+        display: none;
+    }
+
+    .p-reservation__panel  {
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: none;
+        height: 100dvh;
+        padding: 38px 20px 24px;
+        transform: translateX(100%);
+        opacity: 1;
+        transition: transform .36s ease;
+    }
+
+    .p-reservation.is-open .p-reservation__panel  {
+        transform: translateX(0);
+    }
+
+    .p-reservation__close  {
+        right: 20px;
+    }
+
+    .p-reservation__title  {
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    .p-reservation__lead  {
+        padding-top: 38px;
+    }
+
+    .p-reservation__form  {
+        gap: 20px;
+    }
+
+    .p-reservation__field--product .p-reservation__control, .p-reservation__field--date .p-reservation__control, .p-reservation__field--name .p-reservation__control, .p-reservation__field--email .p-reservation__control  {
+        max-width: 100%;
+    }
+
+    .p-reservation__submit  {
+        width: 100%;
+        min-height: 54px;
+        padding: 0 18px;
+        font-size: 1.6rem;
+        line-height: 16px;
+    }
+
+    .p-reservation__note  {
+        padding-top: 18px;
+    }
+
+}
+
+/* Figmaの日時フィールドは未入力時に空欄。入力操作は残したまま日付書式を非表示にする。 */
+.p-reservation__field--date input:invalid::-webkit-datetime-edit  {
+    color: transparent;
+}
+
+.p-reservation__field--date input::-webkit-calendar-picker-indicator  {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.p-reservation__submit span:last-child  {
+    display: block;
+    width: 17px;
+    height: 8px;
+    color: transparent;
+    font-size: 0;
+    background: url('../assets/icons/arrow-light.svg') center / 17px 8px no-repeat;
+}

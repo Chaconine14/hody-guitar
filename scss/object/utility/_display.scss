@@ -1,0 +1,10 @@
+.u-pc-only  {
+    display: initial;
+}
+
+@media (max-width: 768px)  {
+    .u-pc-only  {
+        display: none;
+    }
+
+}

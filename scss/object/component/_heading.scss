@@ -1,0 +1,31 @@
+.c-section-heading  {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1.45;
+}
+
+.c-section-heading__en  {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.c-section-heading__ja  {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+@media (max-width: 768px)  {
+    .c-section-heading__en  {
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+
+    .c-section-heading__ja  {
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+}

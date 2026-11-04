@@ -1,0 +1,13 @@
+{
+  "name": "hody-guitar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HODY GUITAR | FLOCSS-based static website, TOP page",
+  "scripts": {
+    "build": "sass scss/style.scss css/style.css --no-source-map",
+    "watch": "sass scss/style.scss css/style.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}

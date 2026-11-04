@@ -1,0 +1,182 @@
+.p-finder  {
+    height: 676px;
+    position: relative;
+    padding: 60px 40px;
+    background: var(--color-surface);
+}
+
+.p-finder__inner  {
+    position: relative;
+    max-width: 1100px;
+    height: 556px;
+    margin: 0 auto;
+    border: 1px solid var(--color-blue);
+    background: var(--color-ivory);
+}
+
+.p-finder__content  {
+    position: absolute;
+    z-index: 1;
+    left: 79px;
+    top: 88px;
+    width: 470px;
+}
+
+.p-finder__heading .c-section-heading__en  {
+    font-size: 4rem;
+    line-height: 1.6;
+}
+
+.p-finder__copy  {
+    margin-top: 72px;
+    width: 403px;
+    font-size: 1.6rem;
+    line-height: 27.2px;
+}
+
+.p-finder__content .c-button  {
+    margin-top: 70px;
+}
+
+.p-finder__illustration  {
+    position: absolute;
+    right: 164px;
+    top: 47px;
+    width: 290px;
+    height: 436px;
+}
+
+.p-finder__illustration img  {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.p-finder__reservation  {
+    position: absolute;
+    z-index: 2;
+    top: 182px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 161px;
+    height: 104px;
+    padding: 12px 20px;
+    background: var(--color-blue);
+    border: 0;
+    border-top: 1px solid var(--color-sand);
+    border-radius: 16px 0 0 16px;
+    color: var(--color-sand);
+}
+
+.p-finder__reservation img  {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 52px;
+    height: 52px;
+}
+
+.p-finder__reservation-text  {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-finder__reservation-text small  {
+    display: none;
+}
+
+.p-finder__reservation-text strong  {
+    font-size: 1.4rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.p-finder__reservation-arrow  {
+    font-size: 1.8rem;
+    margin-left: 8px;
+}
+
+@media (max-width: 768px)  {
+    .p-finder  {
+        height: 619px;
+        padding: 20px 16px 23px;
+    }
+
+    .p-finder__inner  {
+        height: 576px;
+    }
+
+    .p-finder__content  {
+        left: 19px;
+        top: 39px;
+        width: calc(100% - 38px);
+    }
+
+    .p-finder__heading .c-section-heading__en  {
+        font-size: 2.8rem;
+        line-height: 28px;
+    }
+
+    .p-finder__heading  {
+        gap: 4px;
+    }
+
+    .p-finder__copy  {
+        width: 100%;
+        margin-top: 280px;
+        font-size: 1.6rem;
+        line-height: 27.2px;
+    }
+
+    .p-finder__content .c-button  {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .p-finder__illustration  {
+        top: 122px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 135px;
+        height: 202px;
+    }
+
+    .p-finder__reservation  {
+        top: 234px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 68px;
+        padding: 0 20px;
+        border-radius: 0;
+    }
+
+    .p-finder__reservation img  {
+        position: static;
+        flex: 0 0 auto;
+        width: 32px;
+        height: 32px;
+    }
+
+    .p-finder__reservation-text  {
+        align-self: center;
+        margin: 0 auto 0 8px;
+        gap: 4px;
+        text-align: left;
+    }
+
+    .p-finder__reservation-text small  {
+        display: block;
+        font-size: .8rem;
+        font-weight: 400;
+    }
+
+    .p-finder__reservation-arrow  {
+        margin-left: auto;
+    }
+
+}
