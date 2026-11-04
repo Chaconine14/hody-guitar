@@ -28,3 +28,22 @@
 **今回提供されていない素材：** 店舗情報の地図（PC/SPの画像）。そのため `index.html` の地図部分のみ、既存の画像参照を残しています。
 
 **FVの挙動：** 画像は 01→02→03→04→01 の順に切り替わります。現在の切り替え間隔（6秒）は実装上の仮値です。
+
+## 試奏ガイド専用ページ
+
+`guide.html` は指定Figma `2114:5050` / `2114:5709` に対応します。TOP用の画像は置換していません。
+
+| ローカル素材 | Figma内の対応・表示 |
+| --- | --- |
+| `guide_step01.svg`〜`guide_step05.svg` | 指・記入・人物・音符・会話の順。提供済み素材を各50×50pxで使用 |
+| `guide/intro.png` | PC導入 `2114:5060` / SP導入 `2114:5716`。同じ4032×3024px写真、中央cover＋95%チャコール重ね色 |
+| `guide/shop-pc.png` | `2114:5194`。1672×941px原本、PC高さ506px・object-position 30.29% |
+| `guide/shop-sp.png` | `2114:5872`。1122×1402px原本、SPカンプの幅390px・高さ487pxを375px枠の左端で切り出す |
+| `guide/logo-charcoal.svg` / `logo-white.svg` | Figmaの濃色ヘッダー・明色フッターロゴ。フッターは原本を背景で257×132px／117×60px表示 |
+| `guide/connector-01.svg`〜`connector-03.svg` | PCの点線原本。2→3と4→5はFigma上でも同一ベクター |
+| `guide/step-arrow.svg` / `step-arrow-narrow.svg` | SPステップ間の下向き矢印原本。04の直前のみ幅47px |
+| `guide/guitar-blue.svg` / `guitar-ivory.svg` | 下部予約ボタン／SP固定バーの32×32pxギター |
+| `guide/arrow-header.svg` / `arrow-blue.svg` / `arrow-ivory.svg` | ヘッダー／下部予約／固定バーの矢印原本 |
+| `guide/menu.svg` / `footer-line.svg` | SPヘッダーの二本線／フッター罫線の原本 |
+
+提供済みステップ素材はFigmaと照合済み。01・02・03・05は描画属性が一致、04は書き出し座標の小数丸め差のみです。既存写真は同じ被写体でも画角・比率が異なるため、ガイドではFigmaから取得した上記原本を使用しています。仮のFigma画像URLは実装に残していません。

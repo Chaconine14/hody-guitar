@@ -1,0 +1,173 @@
+{
+    "viewports": {
+        "1440": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 310
+                },
+                "flow": {
+                    "y": 403,
+                    "height": 1515
+                },
+                "faq": {
+                    "y": 1918,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 2910,
+                    "height": 335
+                }
+            },
+            "js_errors": []
+        },
+        "375": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 270.015625
+                },
+                "flow": {
+                    "y": 351.015625,
+                    "height": 1411.921875
+                },
+                "faq": {
+                    "y": 1762.9375,
+                    "height": 897.921875
+                },
+                "invite": {
+                    "y": 2660.859375,
+                    "height": 415
+                }
+            },
+            "js_errors": []
+        },
+        "320": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 297.21875
+                },
+                "flow": {
+                    "y": 378.21875,
+                    "height": 1527.65625
+                },
+                "faq": {
+                    "y": 1905.875,
+                    "height": 921.71875
+                },
+                "invite": {
+                    "y": 2827.59375,
+                    "height": 448.390625
+                }
+            },
+            "js_errors": []
+        },
+        "768": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 81,
+                    "height": 215.609375
+                },
+                "flow": {
+                    "y": 296.609375,
+                    "height": 1364.328125
+                },
+                "faq": {
+                    "y": 1660.9375,
+                    "height": 826.53125
+                },
+                "invite": {
+                    "y": 2487.46875,
+                    "height": 415
+                }
+            },
+            "js_errors": []
+        },
+        "769": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 337.09375
+                },
+                "flow": {
+                    "y": 430.09375,
+                    "height": 1803.796875
+                },
+                "faq": {
+                    "y": 2233.890625,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 3225.890625,
+                    "height": 393.3125
+                }
+            },
+            "js_errors": []
+        },
+        "1024": {
+            "passed": true,
+            "geometry": {
+                "intro": {
+                    "y": 93,
+                    "height": 310
+                },
+                "flow": {
+                    "y": 403,
+                    "height": 1515
+                },
+                "faq": {
+                    "y": 1918,
+                    "height": 992
+                },
+                "invite": {
+                    "y": 2910,
+                    "height": 335
+                }
+            },
+            "js_errors": []
+        }
+    },
+    "regression": {
+        "1440": {
+            "top_mean_channel_error_0_to_255": 0.008619982868330886,
+            "top_threshold": 0.1,
+            "reservation_panels_pixel_identical": true,
+            "reservation_mean_channel_error_0_to_255": 0.0,
+            "guide_panel_mean_channel_error_0_to_255": 0.0,
+            "guide_panel_threshold": 0.1,
+            "reservation_title_fonts": [
+                {
+                    "familyName": "Hiragino Kaku Gothic ProN",
+                    "postScriptName": "HiraKakuProN-W6",
+                    "isCustomFont": false,
+                    "glyphCount": 4
+                }
+            ],
+            "guide_panel_matches_top_within_threshold": true
+        },
+        "375": {
+            "top_mean_channel_error_0_to_255": 0.0,
+            "top_threshold": 0.1,
+            "reservation_panels_pixel_identical": true,
+            "reservation_mean_channel_error_0_to_255": 0.0,
+            "guide_panel_mean_channel_error_0_to_255": 0.00016420361247947455,
+            "guide_panel_threshold": 0.1,
+            "reservation_title_fonts": [
+                {
+                    "familyName": "Hiragino Kaku Gothic ProN",
+                    "postScriptName": "HiraKakuProN-W3",
+                    "isCustomFont": false,
+                    "glyphCount": 4
+                }
+            ],
+            "guide_panel_matches_top_within_threshold": true
+        }
+    },
+    "slider": "Passed: first-to-second automatic transition; one active slide and bar."
+}
