@@ -19,7 +19,7 @@
     <script type="module" src="js/finder.js"></script>
 </head>
 
-<body>
+<body class="p-top">
     <header class="l-header" id="top">
         <div class="l-header__inner">
             <a href="#top" class="l-header__brand" aria-label="HODY GUITAR トップページ">
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-        <section class="p-hero" aria-labelledby="hero-heading">
+        <section class="p-hero js-reservation-hero" aria-labelledby="hero-heading">
             <div class="p-hero__visual" aria-hidden="true">
                 <div class="p-hero__slide is-active"><img src="assets/images/top_slider01.jpg" alt=""
                         fetchpriority="high"></div>
@@ -83,7 +83,8 @@
                     </picture>
                 </div>
             </div>
-            <button class="p-finder__reservation js-open-reservation" type="button" aria-label="試奏予約をする">
+            <button class="p-finder__reservation js-fixed-reservation js-open-reservation" type="button"
+                aria-label="試奏予約をする" inert>
                 <picture>
                     <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
                         src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">
@@ -219,10 +220,11 @@
                     <p class="c-section-heading__ja">店舗情報</p>
                 </div>
                 <div class="p-store__detail">
-                    <picture class="p-store__map">
-                        <source media="(max-width: 768px)" srcset="assets/images/store-map-sp.png"><img
-                            src="assets/images/store-map-pc.png" alt="HODY GUITARの周辺地図" loading="lazy">
-                    </picture>
+                    <div class="p-store__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5522917886615!2d139.6982949757871!3d35.66340067259254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b561c2f3c71%3A0x454a36f96e6381d4!2z5p2x5Lqs44OH44K244Kk44Oz44OX44Os44OD44Kv44K556CU56m25omA!5e0!3m2!1sja!2sjp!4v1793873375906!5m2!1sja!2sjp"
+                            title="HODY GUITARの周辺地図" allowfullscreen loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                     <dl class="p-store__list">
                         <div class="p-store__item">
                             <dt>住所</dt>
@@ -255,37 +257,49 @@
                         <p class="c-section-heading__ja">インスタグラム</p>
                     </div>
                     <a class="c-button c-button--outline p-instagram__more p-instagram__more--pc"
-                        href="#instagram"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
+                        href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
                 </div>
                 <div class="p-instagram__photos">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/images/instagram01.jpg"><img
-                            src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 1" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/images/instagram02.jpg"><img
-                            src="assets/images/instagram02.jpg" alt="アコースティックギターの写真 2" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/images/instagram04.jpg"><img
-                            src="assets/images/instagram04.jpg" alt="アコースティックギターの写真 3" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="assets/images/instagram03.jpg"><img
-                            src="assets/images/instagram03.jpg" alt="アコースティックギターの写真 4" loading="lazy">
-                    </picture>
-                    <picture class="p-instagram__photo-extra"><img src="assets/images/instagram01.jpg"
-                            alt="アコースティックギターの写真 5" loading="lazy"></picture>
-                    <picture class="p-instagram__photo-extra"><img src="assets/images/instagram02.jpg"
-                            alt="アコースティックギターの写真 6" loading="lazy"></picture>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/images/instagram01.jpg"><img
+                                src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 1" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/images/instagram02.jpg"><img
+                                src="assets/images/instagram02.jpg" alt="アコースティックギターの写真 2" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/images/instagram04.jpg"><img
+                                src="assets/images/instagram04.jpg" alt="アコースティックギターの写真 3" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/images/instagram03.jpg"><img
+                                src="assets/images/instagram03.jpg" alt="アコースティックギターの写真 4" loading="lazy">
+                        </picture>
+                    </a>
+                    <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture><img src="assets/images/instagram01.jpg"
+                                alt="アコースティックギターの写真 5" loading="lazy"></picture>
+                    </a>
+                    <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <picture><img src="assets/images/instagram02.jpg"
+                                alt="アコースティックギターの写真 6" loading="lazy"></picture>
+                    </a>
                 </div>
                 <a class="c-button c-button--outline p-instagram__more p-instagram__more--sp"
-                    href="#instagram"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
+                    href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span>すべての投稿を見る</span><span class="c-arrow" aria-hidden="true">→</span></a>
             </div>
         </section>
     </main>
 
-    <footer class="l-footer">
+    <footer class="l-footer js-reservation-footer">
         <picture class="l-footer__visual">
             <source media="(max-width: 768px)" srcset="assets/images/footer_shop-sp.jpg"><img
                 src="assets/images/footer_shop-pc.jpg" alt="HODY GUITARの店舗外観" loading="lazy">

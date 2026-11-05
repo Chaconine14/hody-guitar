@@ -1,6 +1,41 @@
 (() => {
     'use strict';
 
+    const hero = document.querySelector('.js-reservation-hero');
+    const fixedReservation = document.querySelector('.js-fixed-reservation');
+    const footer = document.querySelector('.js-reservation-footer');
+    if (hero && fixedReservation && footer) {
+        const mobileViewport = window.matchMedia('(max-width: 768px)');
+        let updatePending = false;
+
+        function updateFixedReservation() {
+            const passedHero = hero.getBoundingClientRect().bottom <= window.innerHeight * 0.5;
+            const reachedFooter = mobileViewport.matches && footer.getBoundingClientRect().top < window.innerHeight;
+            const isVisible = passedHero && !reachedFooter;
+            fixedReservation.classList.toggle('is-visible', isVisible);
+            fixedReservation.inert = !isVisible;
+            updatePending = false;
+        }
+
+        function requestFixedReservationUpdate() {
+            if (updatePending) return;
+            updatePending = true;
+            window.requestAnimationFrame(updateFixedReservation);
+        }
+
+        window.addEventListener('scroll', requestFixedReservationUpdate, { passive: true });
+        window.addEventListener('resize', requestFixedReservationUpdate);
+        window.addEventListener('load', requestFixedReservationUpdate);
+        window.addEventListener('pageshow', requestFixedReservationUpdate);
+        mobileViewport.addEventListener('change', requestFixedReservationUpdate);
+        // 100vhや画像読み込みによるFV・本文の実寸変更後にも判定する。
+        const resizeObserver = new ResizeObserver(requestFixedReservationUpdate);
+        resizeObserver.observe(hero);
+        resizeObserver.observe(footer);
+        resizeObserver.observe(document.querySelector('main'));
+        updateFixedReservation();
+    }
+
     const dialog = document.querySelector('.js-reservation');
     const panel = dialog?.querySelector('.p-reservation__panel');
     const closeButton = dialog?.querySelector('.js-close-reservation');

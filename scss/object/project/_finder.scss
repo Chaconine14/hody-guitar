@@ -105,6 +105,23 @@
     border-radius: 16px 0 0 16px;
     background: var(--color-blue);
     color: var(--color-sand);
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 400ms ease-out, visibility 0s linear 400ms;
+}
+
+.p-finder__reservation.is-visible {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .p-finder__reservation {
+        transition: none !important;
+    }
 }
 
 .p-finder__reservation picture {
@@ -476,12 +493,18 @@
     }
 
     .p-finder__reservation {
-        top: 234px;
+        top: auto;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 68px;
         padding: 0 20px;
         border-radius: 0;
+        transform: translateY(100%);
+    }
+
+    .p-finder__reservation.is-visible {
+        transform: translateY(0);
     }
 
     .p-finder__reservation picture {

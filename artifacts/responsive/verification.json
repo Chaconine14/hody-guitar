@@ -1,0 +1,1231 @@
+{
+  "widths": {
+    "375": {
+      "viewportHeight": 650,
+      "sections": [
+        {
+          "name": "p-hero",
+          "top": 0,
+          "width": 375,
+          "height": 650,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-finder",
+          "top": 650,
+          "width": 375,
+          "height": 619,
+          "padding": "20px 16px 23px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-selection",
+          "top": 1269,
+          "width": 375,
+          "height": 893,
+          "padding": "60px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-about",
+          "top": 2162,
+          "width": 375,
+          "height": 949.03125,
+          "padding": "20px 16px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-staff",
+          "top": 3111.03125,
+          "width": 375,
+          "height": 649,
+          "padding": "0px 0px 68px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-guide",
+          "top": 3760.03125,
+          "width": 375,
+          "height": 336,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-store",
+          "top": 4096.03125,
+          "width": 375,
+          "height": 881.75,
+          "padding": "100px 0px 60px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-instagram",
+          "top": 4977.78125,
+          "width": 375,
+          "height": 338,
+          "padding": "36px 0px 0px",
+          "margin": "0px 0px 60px"
+        },
+        {
+          "name": "l-footer",
+          "top": 5375.78125,
+          "width": 375,
+          "height": 906.625,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "details": {
+        ".p-selection__card": [
+          {
+            "x": 13,
+            "y": 1414,
+            "width": 162,
+            "height": 258,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 200,
+            "y": 1414,
+            "width": 162,
+            "height": 258,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 13,
+            "y": 1716,
+            "width": 162,
+            "height": 258,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 200,
+            "y": 1716,
+            "width": 162,
+            "height": 258,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-selection__photo": [
+          {
+            "x": 13,
+            "y": 1414,
+            "width": 162,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 200,
+            "y": 1414,
+            "width": 162,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 13,
+            "y": 1716,
+            "width": 162,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 200,
+            "y": 1716,
+            "width": 162,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__person": [
+          {
+            "x": 16,
+            "y": 3237.03125,
+            "width": 343,
+            "height": 215.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 3476.53125,
+            "width": 343,
+            "height": 215.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait": [
+          {
+            "x": 16,
+            "y": 3238.03125,
+            "width": 171.5,
+            "height": 214.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 3477.53125,
+            "width": 171.5,
+            "height": 214.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait img": [
+          {
+            "x": 16,
+            "y": 3238.03125,
+            "width": 171.5,
+            "height": 214.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          },
+          {
+            "x": 16,
+            "y": 3477.53125,
+            "width": 171.5,
+            "height": 214.5,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          }
+        ],
+        ".p-store__map": [
+          {
+            "x": 16,
+            "y": 4282.03125,
+            "width": 343,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-store__list": [
+          {
+            "x": 16,
+            "y": 4508.03125,
+            "width": 343,
+            "height": 313.75,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__copyright": [
+          {
+            "x": 147.5078125,
+            "y": 6242.78125,
+            "width": 79.984375,
+            "height": 17,
+            "font": "12px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__address": [
+          {
+            "x": 16,
+            "y": 6172.921875,
+            "width": 343,
+            "height": 40.78125,
+            "font": "12px / 20.4px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ]
+      },
+      "overflow": false,
+      "cta": "passed",
+      "finder_modal": "passed",
+      "links_map_geometry": "passed"
+    },
+    "390": {
+      "viewportHeight": 844,
+      "sections": [
+        {
+          "name": "p-hero",
+          "top": 0,
+          "width": 390,
+          "height": 844,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-finder",
+          "top": 844,
+          "width": 390,
+          "height": 619,
+          "padding": "20px 16px 23px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-selection",
+          "top": 1463,
+          "width": 390,
+          "height": 911.6875,
+          "padding": "60px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-about",
+          "top": 2374.6875,
+          "width": 390,
+          "height": 949.03125,
+          "padding": "20px 16px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-staff",
+          "top": 3323.71875,
+          "width": 390,
+          "height": 667.75,
+          "padding": "0px 0px 68px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-guide",
+          "top": 3991.46875,
+          "width": 390,
+          "height": 336,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-store",
+          "top": 4327.46875,
+          "width": 390,
+          "height": 881.75,
+          "padding": "100px 0px 60px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-instagram",
+          "top": 5209.21875,
+          "width": 390,
+          "height": 338,
+          "padding": "36px 0px 0px",
+          "margin": "0px 0px 60px"
+        },
+        {
+          "name": "l-footer",
+          "top": 5607.21875,
+          "width": 390,
+          "height": 906.625,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "details": {
+        ".p-selection__card": [
+          {
+            "x": 13,
+            "y": 1608,
+            "width": 169.5,
+            "height": 267.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 207.5,
+            "y": 1608,
+            "width": 169.5,
+            "height": 267.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 13,
+            "y": 1919.34375,
+            "width": 169.5,
+            "height": 267.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 207.5,
+            "y": 1919.34375,
+            "width": 169.5,
+            "height": 267.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-selection__photo": [
+          {
+            "x": 13,
+            "y": 1608,
+            "width": 169.5,
+            "height": 211.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 207.5,
+            "y": 1608,
+            "width": 169.5,
+            "height": 211.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 13,
+            "y": 1919.34375,
+            "width": 169.5,
+            "height": 211.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 207.5,
+            "y": 1919.34375,
+            "width": 169.5,
+            "height": 211.34375,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__person": [
+          {
+            "x": 16,
+            "y": 3449.71875,
+            "width": 358,
+            "height": 224.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 3698.59375,
+            "width": 358,
+            "height": 224.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait": [
+          {
+            "x": 16,
+            "y": 3450.71875,
+            "width": 179,
+            "height": 223.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 3699.59375,
+            "width": 179,
+            "height": 223.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait img": [
+          {
+            "x": 16,
+            "y": 3450.71875,
+            "width": 179,
+            "height": 223.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          },
+          {
+            "x": 16,
+            "y": 3699.59375,
+            "width": 179,
+            "height": 223.875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          }
+        ],
+        ".p-store__map": [
+          {
+            "x": 16,
+            "y": 4513.46875,
+            "width": 358,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-store__list": [
+          {
+            "x": 16,
+            "y": 4739.46875,
+            "width": 358,
+            "height": 313.75,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__copyright": [
+          {
+            "x": 155.0078125,
+            "y": 6474.21875,
+            "width": 79.984375,
+            "height": 17,
+            "font": "12px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__address": [
+          {
+            "x": 16,
+            "y": 6404.359375,
+            "width": 358,
+            "height": 40.78125,
+            "font": "12px / 20.4px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ]
+      },
+      "overflow": false,
+      "cta": "passed",
+      "finder_modal": "passed",
+      "links_map_geometry": "passed"
+    },
+    "768": {
+      "viewportHeight": 1024,
+      "sections": [
+        {
+          "name": "p-hero",
+          "top": 0,
+          "width": 768,
+          "height": 1024,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-finder",
+          "top": 1024,
+          "width": 768,
+          "height": 619,
+          "padding": "20px 16px 23px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-selection",
+          "top": 1643,
+          "width": 768,
+          "height": 1173.53125,
+          "padding": "60px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-about",
+          "top": 2816.53125,
+          "width": 768,
+          "height": 813.015625,
+          "padding": "20px 16px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-staff",
+          "top": 3629.546875,
+          "width": 768,
+          "height": 845.34375,
+          "padding": "0px 0px 68px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-guide",
+          "top": 4474.890625,
+          "width": 768,
+          "height": 336,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-store",
+          "top": 4810.890625,
+          "width": 768,
+          "height": 881.75,
+          "padding": "100px 0px 60px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-instagram",
+          "top": 5692.640625,
+          "width": 768,
+          "height": 338,
+          "padding": "36px 0px 0px",
+          "margin": "0px 0px 60px"
+        },
+        {
+          "name": "l-footer",
+          "top": 6090.640625,
+          "width": 768,
+          "height": 906.625,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "details": {
+        ".p-selection__card": [
+          {
+            "x": 97,
+            "y": 1788,
+            "width": 274.5,
+            "height": 398.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 396.5,
+            "y": 1788,
+            "width": 274.5,
+            "height": 398.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 97,
+            "y": 2230.265625,
+            "width": 274.5,
+            "height": 398.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 396.5,
+            "y": 2230.265625,
+            "width": 274.5,
+            "height": 398.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-selection__photo": [
+          {
+            "x": 97,
+            "y": 1788,
+            "width": 274.5,
+            "height": 342.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 396.5,
+            "y": 1788,
+            "width": 274.5,
+            "height": 342.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 97,
+            "y": 2230.265625,
+            "width": 274.5,
+            "height": 342.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 396.5,
+            "y": 2230.265625,
+            "width": 274.5,
+            "height": 342.265625,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__person": [
+          {
+            "x": 16,
+            "y": 3755.546875,
+            "width": 736,
+            "height": 313.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 4093.21875,
+            "width": 736,
+            "height": 313.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait": [
+          {
+            "x": 16,
+            "y": 3756.546875,
+            "width": 250,
+            "height": 312.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 16,
+            "y": 4094.21875,
+            "width": 250,
+            "height": 312.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait img": [
+          {
+            "x": 16,
+            "y": 3756.546875,
+            "width": 250,
+            "height": 312.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          },
+          {
+            "x": 16,
+            "y": 4094.21875,
+            "width": 250,
+            "height": 312.671875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          }
+        ],
+        ".p-store__map": [
+          {
+            "x": 16,
+            "y": 4996.890625,
+            "width": 736,
+            "height": 202,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-store__list": [
+          {
+            "x": 16,
+            "y": 5222.890625,
+            "width": 736,
+            "height": 313.75,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__copyright": [
+          {
+            "x": 344.0078125,
+            "y": 6957.640625,
+            "width": 79.984375,
+            "height": 17,
+            "font": "12px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__address": [
+          {
+            "x": 16,
+            "y": 6887.78125,
+            "width": 736,
+            "height": 40.78125,
+            "font": "12px / 20.4px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ]
+      },
+      "overflow": false,
+      "cta": "passed",
+      "finder_modal": "passed",
+      "links_map_geometry": "passed"
+    },
+    "1024": {
+      "viewportHeight": 768,
+      "sections": [
+        {
+          "name": "p-hero",
+          "top": 0,
+          "width": 1024,
+          "height": 768,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-finder",
+          "top": 768,
+          "width": 1024,
+          "height": 676,
+          "padding": "60px 40px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-selection",
+          "top": 1444,
+          "width": 1024,
+          "height": 951,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-about",
+          "top": 2395,
+          "width": 1024,
+          "height": 830,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-staff",
+          "top": 3225,
+          "width": 1024,
+          "height": 765,
+          "padding": "80px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-guide",
+          "top": 3990,
+          "width": 1024,
+          "height": 475,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-store",
+          "top": 4465,
+          "width": 1024,
+          "height": 720,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-instagram",
+          "top": 5185,
+          "width": 1024,
+          "height": 549.9375,
+          "padding": "80px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "l-footer",
+          "top": 5734.9375,
+          "width": 1024,
+          "height": 1053,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "details": {
+        ".p-selection__card": [
+          {
+            "x": 46,
+            "y": 1669.640625,
+            "width": 350,
+            "height": 606,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 421,
+            "y": 1669.640625,
+            "width": 350,
+            "height": 606,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-selection__photo": [
+          {
+            "x": 113,
+            "y": 1794,
+            "width": 216,
+            "height": 271,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 488,
+            "y": 1794,
+            "width": 216,
+            "height": 271,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__person": [
+          {
+            "x": 40,
+            "y": 3562.9375,
+            "width": 459,
+            "height": 270.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 525,
+            "y": 3562.9375,
+            "width": 459,
+            "height": 270.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait": [
+          {
+            "x": 40,
+            "y": 3563.9375,
+            "width": 215.71875,
+            "height": 269.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 525,
+            "y": 3563.9375,
+            "width": 215.71875,
+            "height": 269.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait img": [
+          {
+            "x": 40,
+            "y": 3563.9375,
+            "width": 215.71875,
+            "height": 269.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          },
+          {
+            "x": 525,
+            "y": 3563.9375,
+            "width": 215.71875,
+            "height": 269.796875,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          }
+        ],
+        ".p-store__map": [
+          {
+            "x": 40,
+            "y": 4659.234375,
+            "width": 472,
+            "height": 336,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-store__list": [
+          {
+            "x": 548,
+            "y": 4659.234375,
+            "width": 343,
+            "height": 356,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__copyright": [
+          {
+            "x": 904.015625,
+            "y": 6715.9375,
+            "width": 79.984375,
+            "height": 17,
+            "font": "12px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__address": [
+          {
+            "x": 40,
+            "y": 6563.9375,
+            "width": 944,
+            "height": 84,
+            "font": "14px / 42px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ]
+      },
+      "overflow": false,
+      "cta": "passed",
+      "finder_modal": "passed",
+      "links_map_geometry": "passed"
+    },
+    "1440": {
+      "viewportHeight": 790,
+      "sections": [
+        {
+          "name": "p-hero",
+          "top": 0,
+          "width": 1440,
+          "height": 790,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-finder",
+          "top": 790,
+          "width": 1440,
+          "height": 676,
+          "padding": "60px 40px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-selection",
+          "top": 1466,
+          "width": 1440,
+          "height": 951,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-about",
+          "top": 2417,
+          "width": 1440,
+          "height": 830,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-staff",
+          "top": 3247,
+          "width": 1440,
+          "height": 765,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-guide",
+          "top": 4012,
+          "width": 1440,
+          "height": 475,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-store",
+          "top": 4487,
+          "width": 1440,
+          "height": 720,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "name": "p-instagram",
+          "top": 5207,
+          "width": 1440,
+          "height": 549.9375,
+          "padding": "80px 0px",
+          "margin": "0px"
+        },
+        {
+          "name": "l-footer",
+          "top": 5756.9375,
+          "width": 1440,
+          "height": 1053,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "details": {
+        ".p-selection__card": [
+          {
+            "x": 443,
+            "y": 1638.5,
+            "width": 350,
+            "height": 606,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 818,
+            "y": 1638.5,
+            "width": 350,
+            "height": 606,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-selection__photo": [
+          {
+            "x": 510,
+            "y": 1762.859375,
+            "width": 216,
+            "height": 271,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 885,
+            "y": 1762.859375,
+            "width": 216,
+            "height": 271,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__person": [
+          {
+            "x": 170,
+            "y": 3547.828125,
+            "width": 537,
+            "height": 345,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 733,
+            "y": 3547.828125,
+            "width": 537,
+            "height": 345,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait": [
+          {
+            "x": 170,
+            "y": 3548.828125,
+            "width": 252.375,
+            "height": 344,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          },
+          {
+            "x": 733,
+            "y": 3548.828125,
+            "width": 252.375,
+            "height": 344,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-staff__portrait img": [
+          {
+            "x": 170,
+            "y": 3548.828125,
+            "width": 252.375,
+            "height": 344,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          },
+          {
+            "x": 733,
+            "y": 3548.828125,
+            "width": 252.375,
+            "height": 344,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "cover"
+          }
+        ],
+        ".p-store__map": [
+          {
+            "x": 170,
+            "y": 4681.234375,
+            "width": 515,
+            "height": 336,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".p-store__list": [
+          {
+            "x": 760,
+            "y": 4681.234375,
+            "width": 343,
+            "height": 356,
+            "font": "16px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__copyright": [
+          {
+            "x": 1190.015625,
+            "y": 6737.9375,
+            "width": 79.984375,
+            "height": 17,
+            "font": "12px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ],
+        ".l-footer__address": [
+          {
+            "x": 170,
+            "y": 6585.9375,
+            "width": 1100,
+            "height": 84,
+            "font": "14px / 42px \"Source Sans 3\", \"Noto Sans JP\", sans-serif",
+            "objectFit": "fill"
+          }
+        ]
+      },
+      "overflow": false,
+      "cta": "passed",
+      "finder_modal": "passed",
+      "links_map_geometry": "passed"
+    }
+  },
+  "external": {
+    "google_maps_embed_responses": [
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "font_responses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "google_maps_tiles_rendered": true,
+    "google_maps_ui_loaded": true
+  },
+  "pc_regression": {
+    "geometry_identical": true,
+    "mean_pixel_difference_excluding_map": 0.006416116005873715
+  },
+  "runtime_errors": [],
+  "passed": true,
+  "staff_final_typography": {
+    "375px_description_lines": [
+      5,
+      5
+    ],
+    "390px_description_lines": [
+      4,
+      5
+    ],
+    "768px_description_lines": [
+      2,
+      2
+    ],
+    "1024px_description_lines": [
+      3,
+      3
+    ],
+    "1440px_description_lines": [
+      3,
+      3
+    ],
+    "all_widths_no_overflow": true
+  }
+}

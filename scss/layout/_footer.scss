@@ -129,6 +129,33 @@
         font-size: 1.2rem;
     }
 
+    // TOPのSPカンプに合わせ、ロゴ上部と住所・著作権の領域を確保する。
+    .p-top .l-footer__bottom {
+        height: 419.633px;
+        padding: 40px 16px 20px;
+    }
+
+    .p-top .l-footer__brand {
+        height: 60px;
+    }
+
+    .p-top .l-footer__top {
+        gap: 45px;
+        padding-bottom: 44.156px;
+    }
+
+    .p-top .l-footer__nav ul {
+        line-height: 14px;
+    }
+
+    .p-top .l-footer__address {
+        margin-top: 16px;
+    }
+
+    .p-top .l-footer__copyright {
+        bottom: 2.633px;
+    }
+
 }
 
 /* 下層ページ共通。既存ガイドの数値を維持。 */

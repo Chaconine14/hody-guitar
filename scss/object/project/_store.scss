@@ -24,10 +24,11 @@
     height: 336px;
 }
 
-.p-store__map img  {
+.p-store__map iframe  {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border: 0;
 }
 
 .p-store__list  {
@@ -74,18 +75,19 @@
 @media (max-width: 768px)  {
     .p-store  {
         display: block;
-        height: 761px;
+        height: auto;
+        padding: 100px 0 60px;
     }
 
     .p-store__inner  {
         width: auto;
         margin: 0 16px;
-        padding-top: 40px;
+        padding-top: 0;
     }
 
     .p-store__detail  {
         display: block;
-        margin-top: 26px;
+        margin-top: 41px;
     }
 
     .p-store__map  {
@@ -96,15 +98,19 @@
 
     .p-store__list  {
         width: 100%;
-        margin-top: 48px;
+        margin-top: 24px;
     }
 
     .p-store__item  {
         padding: 16px 0;
     }
 
+    .p-store__item dd {
+        line-height: 1.2;
+    }
+
     .p-store__reserve  {
-        margin-top: 24px;
+        margin-top: 40px;
     }
 
 }

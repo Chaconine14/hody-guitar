@@ -109,8 +109,8 @@
 
 }
 
-/* 769〜1023px：PCカンプの要素を保持し、狭い幅でカードとボタンのはみ出しを防ぐ */
-@media (min-width: 769px) and (max-width: 1023px)  {
+/* タブレットでは見出しを上段に置き、写真の幅を確保してカードを並べる。 */
+@media (min-width: 769px) and (max-width: 1024px)  {
     .p-selection__inner  {
         flex-wrap: wrap;
         justify-content: center;
@@ -127,29 +127,27 @@
     }
 
     .p-selection__card  {
-        width: clamp(210px, 24vw, 245px);
+        width: min(350px, calc((100vw - 105px) / 2));
     }
 
 }
 
 @media (max-width: 768px)  {
     .p-selection  {
-        height: 773px;
+        height: auto;
         display: block;
+        padding: 60px 0;
         background: var(--color-ivory);
     }
 
     .p-selection__inner  {
-        position: relative;
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .p-selection__heading  {
-        position: absolute;
-        left: 16px;
-        top: 0;
+        margin-inline: 16px;
     }
 
     .p-selection__heading .c-section-heading__en  {
@@ -157,21 +155,20 @@
     }
 
     .p-selection__cards  {
-        position: absolute;
-        top: 86px;
-        left: 0;
         width: 100%;
+        max-width: 600px;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 32px 8px;
-        padding: 0 16px;
-        margin: 0;
+        gap: 44px 25px;
+        padding: 0 13px;
+        margin: 40px auto 0;
     }
 
     .p-selection__card  {
         width: 100%;
         min-height: 0;
         padding: 0;
+        align-self: start;
         background: transparent;
     }
 
@@ -210,11 +207,9 @@
     }
 
     .p-selection__more  {
-        position: absolute;
-        top: 717px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
+        display: flex;
+        width: fit-content;
+        margin: 72px auto 0;
     }
 
 }

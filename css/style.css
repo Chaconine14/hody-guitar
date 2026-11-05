@@ -368,6 +368,26 @@ address {
     white-space: nowrap;
     font-size: 1.2rem;
   }
+  .p-top .l-footer__bottom {
+    height: 419.633px;
+    padding: 40px 16px 20px;
+  }
+  .p-top .l-footer__brand {
+    height: 60px;
+  }
+  .p-top .l-footer__top {
+    gap: 45px;
+    padding-bottom: 44.156px;
+  }
+  .p-top .l-footer__nav ul {
+    line-height: 14px;
+  }
+  .p-top .l-footer__address {
+    margin-top: 16px;
+  }
+  .p-top .l-footer__copyright {
+    bottom: 2.633px;
+  }
 }
 /* 下層ページ共通。既存ガイドの数値を維持。 */
 :is(.p-guide-page__hours--sp, .l-footer__hours--sp) {
@@ -710,7 +730,7 @@ address {
   inset: 0;
   background: var(--color-ivory);
   transform: scaleX(0);
-  transform-origin: center center;
+  transform-origin: left center;
 }
 
 .p-hero__progress-bar.is-active::after {
@@ -740,6 +760,12 @@ address {
     transform: scaleX(1);
   }
 }
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .p-hero__inner {
+    padding-top: min(520px, 100vh - 270px);
+  }
+}
 @media (max-width: 768px) {
   .p-hero {
     height: 100vh;
@@ -753,8 +779,11 @@ address {
     inset: 192px 0 0;
   }
   .p-hero__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: auto;
-    padding: 481px 16px 0;
+    padding: 0 16px 20px;
   }
   .p-hero__title {
     font-size: 2.4rem;
@@ -766,7 +795,7 @@ address {
     margin-top: 16px;
   }
   .p-hero__progress {
-    margin-top: 49px;
+    margin-top: 54px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -881,6 +910,23 @@ address {
   border-radius: 16px 0 0 16px;
   background: var(--color-blue);
   color: var(--color-sand);
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: transform 400ms ease-out, visibility 0s linear 400ms;
+}
+
+.p-finder__reservation.is-visible {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p-finder__reservation {
+    transition: none !important;
+  }
 }
 
 .p-finder__reservation picture {
@@ -1243,12 +1289,17 @@ address {
     margin-top: 16px;
   }
   .p-finder__reservation {
-    top: 234px;
+    top: auto;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 68px;
     padding: 0 20px;
     border-radius: 0;
+    transform: translateY(100%);
+  }
+  .p-finder__reservation.is-visible {
+    transform: translateY(0);
   }
   .p-finder__reservation picture {
     position: static;
@@ -1476,13 +1527,12 @@ address {
     margin-left: 0;
   }
 }
-/* 769〜1023px：PCカンプの要素を保持し、狭い幅でカードとボタンのはみ出しを防ぐ */
-@media (min-width: 769px) and (max-width: 1023px) {
+/* タブレットでは見出しを上段に置き、写真の幅を確保してカードを並べる。 */
+@media (min-width: 769px) and (max-width: 1024px) {
   .p-selection__inner {
     flex-wrap: wrap;
     justify-content: center;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 25px;
   }
   .p-selection__heading {
@@ -1492,44 +1542,41 @@ address {
     margin-left: 0;
   }
   .p-selection__card {
-    width: clamp(210px, 24vw, 245px);
+    width: min(350px, (100vw - 105px) / 2);
   }
 }
 @media (max-width: 768px) {
   .p-selection {
-    height: 773px;
+    height: auto;
     display: block;
+    padding: 60px 0;
     background: var(--color-ivory);
   }
   .p-selection__inner {
-    position: relative;
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   .p-selection__heading {
-    position: absolute;
-    left: 16px;
-    top: 0;
+    margin-inline: 16px;
   }
   .p-selection__heading .c-section-heading__en {
     font-size: 2.8rem;
   }
   .p-selection__cards {
-    position: absolute;
-    top: 86px;
-    left: 0;
     width: 100%;
+    max-width: 600px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px 8px;
-    padding: 0 16px;
-    margin: 0;
+    gap: 44px 25px;
+    padding: 0 13px;
+    margin: 40px auto 0;
   }
   .p-selection__card {
     width: 100%;
     min-height: 0;
     padding: 0;
+    align-self: start;
     background: transparent;
   }
   .p-selection__card--sp {
@@ -1561,11 +1608,9 @@ address {
     color: #161616;
   }
   .p-selection__more {
-    position: absolute;
-    top: 717px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
+    display: flex;
+    width: fit-content;
+    margin: 72px auto 0;
   }
 }
 .p-about {
@@ -1639,7 +1684,7 @@ address {
   .p-about__body {
     width: 100%;
     padding: 0;
-    gap: 40px;
+    gap: 26px;
     font-size: 1.6rem;
     line-height: 27.2px;
   }
@@ -1648,6 +1693,7 @@ address {
   }
   .p-about__heading {
     gap: 4px;
+    margin-bottom: 14px;
   }
 }
 .p-staff {
@@ -1726,10 +1772,27 @@ address {
   line-height: 22.4px;
 }
 
+@media (max-width: 1024px) and (min-width: 769px) {
+  .p-staff {
+    height: auto;
+    min-height: 765px;
+    padding: 80px 0;
+  }
+  .p-staff__person {
+    height: auto;
+    align-items: flex-start;
+  }
+  .p-staff__portrait {
+    height: auto;
+    aspect-ratio: 686/858;
+  }
+}
+
 @media (max-width: 768px) {
   .p-staff {
-    height: 590px;
+    height: auto;
     display: block;
+    padding-bottom: 68px;
   }
   .p-staff__inner {
     position: relative;
@@ -1740,6 +1803,7 @@ address {
   .p-staff__lead {
     margin-top: 20px;
     font-size: 1.4rem;
+    font-weight: 700;
     line-height: 1;
   }
   .p-staff__grid {
@@ -1750,11 +1814,14 @@ address {
   }
   .p-staff__person {
     width: 100%;
-    height: 215px;
+    height: auto;
+    align-items: flex-start;
   }
   .p-staff__portrait {
     width: 50%;
-    height: 215px;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 686/858;
   }
   .p-staff__info {
     padding: 16px;
@@ -1764,14 +1831,16 @@ address {
   }
   .p-staff__name {
     font-size: 2rem;
+    font-weight: 700;
     line-height: 20px;
     margin-top: 16px;
     white-space: nowrap;
   }
   .p-staff__description {
-    margin-top: 16px;
+    margin-top: 24px;
     font-size: 1.4rem;
     line-height: 22.4px;
+    letter-spacing: 0.02em;
   }
 }
 .p-guide {
@@ -1872,7 +1941,10 @@ address {
     line-height: 23.8px;
   }
   .p-guide__more {
+    display: flex;
+    width: fit-content;
     margin-top: 30px;
+    margin-inline: auto;
   }
 }
 .p-store {
@@ -1901,11 +1973,11 @@ address {
   height: 336px;
 }
 
-.p-store__map img {
+.p-store__map iframe {
+  display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border: 0;
 }
 
 .p-store__list {
@@ -1951,16 +2023,17 @@ address {
 @media (max-width: 768px) {
   .p-store {
     display: block;
-    height: 761px;
+    height: auto;
+    padding: 100px 0 60px;
   }
   .p-store__inner {
     width: auto;
     margin: 0 16px;
-    padding-top: 40px;
+    padding-top: 0;
   }
   .p-store__detail {
     display: block;
-    margin-top: 26px;
+    margin-top: 41px;
   }
   .p-store__map {
     display: block;
@@ -1969,13 +2042,16 @@ address {
   }
   .p-store__list {
     width: 100%;
-    margin-top: 48px;
+    margin-top: 24px;
   }
   .p-store__item {
     padding: 16px 0;
   }
+  .p-store__item dd {
+    line-height: 1.2;
+  }
   .p-store__reserve {
-    margin-top: 24px;
+    margin-top: 40px;
   }
 }
 .p-instagram {
@@ -2015,6 +2091,15 @@ address {
   height: 253px;
 }
 
+.p-instagram__photos > a {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.p-instagram__photos > a:hover {
+  opacity: 1;
+}
+
 .p-instagram__photos img {
   width: 100%;
   height: 100%;
@@ -2035,6 +2120,7 @@ address {
   .p-instagram {
     height: 338px;
     padding: 36px 0 0;
+    margin-bottom: 60px;
   }
   .p-instagram__inner {
     margin: 0;

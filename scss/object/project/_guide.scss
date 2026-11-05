@@ -105,7 +105,10 @@
     }
 
     .p-guide__more  {
+        display: flex;
+        width: fit-content;
         margin-top: 30px;
+        margin-inline: auto;
     }
 
 }
