@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --color-ivory: #fbf7ef;
   --color-sand: #f4ecdd;
@@ -10,7 +11,9 @@
   --container-width: 1100px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -33,7 +36,10 @@ body.is-locked {
   overflow: hidden;
 }
 
-button, select, input, textarea {
+button,
+select,
+input,
+textarea {
   font: inherit;
   color: inherit;
 }
@@ -66,7 +72,12 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, p, dl, dd {
+h1,
+h2,
+h3,
+p,
+dl,
+dd {
   margin: 0;
 }
 
@@ -87,12 +98,16 @@ address {
   html {
     scroll-behavior: auto;
   }
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
+
 .l-header {
   position: absolute;
   z-index: 20;
@@ -122,7 +137,7 @@ address {
   width: 117px;
   height: 60px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .l-header__nav {
@@ -148,19 +163,24 @@ address {
     padding-inline: 40px;
     gap: 22px;
   }
+
   .l-header__nav-list {
     gap: 14px;
     font-size: 1.2rem;
   }
 }
+
 @media (max-width: 768px) {
   .l-header__inner {
     height: 80px;
     padding: 10px 20px 10px 3px;
   }
-  .l-header__nav, .l-header__reserve {
+
+  .l-header__nav,
+  .l-header__reserve {
     display: none !important;
   }
+
   .l-header__menu-button {
     position: relative;
     display: flex;
@@ -174,6 +194,7 @@ address {
     background: none;
     border: 0;
   }
+
   .l-header__menu-button span {
     display: block;
     width: 32px;
@@ -181,6 +202,7 @@ address {
     background: var(--color-ivory);
   }
 }
+
 .l-footer {
   background: var(--color-charcoal);
   color: var(--color-ivory);
@@ -196,9 +218,9 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center 44%;
-     object-position: center 44%;
+  object-position: center 44%;
 }
 
 .l-footer__bottom {
@@ -258,17 +280,20 @@ address {
   .l-footer__visual {
     height: 487px;
   }
+
   .l-footer__visual img {
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
+
   .l-footer__bottom {
     height: 380px;
     padding: 0 16px 20px;
   }
+
   .l-footer__top {
     display: flex;
     flex-direction: column;
@@ -276,6 +301,7 @@ address {
     gap: 34px;
     padding: 0 0 30px;
   }
+
   .l-footer__brand {
     align-self: center;
     width: 117px;
@@ -283,10 +309,12 @@ address {
     display: flex;
     justify-content: center;
   }
+
   .l-footer__brand img {
     width: 117px;
     height: 60px;
   }
+
   .l-footer__nav ul {
     display: flex;
     flex-direction: column;
@@ -295,11 +323,13 @@ address {
     font-weight: 500;
     font-size: 1.4rem;
   }
+
   .l-footer__address {
     margin-top: 20px;
     font-size: 1.2rem;
     line-height: 1.7;
   }
+
   .l-footer__copyright {
     bottom: 14px;
     right: 50%;
@@ -308,6 +338,7 @@ address {
     font-size: 1.2rem;
   }
 }
+
 .c-button {
   display: inline-flex;
   align-items: center;
@@ -397,11 +428,13 @@ address {
     font-size: 2.8rem;
     line-height: 1;
   }
+
   .c-section-heading__ja {
     font-size: 1.4rem;
     line-height: 1;
   }
 }
+
 .p-hero {
   position: relative;
   height: 790px;
@@ -410,7 +443,9 @@ address {
   color: var(--color-ivory);
 }
 
-.p-hero__visual, .p-hero__slide, .p-hero__slide img {
+.p-hero__visual,
+.p-hero__slide,
+.p-hero__slide img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -428,9 +463,9 @@ address {
 
 .p-hero__slide img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 
 .p-hero__shade {
@@ -500,48 +535,59 @@ address {
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
 }
+
 @media (max-width: 768px) {
   .p-hero {
     height: 650px;
     color: var(--color-sand);
   }
+
   .p-hero__slide img {
     -o-object-position: center top;
-       object-position: center top;
+    object-position: center top;
   }
+
   .p-hero__shade {
     inset: 192px 0 0;
   }
+
   .p-hero__inner {
     width: auto;
     padding: 481px 16px 0;
   }
+
   .p-hero__title {
     font-size: 2.4rem;
     line-height: 32px;
   }
+
   .p-hero__copy {
     font-size: 1.4rem;
     line-height: 22.4px;
     margin-top: 16px;
   }
+
   .p-hero__progress {
     margin-top: 49px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .p-hero__slide {
     transition: none;
   }
+
   .p-hero__progress-bar.is-active::after {
     animation: none;
     transform: scaleX(1);
   }
 }
+
 .p-finder {
   height: 676px;
   position: relative;
@@ -594,7 +640,7 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .p-finder__reservation {
@@ -649,31 +695,38 @@ address {
     height: 619px;
     padding: 20px 16px 23px;
   }
+
   .p-finder__inner {
     height: 576px;
   }
+
   .p-finder__content {
     left: 19px;
     top: 39px;
     width: calc(100% - 38px);
   }
+
   .p-finder__heading .c-section-heading__en {
     font-size: 2.8rem;
     line-height: 28px;
   }
+
   .p-finder__heading {
     gap: 4px;
   }
+
   .p-finder__copy {
     width: 100%;
     margin-top: 280px;
     font-size: 1.6rem;
     line-height: 27.2px;
   }
+
   .p-finder__content .c-button {
     width: 100%;
     margin-top: 16px;
   }
+
   .p-finder__illustration {
     top: 122px;
     left: 50%;
@@ -682,6 +735,7 @@ address {
     width: 135px;
     height: 202px;
   }
+
   .p-finder__reservation {
     top: 234px;
     left: 0;
@@ -691,27 +745,32 @@ address {
     padding: 0 20px;
     border-radius: 0;
   }
+
   .p-finder__reservation img {
     position: static;
     flex: 0 0 auto;
     width: 32px;
     height: 32px;
   }
+
   .p-finder__reservation-text {
     align-self: center;
     margin: 0 auto 0 8px;
     gap: 4px;
     text-align: left;
   }
+
   .p-finder__reservation-text small {
     display: block;
     font-size: 0.8rem;
     font-weight: 400;
   }
+
   .p-finder__reservation-arrow {
     margin-left: auto;
   }
 }
+
 .p-selection {
   height: 951px;
   display: flex;
@@ -766,7 +825,7 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-selection__text {
@@ -808,56 +867,68 @@ address {
   .p-selection__inner {
     gap: 15px;
   }
+
   .p-selection__card {
     width: clamp(210px, 24vw, 350px);
     padding-inline: 24px;
   }
+
   .p-selection__photo {
     max-width: 100%;
   }
+
   .p-selection__more {
     margin-left: 0;
   }
 }
+
 /* 769〜1023px：PCカンプの要素を保持し、狭い幅でカードとボタンのはみ出しを防ぐ */
 @media (min-width: 769px) and (max-width: 1023px) {
   .p-selection__inner {
     flex-wrap: wrap;
     justify-content: center;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 25px;
   }
+
   .p-selection__heading {
     flex-basis: 100%;
   }
+
   .p-selection__cards {
     margin-left: 0;
   }
+
   .p-selection__card {
     width: clamp(210px, 24vw, 245px);
   }
 }
+
 @media (max-width: 768px) {
   .p-selection {
     height: 773px;
     display: block;
     background: var(--color-ivory);
   }
+
   .p-selection__inner {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
   }
+
   .p-selection__heading {
     position: absolute;
     left: 16px;
     top: 0;
   }
+
   .p-selection__heading .c-section-heading__en {
     font-size: 2.8rem;
   }
+
   .p-selection__cards {
     position: absolute;
     top: 86px;
@@ -869,40 +940,48 @@ address {
     padding: 0 16px;
     margin: 0;
   }
+
   .p-selection__card {
     width: 100%;
     min-height: 0;
     padding: 0;
     background: transparent;
   }
+
   .p-selection__card--sp {
     display: block;
   }
+
   .p-selection__photo {
     width: 100%;
     height: auto;
     aspect-ratio: 162/202;
     background: #dededb;
   }
+
   .p-selection__text {
     margin-top: 8px;
     gap: 4px;
   }
+
   .p-selection__tagline {
     font-size: 0.8rem;
     line-height: 1;
     color: #161616;
   }
+
   .p-selection__brand {
     font-size: 1.2rem;
     color: #555;
     line-height: 1;
   }
+
   .p-selection__name {
     font-size: 2rem;
     line-height: 1;
     color: #161616;
   }
+
   .p-selection__more {
     position: absolute;
     top: 717px;
@@ -911,6 +990,7 @@ address {
     margin: 0;
   }
 }
+
 .p-about {
   position: relative;
   height: 830px;
@@ -935,9 +1015,9 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 
 .p-about__body {
@@ -960,12 +1040,14 @@ address {
     padding-right: 24px;
   }
 }
+
 @media (max-width: 768px) {
   .p-about {
     height: auto;
     padding: 20px 16px;
     background: var(--color-ivory);
   }
+
   .p-about__inner {
     flex-direction: column;
     width: 100%;
@@ -974,11 +1056,13 @@ address {
     padding: 80px 40px;
     background: var(--color-surface);
   }
+
   .p-about__image {
     flex: none;
     width: 216px;
     height: 325px;
   }
+
   .p-about__body {
     width: 100%;
     padding: 0;
@@ -986,13 +1070,16 @@ address {
     font-size: 1.6rem;
     line-height: 27.2px;
   }
+
   .p-about__body p {
     overflow-wrap: anywhere;
   }
+
   .p-about__heading {
     gap: 4px;
   }
 }
+
 .p-staff {
   height: 765px;
   display: flex;
@@ -1039,7 +1126,7 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-staff__info {
@@ -1074,49 +1161,59 @@ address {
     height: 590px;
     display: block;
   }
+
   .p-staff__inner {
     position: relative;
     width: auto;
     margin: 0 16px;
     padding-top: 0;
   }
+
   .p-staff__lead {
     margin-top: 20px;
     font-size: 1.4rem;
     line-height: 1;
   }
+
   .p-staff__grid {
     display: flex;
     flex-direction: column;
     gap: 24px;
     margin-top: 46px;
   }
+
   .p-staff__person {
     width: 100%;
     height: 215px;
   }
+
   .p-staff__portrait {
     width: 50%;
     height: 215px;
   }
+
   .p-staff__info {
     padding: 16px;
   }
+
   .p-staff__role {
     font-size: 1.2rem;
   }
+
   .p-staff__name {
     font-size: 2rem;
     line-height: 20px;
     margin-top: 16px;
     white-space: nowrap;
   }
+
   .p-staff__description {
     margin-top: 16px;
     font-size: 1.4rem;
     line-height: 22.4px;
   }
 }
+
 .p-guide {
   height: 475px;
   background: var(--color-charcoal);
@@ -1165,25 +1262,29 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
   .p-guide__content {
     padding-left: 30px;
   }
+
   .p-guide__heading .c-section-heading__en {
     font-size: 2.6rem;
   }
 }
+
 @media (max-width: 768px) {
   .p-guide {
     position: relative;
     height: 336px;
   }
+
   .p-guide__inner {
     position: relative;
   }
+
   .p-guide__image {
     position: absolute;
     inset: 0;
@@ -1191,10 +1292,12 @@ address {
     height: 336px;
     opacity: 0.18;
   }
+
   .p-guide__image img {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
+
   .p-guide__content {
     position: relative;
     z-index: 1;
@@ -1203,21 +1306,26 @@ address {
     height: 100%;
     padding: 40px 16px;
   }
+
   .p-guide__heading .c-section-heading__en {
     font-size: 2.8rem;
   }
+
   .p-guide__heading .c-section-heading__ja {
     font-size: 1.4rem;
   }
+
   .p-guide__copy {
     margin-top: 40px;
     font-size: 1.4rem;
     line-height: 23.8px;
   }
+
   .p-guide__more {
     margin-top: 30px;
   }
 }
+
 .p-store {
   height: 720px;
   background: var(--color-ivory);
@@ -1248,7 +1356,7 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-store__list {
@@ -1285,41 +1393,50 @@ address {
   .p-store__detail {
     gap: 36px;
   }
+
   .p-store__map {
     flex-basis: 50%;
     width: 50%;
   }
 }
+
 @media (max-width: 768px) {
   .p-store {
     display: block;
     height: 761px;
   }
+
   .p-store__inner {
     width: auto;
     margin: 0 16px;
     padding-top: 40px;
   }
+
   .p-store__detail {
     display: block;
     margin-top: 26px;
   }
+
   .p-store__map {
     display: block;
     width: 100%;
     height: 202px;
   }
+
   .p-store__list {
     width: 100%;
     margin-top: 48px;
   }
+
   .p-store__item {
     padding: 16px 0;
   }
+
   .p-store__reserve {
     margin-top: 24px;
   }
 }
+
 .p-instagram {
   background: var(--color-sand);
   padding: 80px 0;
@@ -1360,7 +1477,7 @@ address {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .p-instagram__more--sp {
@@ -1372,35 +1489,44 @@ address {
     margin: 0 40px;
   }
 }
+
 @media (max-width: 768px) {
   .p-instagram {
     height: 338px;
     padding: 36px 0 0;
   }
+
   .p-instagram__inner {
     margin: 0;
   }
+
   .p-instagram__heading {
     margin-left: 16px;
   }
+
   .p-instagram__heading .c-section-heading__ja {
     font-size: 1.4rem;
   }
+
   .p-instagram__photos {
     margin-top: 32px;
     margin-left: -11px;
     gap: 16px;
   }
+
   .p-instagram__photos picture {
     width: 100px;
     height: 100px;
   }
+
   .p-instagram__photos .p-instagram__photo-extra {
     display: none;
   }
+
   .p-instagram__more--pc {
     display: none;
   }
+
   .p-instagram__more--sp {
     display: flex;
     width: -moz-fit-content;
@@ -1408,6 +1534,7 @@ address {
     margin: 30px auto 0;
   }
 }
+
 .p-mobile-menu {
   position: fixed;
   z-index: 60;
@@ -1456,7 +1583,7 @@ address {
   transform: rotate(45deg);
 }
 
-.p-mobile-menu__close span + span {
+.p-mobile-menu__close span+span {
   transform: rotate(-45deg);
 }
 
@@ -1485,6 +1612,7 @@ address {
     display: none !important;
   }
 }
+
 .p-reservation {
   position: fixed;
   z-index: 100;
@@ -1627,8 +1755,8 @@ address {
   max-width: 343px;
   cursor: pointer;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-image: url("../assets/icons/chevron.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
@@ -1700,6 +1828,7 @@ address {
   .p-reservation__backdrop {
     display: none;
   }
+
   .p-reservation__panel {
     top: 0;
     left: 0;
@@ -1711,26 +1840,36 @@ address {
     opacity: 1;
     transition: transform 0.36s ease;
   }
+
   .p-reservation.is-open .p-reservation__panel {
     transform: translateX(0);
   }
+
   .p-reservation__close {
     right: 20px;
   }
+
   .p-reservation__title {
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 32px;
   }
+
   .p-reservation__lead {
     padding-top: 38px;
   }
+
   .p-reservation__form {
     gap: 20px;
   }
-  .p-reservation__field--product .p-reservation__control, .p-reservation__field--date .p-reservation__control, .p-reservation__field--name .p-reservation__control, .p-reservation__field--email .p-reservation__control {
+
+  .p-reservation__field--product .p-reservation__control,
+  .p-reservation__field--date .p-reservation__control,
+  .p-reservation__field--name .p-reservation__control,
+  .p-reservation__field--email .p-reservation__control {
     max-width: 100%;
   }
+
   .p-reservation__submit {
     width: 100%;
     min-height: 54px;
@@ -1738,10 +1877,12 @@ address {
     font-size: 1.6rem;
     line-height: 16px;
   }
+
   .p-reservation__note {
     padding-top: 18px;
   }
 }
+
 /* Figmaの日時フィールドは未入力時に空欄。入力操作は残したまま日付書式を非表示にする。 */
 .p-reservation__field--date input:invalid::-webkit-datetime-edit {
   color: transparent;
@@ -1769,6 +1910,7 @@ address {
   font-display: swap;
   src: url("../assets/fonts/guide-noto-jp-400.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "HODY Guide JP";
   font-style: normal;
@@ -1776,6 +1918,7 @@ address {
   font-display: swap;
   src: url("../assets/fonts/guide-noto-jp-500.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "HODY Guide JP";
   font-style: normal;
@@ -1783,6 +1926,7 @@ address {
   font-display: swap;
   src: url("../assets/fonts/guide-noto-jp-700.ttf") format("truetype");
 }
+
 /* 試奏ガイド専用。既存TOP・予約画面へスタイルを波及させない。 */
 .p-guide-page__container {
   width: min(1100px, 100% - 80px);
@@ -1833,16 +1977,16 @@ address {
 }
 
 /* 日本語Webフォントはガイド本体だけに適用。共通ダイアログ・メニューは既存のまま。 */
-.p-guide-page > .l-header,
-.p-guide-page > main,
-.p-guide-page > .l-footer,
+.p-guide-page>.l-header,
+.p-guide-page>main,
+.p-guide-page>.l-footer,
 .p-guide-page__fixed {
   font-family: "Source Sans 3", "HODY Guide JP", sans-serif;
 }
 
 /* TOPで実測した和文フォールバックを維持。未搭載環境は既存の候補へ戻す。 */
-.p-guide-page > .p-reservation,
-.p-guide-page > .p-mobile-menu {
+.p-guide-page>.p-reservation,
+.p-guide-page>.p-mobile-menu {
   font-family: "Source Sans 3", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
 }
 
@@ -2121,7 +2265,7 @@ address {
 
 .l-footer--guide .l-footer__visual img {
   -o-object-position: center 30.29%;
-     object-position: center 30.29%;
+  object-position: center 30.29%;
 }
 
 .l-footer--guide .l-footer__brand {
@@ -2145,86 +2289,108 @@ address {
     padding-inline: 24px;
     gap: 20px;
   }
+
   .l-header--guide .l-header__nav-list {
     gap: 16px;
     font-size: 1.2rem;
   }
+
   .l-header--guide .l-header__nav-list li:nth-child(n) {
     width: auto;
   }
+
   .l-header--guide .l-header__reserve {
     padding-inline: 14px;
     gap: 8px;
     font-size: 1.2rem;
   }
+
   .p-guide-page__step-title {
     padding-right: 46px;
   }
+
   .p-guide-page__step:nth-child(odd) .p-guide-page__step-title,
   .p-guide-page__step:nth-child(odd) .p-guide-page__step-copy {
     max-width: calc(50% - 107px);
   }
+
   .p-guide-page__step-icon {
     left: calc(50% - 55px);
   }
+
   .p-guide-page__step:nth-child(even) .p-guide-page__step-icon {
     left: auto;
     right: 0;
   }
+
   .p-guide-page__lead {
     margin-left: 0;
   }
+
   .p-guide-page__invite-inner {
     gap: 28px;
   }
 }
+
 @media (max-width: 768px) {
   .p-guide-page {
     padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
   }
+
   .p-guide-page__container {
     width: calc(100% - 32px);
   }
+
   .l-header--guide .l-header__inner {
     gap: 0;
   }
+
   .l-header--guide .l-header__menu-button {
     background: url("../assets/images/guide/menu.svg") center/32px 10px no-repeat;
   }
+
   .l-header--guide .l-header__menu-button span {
     visibility: hidden;
   }
+
   .p-guide-page__intro {
     min-height: 0;
     padding: 0 0 20px;
   }
+
   .p-guide-page__intro .p-guide-page__container {
     width: 100%;
   }
+
   .p-guide-page__heading {
     gap: 4px;
     padding: 34px 14px;
   }
+
   .p-guide-page__lead {
     margin: 0;
     padding-inline: 32px;
     font-size: 1.6rem;
     line-height: 27.2px;
   }
+
   .p-guide-page__flow {
     min-height: 0;
     padding-block: 64px 129px;
   }
+
   .p-guide-page__flow-heading,
   .p-guide-page__faq-heading {
     font-size: 2rem;
     line-height: 32px;
   }
+
   .p-guide-page__steps {
     gap: 0;
     margin-top: 1px;
     padding-inline: 8px;
   }
+
   .p-guide-page__step,
   .p-guide-page__step:nth-child(even) {
     display: grid;
@@ -2233,6 +2399,7 @@ address {
     min-height: 0;
     padding: 24px 0 33px;
   }
+
   .p-guide-page__step:not(:last-child)::after {
     position: absolute;
     bottom: 0;
@@ -2242,12 +2409,15 @@ address {
     background: var(--color-muted);
     content: "";
   }
+
   .p-guide-page__step:last-child {
     padding-bottom: 0;
   }
+
   .p-guide-page__step:not(.p-guide-page__step--04) .p-guide-page__step-copy {
     min-height: 96px;
   }
+
   .p-guide-page__step-arrow {
     display: block;
     grid-column: 1/-1;
@@ -2255,12 +2425,15 @@ address {
     margin-top: -0.5px;
     margin-bottom: 0.5px;
   }
+
   .p-guide-page__step--04 .p-guide-page__step-arrow img {
     width: 47px;
   }
+
   .p-guide-page__step--05 .p-guide-page__step-arrow {
     margin-bottom: 5.451px;
   }
+
   .p-guide-page__number,
   .p-guide-page__step:nth-child(even) .p-guide-page__number {
     position: static;
@@ -2271,36 +2444,45 @@ address {
     font-weight: 500;
     line-height: 14px;
   }
+
   .p-guide-page__step-title {
     align-self: center;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 16px;
   }
+
   .p-guide-page__step-icon {
     position: static;
   }
+
   .p-guide-page__step-copy {
     margin: 0;
     font-size: 1.4rem;
     line-height: 23.8px;
   }
+
   .p-guide-page__connector {
     display: none;
   }
+
   .p-guide-page__faq {
     padding-block: 32px 60px;
   }
+
   .p-guide-page__faq-heading {
     min-height: 32px;
   }
+
   .p-guide-page__faq-list {
     margin-top: 32px;
     border-color: var(--color-charcoal);
   }
+
   .p-guide-page__faq-item {
     border-color: var(--color-muted);
   }
+
   .p-guide-page__question,
   .p-guide-page__faq-item[open] .p-guide-page__question {
     grid-template-columns: 34px minmax(0, 1fr) 17.6px;
@@ -2310,12 +2492,14 @@ address {
     font-size: 1.6rem;
     line-height: 27.2px;
   }
+
   .p-guide-page__q,
   .p-guide-page__a {
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 12px;
   }
+
   .p-guide-page__answer {
     grid-template-columns: 34px minmax(0, 1fr);
     gap: 12px;
@@ -2324,24 +2508,30 @@ address {
     font-size: 1.4rem;
     line-height: 23.8px;
   }
+
   .p-guide-page__answer-break {
     display: block;
   }
+
   /* 原本の先頭回答は本文の下に約4px。固定高で文字を切らない。 */
   .p-guide-page__faq-item:first-child .p-guide-page__answer {
     padding-bottom: 4.156px;
   }
+
   .p-guide-page__invite {
     min-height: 415px;
     padding-block: 66px 60px;
     color: var(--color-sand);
   }
+
   .p-guide-page__invite-inner {
     display: block;
   }
+
   .p-guide-page__invitation {
     width: 100%;
   }
+
   .p-guide-page__invitation h2 {
     min-height: 0;
     padding-bottom: 16px;
@@ -2350,15 +2540,18 @@ address {
     line-height: 34px;
     -webkit-text-stroke: 0;
   }
+
   .p-guide-page__invitation p {
     min-height: 0;
     font-size: 1.4rem;
     line-height: 23.8px;
   }
+
   .p-guide-page__reserve {
     width: 100%;
     margin-top: 32px;
   }
+
   .p-guide-page__fixed {
     position: fixed;
     z-index: 40;
@@ -2376,58 +2569,71 @@ address {
     color: var(--color-sand);
     text-align: left;
   }
-  .p-guide-page__fixed > span {
+
+  .p-guide-page__fixed>span {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
+
   .p-guide-page__fixed small {
     font-size: 0.8rem;
     line-height: 13.44px;
   }
+
   .p-guide-page__fixed strong {
     font-size: 1.4rem;
     line-height: 14px;
   }
+
   .l-footer--guide .l-footer__visual img {
     width: max(100%, 390px);
     max-width: none;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
+
   .l-footer--guide .l-footer__bottom {
     height: 419.633px;
     padding: 40px 16px 20px;
   }
+
   .l-footer--guide .l-footer__brand {
     height: 60px;
     background-position: center top;
     background-size: 117px 60px;
   }
+
   .l-footer--guide .l-footer__top {
     gap: 45px;
     padding-bottom: 44.156px;
     border-bottom: 0;
     background: url("../assets/images/guide/footer-line.svg") left bottom/100% 1px no-repeat;
   }
+
   .l-footer--guide .l-footer__nav ul {
     line-height: 14px;
   }
+
   .l-footer--guide .l-footer__address {
     margin-top: 16px;
     gap: 0;
     line-height: 20.4px;
   }
+
   .l-footer--guide .l-footer__copyright {
     bottom: 2.633px;
   }
+
   .p-guide-page__hours--pc {
     display: none;
   }
+
   .p-guide-page__hours--sp {
     display: inline;
   }
 }
+
 .u-pc-only {
   display: initial;
 }
@@ -2436,4 +2642,6 @@ address {
   .u-pc-only {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
