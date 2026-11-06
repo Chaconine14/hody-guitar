@@ -1,6 +1,8 @@
 (() => {
     'use strict';
 
+    let pageScroll = null;
+
     const hero = document.querySelector('.js-reservation-hero');
     const fixedReservation = document.querySelector('.js-fixed-reservation');
     const footer = document.querySelector('.js-reservation-footer');
@@ -11,7 +13,7 @@
         function updateFixedReservation() {
             const passedStart = hero
                 ? hero.getBoundingClientRect().bottom <= window.innerHeight * 0.5
-                : window.scrollY >= 150;
+                : (pageScroll?.y ?? window.scrollY) >= 150;
             const reachedFooter = mobileViewport.matches && footer.getBoundingClientRect().top < window.innerHeight;
             const isVisible = passedStart && !reachedFooter;
             fixedReservation.classList.toggle('is-visible', isVisible);
@@ -207,28 +209,41 @@
         if (dialog.classList.contains('is-open')) return;
         lastFocus = document.activeElement;
         window.dispatchEvent(new CustomEvent('hody:reservation-open'));
+        // メニューのロック解除後に保存し、背景を同じ位置で固定する。
+        pageScroll = { x: window.scrollX, y: window.scrollY };
+        const hasScrollbar = window.innerWidth > document.documentElement.clientWidth;
+        document.documentElement.classList.toggle('is-reservation-scrollbar', hasScrollbar);
+        document.body.style.setProperty('--reservation-scroll-top', `${-pageScroll.y}px`);
+        document.body.classList.add('is-reservation-locked');
         dialog.inert = false;
         dialog.classList.add('is-open');
         dialog.setAttribute('aria-hidden', 'false');
         document.body.classList.add('is-locked');
         reservationDateTime?.refresh({ syncCalendar: true });
         if (product && [...productInput.options].some(option => option.value === product)) productInput.value = product;
-        closeButton.focus();
+        closeButton.focus({ preventScroll: true });
     }
 
     function closeReservation() {
         if (!dialog.classList.contains('is-open')) return;
         reservationDateTime?.close();
+        // キーボードのフォーカスを外してから背景を元の位置へ戻す。
+        if (dialog.contains(document.activeElement)) document.activeElement.blur();
         dialog.classList.remove('is-open');
         dialog.setAttribute('aria-hidden', 'true');
         dialog.inert = true;
         document.body.classList.remove('is-locked');
+        document.body.classList.remove('is-reservation-locked');
+        document.body.style.removeProperty('--reservation-scroll-top');
+        document.documentElement.classList.remove('is-reservation-scrollbar');
+        if (pageScroll) window.scrollTo({ left: pageScroll.x, top: pageScroll.y, behavior: 'instant' });
+        pageScroll = null;
         if (finderOptions) {
             productInput.replaceChildren(...finderOptions.options);
             productInput.value = finderOptions.value;
             finderOptions = null;
         }
-        if (lastFocus?.isConnected) lastFocus.focus();
+        if (lastFocus?.isConnected) lastFocus.focus({ preventScroll: true });
     }
 
     // 診断から開いた間だけ推薦候補を表示し、通常の予約選択肢へ戻せるよう保持する。

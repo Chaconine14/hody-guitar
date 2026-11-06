@@ -2227,6 +2227,17 @@ address {
     display: none !important;
   }
 }
+html.is-reservation-scrollbar {
+  overflow-y: scroll;
+}
+
+body.is-reservation-locked {
+  position: fixed;
+  top: var(--reservation-scroll-top, 0px);
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
 .p-reservation {
   position: fixed;
   z-index: 100;
@@ -2259,6 +2270,7 @@ address {
   width: min(840px, 100% - 48px);
   max-height: min(980px, 100dvh - 48px);
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   padding: 38px 20px 24px;
   background: var(--color-sand);
   transform: translate(-50%, -45%) scale(0.98);
@@ -2487,6 +2499,10 @@ address {
 }
 
 @media (max-width: 768px) {
+  .p-reservation.is-open {
+    background: var(--color-sand);
+    transition: background-color 0s 0.36s;
+  }
   .p-reservation__backdrop {
     display: none;
   }
@@ -2539,6 +2555,11 @@ address {
   }
   .p-reservation__note {
     padding-top: 18px;
+  }
+}
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .p-reservation.is-open {
+    transition: none;
   }
 }
 .p-reservation__submit span:last-child {

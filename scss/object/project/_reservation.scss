@@ -1,3 +1,17 @@
+// スクロールバーのある画面は、背景固定中も同じ表示幅を保つ。
+html.is-reservation-scrollbar {
+    overflow-y: scroll;
+}
+
+// 予約表示中だけ背景を固定し、解除時にJavaScriptで元の位置へ戻す。
+body.is-reservation-locked {
+    position: fixed;
+    top: var(--reservation-scroll-top, 0px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
 .p-reservation {
     position: fixed;
     z-index: 100;
@@ -30,6 +44,7 @@
     width: min(840px, calc(100% - 48px));
     max-height: min(980px, calc(100dvh - 48px));
     overflow-y: auto;
+    overscroll-behavior-y: contain;
     padding: 38px 20px 24px;
     background: var(--color-sand);
     transform: translate(-50%, -45%) scale(.98);
@@ -254,6 +269,12 @@
 }
 
 @media (max-width: 768px) {
+    .p-reservation.is-open {
+        // パネルのスライド後に背景を覆い、キーボード操作時の露出を防ぐ。
+        background: var(--color-sand);
+        transition: background-color 0s .36s;
+    }
+
     .p-reservation__backdrop {
         display: none;
     }
@@ -318,6 +339,12 @@
         padding-top: 18px;
     }
 
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+    .p-reservation.is-open {
+        transition: none;
+    }
 }
 
 .p-reservation__submit span:last-child {
