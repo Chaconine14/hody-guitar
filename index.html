@@ -86,16 +86,6 @@
                     </picture>
                 </div>
             </div>
-            <button class="p-finder__reservation js-fixed-reservation js-open-reservation" type="button"
-                aria-label="試奏予約をする" inert>
-                <picture>
-                    <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
-                        src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">
-                </picture>
-                <span class="p-finder__reservation-text"><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
-                <img class="p-finder__reservation-arrow" src="assets/images/guide/arrow-ivory.svg" width="10.5"
-                    height="7.36396" alt="">
-            </button>
             <p class="p-finder__status js-finder-status" role="status" aria-live="polite" aria-atomic="true"></p>
         </section>
 
@@ -326,6 +316,17 @@
             </div>
         </div>
     </footer>
+
+    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation" type="button"
+        aria-label="試奏予約をする" inert>
+        <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
+                src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">
+        </picture>
+        <span class="c-fixed-reservation__text"><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
+        <img class="c-fixed-reservation__arrow" src="assets/images/guide/arrow-ivory.svg" width="10.5"
+            height="7.36396" alt="">
+    </button>
 
     <!-- SP版のフルスクリーンメニュー -->
     <div class="p-mobile-menu js-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="サイトメニュー"

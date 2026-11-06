@@ -69,6 +69,15 @@ def reservation_date():
     return day.isoformat()
 
 
+def show_fixed_reservation(page):
+    page.evaluate('window.scrollTo(0, 150)')
+    button = page.locator('.js-fixed-reservation')
+    expect(button).to_have_count(1)
+    expect(button).to_be_visible()
+    assert not button.evaluate('el => el.inert')
+    return button
+
+
 def dialog_sections(page, prefix):
     # 日時欄の変更による高さ差を除き、他の欄の見た目と間隔を維持する。
     sections = ['eyebrow', 'title', 'lead', 'field--product', 'field--message',
@@ -125,6 +134,10 @@ with sync_playwright() as playwright:
         errors = []
         page.on('pageerror', lambda error: errors.append(str(error)))
         ready(page)
+        fixed = page.locator('.js-fixed-reservation')
+        expect(fixed).to_have_count(1)
+        expect(fixed).to_be_hidden()
+        assert fixed.evaluate('el => el.inert')
         assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), f'Overflow: {width}'
         assert page.evaluate('[...document.images].every(i => i.complete && i.naturalWidth > 0)')
         assert page.locator('h1').count() == 1
@@ -152,9 +165,19 @@ with sync_playwright() as playwright:
             if width == 375:
                 page.screenshot(path=str(args.output / 'viewport-375.png'))
                 page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+                expect(fixed).to_be_hidden()
+                assert fixed.evaluate('el => el.inert')
                 page.screenshot(path=str(args.output / 'footer-viewport-375.png'))
-                bar = page.locator('.p-guide-page__fixed').bounding_box()
-                assert abs(bar['y'] + bar['height'] - height) < 1
+        # The shared CTA appears after 150px on every viewport and opens the dialog.
+        show_fixed_reservation(page).click()
+        expect(page.locator('.js-close-reservation')).to_be_visible()
+        page.keyboard.press('Escape')
+        expect(fixed).to_be_focused()
+        if width <= 768:
+            bar = fixed.bounding_box()
+            assert abs(bar['y'] + bar['height'] - height) < 1
+        page.evaluate('window.scrollTo(0, 0)')
+        expect(fixed).to_be_hidden()
         summaries = page.locator('summary')
         summaries.nth(1).click()
         assert page.locator('details[open]').count() == 2
@@ -168,8 +191,8 @@ with sync_playwright() as playwright:
             assert page.locator('.p-guide-page__answer').nth(i).evaluate('el => el.scrollHeight <= el.clientHeight + 1')
             page.keyboard.press('Space')
             assert page.locator('details').nth(i).get_attribute('open') is None
-        # Every currently visible reservation CTA opens the shared dialog.
-        buttons = page.locator('.js-open-reservation')
+        # Ordinary CTAs are independent of the scroll-controlled CTA checked above.
+        buttons = page.locator('.js-open-reservation:not(.js-fixed-reservation)')
         for i in range(buttons.count()):
             button = buttons.nth(i)
             if not button.is_visible():
@@ -185,7 +208,9 @@ with sync_playwright() as playwright:
         page = browser.new_page(viewport={'width': width, 'height': height}, device_scale_factor=1, reduced_motion='reduce')
         page.on('pageerror', lambda error: errors.append(str(error)))
         ready(page)
-        opener = '.p-guide-page__fixed' if width <= 768 else '.l-header__reserve'
+        opener = '.js-fixed-reservation' if width <= 768 else '.l-header__reserve'
+        if width <= 768:
+            show_fixed_reservation(page)
         page.locator(opener).click()
         expect(page.locator('.p-reservation__close')).to_be_visible()
         page.locator('.p-reservation__close').focus()
@@ -263,7 +288,10 @@ with sync_playwright() as playwright:
             # 新しい日時UIを含め、ガイドと現在のTOPのモーダル全体を比較する。
             page = browser.new_page(viewport={'width': width, 'height': height}, reduced_motion='reduce')
             ready(page)
-            page.locator('.p-guide-page__fixed' if width == 375 else '.l-header__reserve').click()
+            if width == 375:
+                show_fixed_reservation(page).click()
+            else:
+                page.locator('.l-header__reserve').click()
             expect(page.locator('.p-reservation__close')).to_be_visible()
             page.evaluate('document.fonts.ready')
             guide_fonts = dialog_fonts(page)

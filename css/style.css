@@ -645,6 +645,106 @@ address {
     margin-top: 32px;
   }
 }
+.c-fixed-reservation {
+  position: fixed;
+  z-index: 2;
+  top: 182px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 161px;
+  height: 104px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 16px 0 0 16px;
+  background: var(--color-blue);
+  color: var(--color-sand);
+  font-family: "Source Sans 3", "HODY Finder JP", sans-serif;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: transform 400ms ease-out, visibility 0s linear 400ms;
+}
+
+.c-fixed-reservation.is-visible {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-fixed-reservation {
+    transition: none !important;
+  }
+}
+.c-fixed-reservation picture {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 52px;
+  height: 52px;
+}
+
+.c-fixed-reservation__text {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-fixed-reservation__text small {
+  display: none;
+}
+
+.c-fixed-reservation__text strong {
+  font-size: 1.4rem;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.c-fixed-reservation__arrow {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .c-fixed-reservation {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 20px;
+    border-radius: 0;
+    transform: translateY(100%);
+  }
+  .c-fixed-reservation.is-visible {
+    transform: translateY(0);
+  }
+  .c-fixed-reservation picture {
+    position: static;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+  }
+  .c-fixed-reservation picture img {
+    width: 32px;
+    height: 32px;
+  }
+  .c-fixed-reservation__text {
+    align-self: center;
+    margin: 0 auto 0 8px;
+    gap: 4px;
+    text-align: left;
+  }
+  .c-fixed-reservation__text small {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 8px;
+  }
+}
 .p-hero {
   position: relative;
   height: 100vh;
@@ -807,7 +907,7 @@ address {
     transform: scaleX(1);
   }
 }
-/* 和文フォントは診断内だけに適用し、既存TOPと予約画面には波及させない。 */
+/* 和文フォントは診断と共通CTAに適用し、その他の本文と予約画面には波及させない。 */
 @font-face {
   font-family: "HODY Finder JP";
   font-style: normal;
@@ -892,68 +992,6 @@ address {
   aspect-ratio: 290/436;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.p-finder__reservation {
-  position: fixed;
-  z-index: 2;
-  top: 182px;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 161px;
-  height: 104px;
-  padding: 12px 20px;
-  border: 0;
-  border-radius: 16px 0 0 16px;
-  background: var(--color-blue);
-  color: var(--color-sand);
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateX(100%);
-  transition: transform 400ms ease-out, visibility 0s linear 400ms;
-}
-
-.p-finder__reservation.is-visible {
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(0);
-  transition-delay: 0s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .p-finder__reservation {
-    transition: none !important;
-  }
-}
-.p-finder__reservation picture {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  width: 52px;
-  height: 52px;
-}
-
-.p-finder__reservation-text {
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-}
-
-.p-finder__reservation-text small {
-  display: none;
-}
-
-.p-finder__reservation-text strong {
-  font-size: 1.4rem;
-  line-height: 14px;
-  white-space: nowrap;
-}
-
-.p-finder__reservation-arrow {
-  flex: 0 0 auto;
-  margin-left: auto;
 }
 
 .p-finder.is-started .p-finder__inner {
@@ -1281,41 +1319,6 @@ address {
     order: 3;
     width: calc(100% - 40px);
     margin-top: 16px;
-  }
-  .p-finder__reservation {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 68px;
-    padding: 0 20px;
-    border-radius: 0;
-    transform: translateY(100%);
-  }
-  .p-finder__reservation.is-visible {
-    transform: translateY(0);
-  }
-  .p-finder__reservation picture {
-    position: static;
-    flex: 0 0 32px;
-    width: 32px;
-    height: 32px;
-  }
-  .p-finder__reservation picture img {
-    width: 32px;
-    height: 32px;
-  }
-  .p-finder__reservation-text {
-    align-self: center;
-    margin: 0 auto 0 8px;
-    gap: 4px;
-    text-align: left;
-  }
-  .p-finder__reservation-text small {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 8px;
   }
   .p-finder.is-started .p-finder__inner {
     min-height: 576px;
@@ -2584,8 +2587,7 @@ address {
 /* 日本語Webフォントはガイド本体だけに適用。共通ダイアログ・メニューは既存のまま。 */
 .p-guide-page > .l-header,
 .p-guide-page > main,
-.p-guide-page > .l-footer,
-.p-guide-page__fixed {
+.p-guide-page > .l-footer {
   font-family: "Source Sans 3", "HODY Guide JP", sans-serif;
 }
 
@@ -2803,10 +2805,6 @@ address {
   font-weight: 700;
 }
 
-.p-guide-page__fixed {
-  display: none;
-}
-
 @media (max-width: 1200px) and (min-width: 769px) {
   .p-guide-page__step-title {
     padding-right: 46px;
@@ -2969,36 +2967,6 @@ address {
   /* 原本の先頭回答は本文の下に約4px。固定高で文字を切らない。 */
   .p-guide-page__faq-item:first-child .p-guide-page__answer {
     padding-bottom: 4.156px;
-  }
-  .p-guide-page__fixed {
-    position: fixed;
-    z-index: 40;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    min-height: calc(68px + env(safe-area-inset-bottom, 0px));
-    padding: 0 20px env(safe-area-inset-bottom, 0px);
-    border: 0;
-    border-top: 1px solid var(--color-sand);
-    background: var(--color-blue);
-    color: var(--color-sand);
-    text-align: left;
-  }
-  .p-guide-page__fixed > span {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .p-guide-page__fixed small {
-    font-size: 0.8rem;
-    line-height: 13.44px;
-  }
-  .p-guide-page__fixed strong {
-    font-size: 1.4rem;
-    line-height: 14px;
   }
 }
 /* 商品一覧専用の和文フォント。TOP・ガイドの字体は維持する。 */

@@ -195,7 +195,7 @@
         </section>
     </main>
 
-    <footer class="l-footer l-footer--guide">
+    <footer class="l-footer l-footer--guide js-reservation-footer">
         <picture class="l-footer__visual">
             <source media="(max-width: 768px)" srcset="assets/images/guide/shop-sp.png"><img
                 src="assets/images/guide/shop-pc.png" alt="HODY GUITARの店舗外観" loading="lazy">
@@ -223,13 +223,15 @@
         </div>
     </footer>
 
-
-    <!-- 追従動作はユーザー確認済み。メニューと予約画面より背面に配置する。 -->
-    <button class="p-guide-page__fixed js-open-reservation" type="button">
-        <img src="assets/images/guide/guitar-ivory.svg" width="32" height="32" alt="">
-        <span><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
-        <img class="p-guide-page__button-arrow" src="assets/images/guide/arrow-ivory.svg" width="10.5" height="7.36396"
-            alt="">
+    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation" type="button"
+        aria-label="試奏予約をする" inert>
+        <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
+                src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">
+        </picture>
+        <span class="c-fixed-reservation__text"><small>相談だけでもOK！</small><strong>試奏予約をする</strong></span>
+        <img class="c-fixed-reservation__arrow" src="assets/images/guide/arrow-ivory.svg" width="10.5"
+            height="7.36396" alt="">
     </button>
 
     <!-- SP版のフルスクリーンメニュー -->

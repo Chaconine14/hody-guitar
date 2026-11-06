@@ -135,9 +135,9 @@ def non_image_error(first, second, boxes):
 
 
 if args.baseline_dir:
-    for name in ['data/products.json', 'data/products.csv', 'data/test_scenarios.json', 'selection.html', 'guide.html', 'js/menu.js', 'js/slider.js']:
+    for name in ['data/products.json', 'data/products.csv', 'data/test_scenarios.json', 'js/menu.js', 'js/slider.js']:
         assert (ROOT / name).read_bytes() == (args.baseline_dir / name).read_bytes(), f'Unrelated file changed: {name}'
-    report['unchanged_files'] = ['product JSON/CSV/scenarios', 'selection.html', 'guide.html', 'menu.js', 'slider.js']
+    report['unchanged_files'] = ['product JSON/CSV/scenarios', 'menu.js', 'slider.js']
 
 with sync_playwright() as p:
     browser = p.chromium.launch(executable_path=args.browser, headless=True)
@@ -198,7 +198,11 @@ with sync_playwright() as p:
             else:
                 assert all(positions[i+1]['y'] > positions[i]['y'] for i in range(buttons.count()-1))
             expect(page.locator('.p-finder__question-title')).to_be_focused()
-            expect(page.locator('.p-finder__reservation')).to_be_hidden()
+            fixed = page.locator('.js-fixed-reservation')
+            expect(fixed).to_have_count(1)
+            assert page.locator('.js-reservation-hero').evaluate('el => el.getBoundingClientRect().bottom <= innerHeight * .5')
+            expect(fixed).to_be_visible()
+            assert not fixed.evaluate('el => el.inert')
             if width in (1440,375):shot(page, f'{label}-q{step+1}.png')
             answer(page,value)
         result_ready(page)

@@ -4,14 +4,16 @@
     const hero = document.querySelector('.js-reservation-hero');
     const fixedReservation = document.querySelector('.js-fixed-reservation');
     const footer = document.querySelector('.js-reservation-footer');
-    if (hero && fixedReservation && footer) {
+    if (fixedReservation && footer) {
         const mobileViewport = window.matchMedia('(max-width: 768px)');
         let updatePending = false;
 
         function updateFixedReservation() {
-            const passedHero = hero.getBoundingClientRect().bottom <= window.innerHeight * 0.5;
+            const passedStart = hero
+                ? hero.getBoundingClientRect().bottom <= window.innerHeight * 0.5
+                : window.scrollY >= 150;
             const reachedFooter = mobileViewport.matches && footer.getBoundingClientRect().top < window.innerHeight;
-            const isVisible = passedHero && !reachedFooter;
+            const isVisible = passedStart && !reachedFooter;
             fixedReservation.classList.toggle('is-visible', isVisible);
             fixedReservation.inert = !isVisible;
             updatePending = false;
@@ -30,7 +32,7 @@
         mobileViewport.addEventListener('change', requestFixedReservationUpdate);
         // 100vhや画像読み込みによるFV・本文の実寸変更後にも判定する。
         const resizeObserver = new ResizeObserver(requestFixedReservationUpdate);
-        resizeObserver.observe(hero);
+        if (hero) resizeObserver.observe(hero);
         resizeObserver.observe(footer);
         resizeObserver.observe(document.querySelector('main'));
         updateFixedReservation();

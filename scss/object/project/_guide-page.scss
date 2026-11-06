@@ -32,8 +32,7 @@
 /* 日本語Webフォントはガイド本体だけに適用。共通ダイアログ・メニューは既存のまま。 */
 .p-guide-page > .l-header,
 .p-guide-page > main,
-.p-guide-page > .l-footer,
-.p-guide-page__fixed {
+.p-guide-page > .l-footer {
     font-family: "Source Sans 3", "HODY Guide JP", sans-serif;
 }
 
@@ -251,10 +250,6 @@
     font-weight: 700;
 }
 
-.p-guide-page__fixed {
-    display: none;
-}
-
 @media (max-width: 1200px) and (min-width: 769px) {
 .p-guide-page__step-title {
         padding-right: 46px;
@@ -453,37 +448,4 @@
         padding-bottom: 4.156px;
     }
 
-.p-guide-page__fixed {
-        position: fixed;
-        z-index: 40;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        min-height: calc(68px + env(safe-area-inset-bottom, 0px));
-        padding: 0 20px env(safe-area-inset-bottom, 0px);
-        border: 0;
-        border-top: 1px solid var(--color-sand);
-        background: var(--color-blue);
-        color: var(--color-sand);
-        text-align: left;
-    }
-
-.p-guide-page__fixed > span {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-.p-guide-page__fixed small {
-        font-size: .8rem;
-        line-height: 13.44px;
-    }
-
-.p-guide-page__fixed strong {
-        font-size: 1.4rem;
-        line-height: 14px;
-    }
 }
