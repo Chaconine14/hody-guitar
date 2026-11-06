@@ -113,26 +113,6 @@
     }
 }
 
-// @media (max-width: 1024px) and (min-width: 769px) {
-//     .p-hero__inner {
-//         padding-top: min(520px, calc(100vh - 270px));
-//     }
-// }
-
-
-// @media (max-width: 1024px) and (min-width: 769px) {
-//     .p-hero__inner {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: flex-end;
-//         padding-top: 0;
-//         padding-bottom: 40px;
-//     }
-
-//     .p-hero__progress {
-//         margin-top: 54px;
-//     }
-// }
 
 
 
@@ -153,9 +133,6 @@
     }
 
     .p-hero__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         width: auto;
         padding: 0 16px 20px;
     }
