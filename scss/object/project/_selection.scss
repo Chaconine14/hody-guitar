@@ -1,11 +1,11 @@
-.p-selection  {
+.p-selection {
     height: 951px;
     display: flex;
     align-items: center;
     background: var(--color-sand);
 }
 
-.p-selection__inner  {
+.p-selection__inner {
     width: calc(100% - 80px);
     max-width: 1360px;
     margin: 0 auto;
@@ -15,21 +15,21 @@
     gap: 30px;
 }
 
-.p-selection__heading  {
+.p-selection__heading {
     flex: 0 0 auto;
 }
 
-.p-selection__heading .c-section-heading__en  {
+.p-selection__heading .c-section-heading__en {
     font-size: 4rem;
 }
 
-.p-selection__cards  {
+.p-selection__cards {
     display: flex;
     gap: 25px;
     margin-left: auto;
 }
 
-.p-selection__card  {
+.p-selection__card {
     width: 350px;
     min-height: 606px;
     padding: 120px 56px 56px;
@@ -40,7 +40,7 @@
     color: var(--color-charcoal);
 }
 
-.p-selection__photo  {
+.p-selection__photo {
     display: block;
     width: 216px;
     height: 271px;
@@ -48,13 +48,13 @@
     overflow: hidden;
 }
 
-.p-selection__photo img  {
+.p-selection__photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.p-selection__text  {
+.p-selection__text {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -62,99 +62,99 @@
     margin-top: 64px;
 }
 
-.p-selection__tagline  {
+.p-selection__tagline {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-muted);
     line-height: 1.45;
 }
 
-.p-selection__brand  {
+.p-selection__brand {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.45;
 }
 
-.p-selection__name  {
+.p-selection__name {
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 1.45;
 }
 
-.p-selection__card--sp  {
+.p-selection__card--sp {
     display: none;
 }
 
-.p-selection__more  {
+.p-selection__more {
     margin-left: 15px;
 }
 
-@media (max-width: 1300px) and (min-width: 769px)  {
-    .p-selection__inner  {
+@media (max-width: 1300px) and (min-width: 769px) {
+    .p-selection__inner {
         gap: 15px;
     }
 
-    .p-selection__card  {
+    .p-selection__card {
         width: clamp(210px, 24vw, 350px);
         padding-inline: 24px;
     }
 
-    .p-selection__photo  {
+    .p-selection__photo {
         max-width: 100%;
     }
 
-    .p-selection__more  {
+    .p-selection__more {
         margin-left: 0;
     }
 
 }
 
 /* タブレットでは見出しを上段に置き、写真の幅を確保してカードを並べる。 */
-@media (min-width: 769px) and (max-width: 1024px)  {
-    .p-selection__inner  {
+@media (min-width: 769px) and (max-width: 1024px) {
+    .p-selection__inner {
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 20px;
         row-gap: 25px;
     }
 
-    .p-selection__heading  {
+    .p-selection__heading {
         flex-basis: 100%;
     }
 
-    .p-selection__cards  {
+    .p-selection__cards {
         margin-left: 0;
     }
 
-    .p-selection__card  {
+    .p-selection__card {
         width: min(350px, calc((100vw - 105px) / 2));
     }
 
 }
 
-@media (max-width: 768px)  {
-    .p-selection  {
+@media (max-width: 768px) {
+    .p-selection {
         height: auto;
         display: block;
         padding: 60px 0;
         background: var(--color-ivory);
     }
 
-    .p-selection__inner  {
+    .p-selection__inner {
         display: block;
         width: 100%;
         height: auto;
     }
 
-    .p-selection__heading  {
+    .p-selection__heading {
         margin-inline: 16px;
     }
 
-    .p-selection__heading .c-section-heading__en  {
+    .p-selection__heading .c-section-heading__en {
         font-size: 2.8rem;
     }
 
-    .p-selection__cards  {
+    .p-selection__cards {
         width: 100%;
         max-width: 600px;
         display: grid;
@@ -164,7 +164,7 @@
         margin: 40px auto 0;
     }
 
-    .p-selection__card  {
+    .p-selection__card {
         width: 100%;
         min-height: 0;
         padding: 0;
@@ -172,41 +172,42 @@
         background: transparent;
     }
 
-    .p-selection__card--sp  {
+    .p-selection__card--sp {
         display: block;
     }
 
-    .p-selection__photo  {
+    .p-selection__photo {
         width: 100%;
         height: auto;
         aspect-ratio: 162 / 202;
         background: #dededb;
     }
 
-    .p-selection__text  {
+    .p-selection__text {
         margin-top: 8px;
         gap: 4px;
     }
 
-    .p-selection__tagline  {
-        font-size: .8rem;
+    .p-selection__tagline {
+        font-size: 1.2rem;
         line-height: 1;
         color: #161616;
     }
 
-    .p-selection__brand  {
-        font-size: 1.2rem;
+    .p-selection__brand {
+        font-size: 1.4rem;
         color: #555;
         line-height: 1;
     }
 
-    .p-selection__name  {
-        font-size: 2rem;
+    .p-selection__name {
+        // font-size: 2rem;
+        font-size: 2.4rem;
         line-height: 1;
         color: #161616;
     }
 
-    .p-selection__more  {
+    .p-selection__more {
         display: flex;
         width: fit-content;
         margin: 72px auto 0;

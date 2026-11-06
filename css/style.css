@@ -219,8 +219,8 @@ address {
     gap: 20px;
   }
   :is(.l-header--guide, .l-header--subpage) .l-header__nav-list {
-    gap: 16px;
-    font-size: 1.2rem;
+    gap: 24px;
+    font-size: 1.4rem;
   }
   :is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(n) {
     width: auto;
@@ -285,8 +285,8 @@ address {
 
 .l-footer__brand {
   display: block;
-  width: 257px;
-  height: 132px;
+  width: 200px;
+  height: 102px;
 }
 
 .l-footer__brand img {
@@ -400,7 +400,7 @@ address {
 }
 
 :is(.l-footer--guide, .l-footer--subpage) .l-footer__brand {
-  background: url("../assets/images/guide/logo-white.svg") left top/257px 132px no-repeat;
+  background: url("../assets/images/guide/logo-white.svg") left top/200px 102px no-repeat;
 }
 
 :is(.l-footer--guide, .l-footer--subpage) .l-footer__address {
@@ -499,7 +499,7 @@ address {
 
 .c-button--finder small {
   color: var(--color-muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -641,8 +641,7 @@ address {
     line-height: 23.8px;
   }
   :is(.p-guide-page__reserve, .c-trial-invite__button) {
-    width: 100%;
-    margin-top: 32px;
+    margin: 40px auto 0;
   }
 }
 .c-fixed-reservation {
@@ -682,7 +681,7 @@ address {
 .c-fixed-reservation picture {
   position: absolute;
   top: 15px;
-  left: 20px;
+  left: 52px;
   width: 52px;
   height: 52px;
 }
@@ -698,14 +697,17 @@ address {
 }
 
 .c-fixed-reservation__text strong {
-  font-size: 1.4rem;
-  line-height: 14px;
+  font-size: 1.6rem;
+  line-height: 16px;
   white-space: nowrap;
 }
 
 .c-fixed-reservation__arrow {
   flex: 0 0 auto;
   margin-left: auto;
+  width: 20px;
+  height: auto;
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -740,9 +742,12 @@ address {
   }
   .c-fixed-reservation__text small {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    line-height: 8px;
+    line-height: 1.7;
+  }
+  .c-fixed-reservation__arrow {
+    visibility: visible;
   }
 }
 .p-hero {
@@ -871,8 +876,8 @@ address {
     color: var(--color-sand);
   }
   .p-hero__slide img {
-    -o-object-position: center top;
-       object-position: center top;
+    -o-object-position: 45% top;
+       object-position: 45% top;
   }
   .p-hero__shade {
     inset: 192px 0 0;
@@ -1591,17 +1596,17 @@ address {
     gap: 4px;
   }
   .p-selection__tagline {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     line-height: 1;
     color: #161616;
   }
   .p-selection__brand {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #555;
     line-height: 1;
   }
   .p-selection__name {
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1;
     color: #161616;
   }
@@ -1797,12 +1802,11 @@ address {
     position: relative;
     width: auto;
     margin: 0 16px;
-    padding-top: 0;
+    padding-top: 60px;
   }
   .p-staff__lead {
     margin-top: 20px;
     font-size: 1.4rem;
-    font-weight: 700;
     line-height: 1;
   }
   .p-staff__grid {
@@ -1926,7 +1930,7 @@ address {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 40px 16px;
+    padding: 60px 16px;
   }
   .p-guide__heading .c-section-heading__en {
     font-size: 2.8rem;
@@ -1962,9 +1966,10 @@ address {
 
 .p-store__detail {
   display: flex;
-  gap: 75px;
+  gap: 60px;
   margin-top: 35px;
   min-height: 356px;
+  justify-content: center;
 }
 
 .p-store__map {
@@ -2025,7 +2030,7 @@ address {
   .p-store {
     display: block;
     height: auto;
-    padding: 100px 0 60px;
+    padding: 80px 0 60px;
   }
   .p-store__inner {
     width: auto;
@@ -2120,7 +2125,7 @@ address {
 @media (max-width: 768px) {
   .p-instagram {
     height: 338px;
-    padding: 36px 0 0;
+    padding: 60px 0 0;
     margin-bottom: 60px;
   }
   .p-instagram__inner {
@@ -2140,9 +2145,6 @@ address {
   .p-instagram__photos picture {
     width: 100px;
     height: 100px;
-  }
-  .p-instagram__photos .p-instagram__photo-extra {
-    display: none;
   }
   .p-instagram__more--pc {
     display: none;
@@ -2222,9 +2224,7 @@ address {
 
 .p-mobile-menu__reserve {
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 60%;
   margin: 80px auto 50px;
 }
 
@@ -2293,8 +2293,8 @@ address {
   background: var(--color-muted);
   color: var(--color-sand);
   font-weight: 400;
-  font-size: 2rem;
-  line-height: 1;
+  font-size: 3.2rem;
+  line-height: 33px;
 }
 
 .p-reservation__eyebrow {
@@ -2464,7 +2464,7 @@ address {
 
 .p-reservation__submit {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   width: 236px;
@@ -2530,10 +2530,10 @@ address {
     max-width: 100%;
   }
   .p-reservation__field--product .p-reservation__control,
-  .p-reservation__field--date .p-reservation__control,
-  .p-reservation__field--time .p-reservation__control,
-  .p-reservation__field--name .p-reservation__control,
-  .p-reservation__field--email .p-reservation__control {
+.p-reservation__field--date .p-reservation__control,
+.p-reservation__field--time .p-reservation__control,
+.p-reservation__field--name .p-reservation__control,
+.p-reservation__field--email .p-reservation__control {
     max-width: 100%;
   }
   .p-reservation__submit {
@@ -2757,7 +2757,7 @@ address {
   padding-block: 21px 23px;
   list-style: none;
   cursor: pointer;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -2767,8 +2767,9 @@ address {
 }
 
 .p-guide-page__q {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .p-guide-page__toggle {
@@ -2794,8 +2795,7 @@ address {
   display: grid;
   grid-template-columns: 34px minmax(0, 860px);
   gap: 24px;
-  min-height: 109px;
-  padding: 0 0 34px 9px;
+  padding: 0 0 34px;
   font-size: 1.6rem;
   line-height: 1.5;
 }
@@ -2803,15 +2803,12 @@ address {
 .p-guide-page__a {
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 @media (max-width: 1200px) and (min-width: 769px) {
   .p-guide-page__step-title {
     padding-right: 46px;
-  }
-  .p-guide-page__step:nth-child(odd) .p-guide-page__step-title,
-.p-guide-page__step:nth-child(odd) .p-guide-page__step-copy {
-    max-width: calc(50% - 107px);
   }
   .p-guide-page__step-icon {
     left: calc(50% - 55px);
@@ -2825,9 +2822,6 @@ address {
   }
 }
 @media (max-width: 768px) {
-  .p-guide-page {
-    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
-  }
   .p-guide-page__container {
     width: calc(100% - 32px);
   }
@@ -2850,7 +2844,7 @@ address {
   }
   .p-guide-page__flow {
     min-height: 0;
-    padding-block: 64px 129px;
+    padding-block: 64px 80px;
   }
   .p-guide-page__flow-heading,
 .p-guide-page__faq-heading {
@@ -2926,7 +2920,7 @@ address {
     display: none;
   }
   .p-guide-page__faq {
-    padding-block: 32px 60px;
+    padding-block: 60px 60px;
   }
   .p-guide-page__faq-heading {
     min-height: 32px;
@@ -2966,7 +2960,7 @@ address {
   }
   /* 原本の先頭回答は本文の下に約4px。固定高で文字を切らない。 */
   .p-guide-page__faq-item:first-child .p-guide-page__answer {
-    padding-bottom: 4.156px;
+    padding-bottom: 20px;
   }
 }
 /* 商品一覧専用の和文フォント。TOP・ガイドの字体は維持する。 */
@@ -3140,7 +3134,7 @@ address {
 .p-selection-page__search {
   display: block;
   width: 100%;
-  min-height: 35px;
+  min-height: 40px;
   margin-top: 42px;
   padding: 7px 13px;
   border: 0;
@@ -3212,8 +3206,8 @@ address {
 .p-selection-page__brand {
   margin-top: 20px;
   color: #555;
-  font-size: 1.2rem;
-  line-height: 12px;
+  font-size: 1.4rem;
+  line-height: 14px;
 }
 
 .p-selection-page__model {
@@ -3403,7 +3397,7 @@ address {
     color: var(--color-charcoal);
   }
   .p-selection-page__search {
-    width: auto;
+    width: 50%;
     margin-top: 40px;
     margin-inline: auto;
   }

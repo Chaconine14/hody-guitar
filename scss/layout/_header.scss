@@ -149,8 +149,10 @@
     }
 
     :is(.l-header--guide, .l-header--subpage) .l-header__nav-list {
-        gap: 16px;
-        font-size: 1.2rem;
+        // gap: 16px;
+        // font-size: 1.2rem;
+        gap: 24px;
+        font-size: 1.4rem;
     }
 
     :is(.l-header--guide, .l-header--subpage) .l-header__nav-list li:nth-child(n) {

@@ -1,107 +1,109 @@
-.p-store  {
+.p-store {
     height: 720px;
     background: var(--color-ivory);
     display: flex;
     align-items: center;
 }
 
-.p-store__inner  {
+.p-store__inner {
     width: min(1100px, calc(100% - 80px));
     margin: 0 auto;
 }
 
-.p-store__detail  {
+.p-store__detail {
     display: flex;
-    gap: 75px;
+    gap: 60px;
     margin-top: 35px;
     min-height: 356px;
+    justify-content: center;
 }
 
-.p-store__map  {
+.p-store__map {
     display: block;
     flex: 0 0 515px;
     width: 515px;
     height: 336px;
 }
 
-.p-store__map iframe  {
+.p-store__map iframe {
     display: block;
     width: 100%;
     height: 100%;
     border: 0;
 }
 
-.p-store__list  {
+.p-store__list {
     width: 343px;
     border-top: 1px solid #9b9b98;
 }
 
-.p-store__item  {
+.p-store__item {
     padding: 16px 0;
     border-bottom: 1px solid #9b9b98;
     color: #161616;
 }
 
-.p-store__item dt  {
+.p-store__item dt {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 14px;
 }
 
-.p-store__item dd  {
+.p-store__item dd {
     margin-top: 12px;
     font-size: 1.6rem;
     line-height: 1.45;
 }
 
-.p-store__reserve  {
+.p-store__reserve {
     display: flex;
     width: fit-content;
     margin: 30px auto 0;
 }
 
-@media (max-width: 1024px) and (min-width: 769px)  {
-    .p-store__detail  {
+@media (max-width: 1024px) and (min-width: 769px) {
+    .p-store__detail {
         gap: 36px;
     }
 
-    .p-store__map  {
+    .p-store__map {
         flex-basis: 50%;
         width: 50%;
     }
 
 }
 
-@media (max-width: 768px)  {
-    .p-store  {
+@media (max-width: 768px) {
+    .p-store {
         display: block;
         height: auto;
-        padding: 100px 0 60px;
+        // padding: 100px 0 60px;
+        padding: 80px 0 60px;
     }
 
-    .p-store__inner  {
+    .p-store__inner {
         width: auto;
         margin: 0 16px;
         padding-top: 0;
     }
 
-    .p-store__detail  {
+    .p-store__detail {
         display: block;
         margin-top: 41px;
     }
 
-    .p-store__map  {
+    .p-store__map {
         display: block;
         width: 100%;
         height: 202px;
     }
 
-    .p-store__list  {
+    .p-store__list {
         width: 100%;
         margin-top: 24px;
     }
 
-    .p-store__item  {
+    .p-store__item {
         padding: 16px 0;
     }
 
@@ -109,7 +111,7 @@
         line-height: 1.2;
     }
 
-    .p-store__reserve  {
+    .p-store__reserve {
         margin-top: 40px;
     }
 

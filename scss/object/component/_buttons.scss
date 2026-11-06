@@ -1,4 +1,4 @@
-.c-button  {
+.c-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -13,17 +13,17 @@
     font-weight: 700;
 }
 
-.c-button--light  {
+.c-button--light {
     color: var(--color-ivory);
     border-color: var(--color-ivory);
 }
 
-.c-button--outline  {
+.c-button--outline {
     color: var(--color-charcoal);
     border-color: var(--color-charcoal);
 }
 
-.c-arrow  {
+.c-arrow {
     display: inline-block;
     min-width: 16px;
     line-height: 1;
@@ -31,7 +31,7 @@
     font-weight: 400;
 }
 
-.c-button--finder  {
+.c-button--finder {
     width: 263px;
     height: 56px;
     display: flex;
@@ -40,18 +40,18 @@
     padding: 8px 16px 12px;
 }
 
-.c-button--finder small  {
+.c-button--finder small {
     color: var(--color-muted);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
-.c-button--finder span  {
+.c-button--finder span {
     font-size: 1.4rem;
 }
 
 /* Use exact SVG vectors exported from Figma rather than text glyphs. */
-.c-arrow  {
+.c-arrow {
     display: block;
     width: 17px;
     height: 8px;
@@ -59,6 +59,6 @@
     background: url('../assets/icons/arrow-dark.svg') center / 17px 8px no-repeat;
 }
 
-.c-button--light .c-arrow  {
+.c-button--light .c-arrow {
     background-image: url('../assets/icons/arrow-light.svg');
 }

@@ -1,25 +1,25 @@
-.p-instagram  {
+.p-instagram {
     background: var(--color-sand);
     padding: 80px 0;
     overflow: hidden;
 }
 
-.p-instagram__inner  {
+.p-instagram__inner {
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.p-instagram__head  {
+.p-instagram__head {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.p-instagram__heading .c-section-heading__ja  {
+.p-instagram__heading .c-section-heading__ja {
     font-size: 1.5rem;
 }
 
-.p-instagram__photos  {
+.p-instagram__photos {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
@@ -27,77 +27,78 @@
     margin-top: 60px;
 }
 
-.p-instagram__photos picture  {
+.p-instagram__photos picture {
     display: block;
     width: 253px;
     height: 253px;
 }
 
-.p-instagram__photos > a {
+.p-instagram__photos>a {
     display: block;
     flex: 0 0 auto;
 }
 
-.p-instagram__photos > a:hover {
+.p-instagram__photos>a:hover {
     opacity: 1;
 }
 
-.p-instagram__photos img  {
+.p-instagram__photos img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.p-instagram__more--sp  {
+.p-instagram__more--sp {
     display: none;
 }
 
-@media (max-width: 1199px) and (min-width: 769px)  {
-    .p-instagram__inner  {
+@media (max-width: 1199px) and (min-width: 769px) {
+    .p-instagram__inner {
         margin: 0 40px;
     }
 
 }
 
-@media (max-width: 768px)  {
-    .p-instagram  {
+@media (max-width: 768px) {
+    .p-instagram {
         height: 338px;
-        padding: 36px 0 0;
+        // padding: 36px 0 0;
+        padding: 60px 0 0;
         margin-bottom: 60px;
     }
 
-    .p-instagram__inner  {
+    .p-instagram__inner {
         margin: 0;
     }
 
-    .p-instagram__heading  {
+    .p-instagram__heading {
         margin-left: 16px;
     }
 
-    .p-instagram__heading .c-section-heading__ja  {
+    .p-instagram__heading .c-section-heading__ja {
         font-size: 1.4rem;
     }
 
-    .p-instagram__photos  {
+    .p-instagram__photos {
         margin-top: 32px;
         margin-left: -11px;
         gap: 16px;
     }
 
-    .p-instagram__photos picture  {
+    .p-instagram__photos picture {
         width: 100px;
         height: 100px;
     }
 
-    .p-instagram__photos .p-instagram__photo-extra  {
+    // .p-instagram__photos .p-instagram__photo-extra  {
+    //     display: none;
+    // }
+
+    .p-instagram__more--pc {
         display: none;
     }
 
-    .p-instagram__more--pc  {
-        display: none;
-    }
-
-    .p-instagram__more--sp  {
+    .p-instagram__more--sp {
         display: flex;
         width: fit-content;
         margin: 30px auto 0;

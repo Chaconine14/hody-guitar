@@ -1,4 +1,4 @@
-.p-mobile-menu  {
+.p-mobile-menu {
     position: fixed;
     z-index: 60;
     inset: 0;
@@ -9,12 +9,12 @@
     transition: transform .35s ease, visibility .35s;
 }
 
-.p-mobile-menu.is-open  {
+.p-mobile-menu.is-open {
     transform: translateX(0);
     visibility: visible;
 }
 
-.p-mobile-menu__head  {
+.p-mobile-menu__head {
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -23,12 +23,12 @@
     border-bottom: 1px solid #dbdbdb;
 }
 
-.p-mobile-menu__head img  {
+.p-mobile-menu__head img {
     width: 117px;
     height: 60px;
 }
 
-.p-mobile-menu__close  {
+.p-mobile-menu__close {
     position: relative;
     width: 32px;
     height: 32px;
@@ -36,7 +36,7 @@
     background: transparent;
 }
 
-.p-mobile-menu__close span  {
+.p-mobile-menu__close span {
     position: absolute;
     top: 15px;
     left: 0;
@@ -46,15 +46,15 @@
     transform: rotate(45deg);
 }
 
-.p-mobile-menu__close span + span  {
+.p-mobile-menu__close span+span {
     transform: rotate(-45deg);
 }
 
-.p-mobile-menu__nav  {
+.p-mobile-menu__nav {
     padding: 34px 14px 0;
 }
 
-.p-mobile-menu__nav ul  {
+.p-mobile-menu__nav ul {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -63,14 +63,15 @@
     font-weight: 500;
 }
 
-.p-mobile-menu__reserve  {
+.p-mobile-menu__reserve {
     display: flex;
-    width: fit-content;
+    // width: fit-content;
+    width: 60%;
     margin: 80px auto 50px;
 }
 
-@media (min-width: 769px)  {
-    .p-mobile-menu  {
+@media (min-width: 769px) {
+    .p-mobile-menu {
         display: none !important;
     }
 

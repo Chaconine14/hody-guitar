@@ -23,14 +23,14 @@
     src: url('../assets/fonts/selection-noto-jp-700.ttf') format('truetype');
 }
 
-.p-selection-page > .l-header,
-.p-selection-page > main,
-.p-selection-page > .l-footer {
+.p-selection-page>.l-header,
+.p-selection-page>main,
+.p-selection-page>.l-footer {
     font-family: "Source Sans 3", "HODY Selection JP", sans-serif;
 }
 
-.p-selection-page > .p-reservation,
-.p-selection-page > .p-mobile-menu {
+.p-selection-page>.p-reservation,
+.p-selection-page>.p-mobile-menu {
     font-family: "Source Sans 3", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
 }
 
@@ -66,7 +66,7 @@
     background: var(--color-surface);
 }
 
-.p-selection-page__applied-desktop > div {
+.p-selection-page__applied-desktop>div {
     padding-block: 32px 60px;
     border-top: 1px solid var(--color-muted);
 }
@@ -169,7 +169,8 @@
 .p-selection-page__search {
     display: block;
     width: 100%;
-    min-height: 35px;
+    // min-height: 35px;
+    min-height: 40px;
     margin-top: 42px;
     padding: 7px 13px;
     border: 0;
@@ -239,8 +240,8 @@
 .p-selection-page__brand {
     margin-top: 20px;
     color: #555;
-    font-size: 1.2rem;
-    line-height: 12px;
+    font-size: 1.4rem;
+    line-height: 14px;
 }
 
 .p-selection-page__model {
@@ -354,7 +355,7 @@
         background: var(--color-ivory);
     }
 
-    .p-selection-page__intro > div {
+    .p-selection-page__intro>div {
         width: calc(100% - 28px);
     }
 
@@ -451,7 +452,8 @@
     }
 
     .p-selection-page__search {
-        width: auto;
+        // width: auto;
+        width: 50%;
         margin-top: 40px;
         margin-inline: auto;
     }

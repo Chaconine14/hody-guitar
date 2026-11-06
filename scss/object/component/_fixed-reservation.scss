@@ -36,7 +36,8 @@
 .c-fixed-reservation picture {
     position: absolute;
     top: 15px;
-    left: 20px;
+    // left: 20px;
+    left: 52px;
     width: 52px;
     height: 52px;
 }
@@ -52,14 +53,17 @@
 }
 
 .c-fixed-reservation__text strong {
-    font-size: 1.4rem;
-    line-height: 14px;
+    font-size: 1.6rem;
+    line-height: 16px;
     white-space: nowrap;
 }
 
 .c-fixed-reservation__arrow {
     flex: 0 0 auto;
     margin-left: auto;
+    width: 20px;
+    height: auto;
+    visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -99,8 +103,14 @@
 
     .c-fixed-reservation__text small {
         display: block;
-        font-size: .8rem;
+        // font-size: .8rem;
+        font-size: 1.2rem;
         font-weight: 400;
-        line-height: 8px;
+        // line-height: 8px;
+        line-height: 1.7;
+    }
+
+    .c-fixed-reservation__arrow {
+        visibility: visible;
     }
 }
