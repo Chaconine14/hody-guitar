@@ -874,8 +874,8 @@ address {
     color: var(--color-sand);
   }
   .p-hero__slide img {
-    -o-object-position: 45% top;
-       object-position: 45% top;
+    -o-object-position: center top;
+       object-position: center top;
   }
   .p-hero__shade {
     inset: 192px 0 0;
@@ -2238,6 +2238,7 @@ body.is-reservation-locked {
   width: 100%;
   overflow: hidden;
 }
+
 .p-reservation {
   position: fixed;
   z-index: 100;
