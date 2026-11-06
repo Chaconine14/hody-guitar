@@ -7,6 +7,70 @@
     <meta name="description" content="長く愛せる一本を。アコースティックギター専門店 HODY GUITAR。あなたにぴったりのギターとの出会いをお手伝いします。">
     <meta name="robots" content="noindex">
     <title>HODY GUITAR | 長く愛せる一本を。</title>
+    <script>
+        (() => {
+            'use strict';
+
+            try {
+                const root = document.documentElement;
+                const key = 'hody:top-loading-seen';
+                const seen = sessionStorage.getItem(key);
+                sessionStorage.setItem(key, '1');
+                const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+                const navigation = performance.getEntriesByType('navigation')[0];
+                const reloading = navigation?.type === 'reload';
+                if ((seen && !reloading) || location.hash || window.scrollX || window.scrollY || document.hidden || motion.matches ||
+                    navigation?.type === 'back_forward') return;
+
+                let finished = false;
+                let timeoutId;
+                function finish() {
+                    if (finished) return;
+                    finished = true;
+                    window.clearTimeout(timeoutId);
+                    document.removeEventListener('hody:loading-finish', finish);
+                    document.removeEventListener('pointerdown', finish, true);
+                    document.removeEventListener('keydown', finish, true);
+                    document.removeEventListener('wheel', finish);
+                    document.removeEventListener('touchstart', finish);
+                    document.removeEventListener('visibilitychange', visibilityChanged);
+                    window.removeEventListener('scroll', scrolled);
+                    window.removeEventListener('pagehide', finish);
+                    window.removeEventListener('pageshow', restored);
+                    window.removeEventListener('hody:reservation-open', finish);
+                    motion.removeEventListener('change', motionChanged);
+                    // バーを0%に戻してから、同じ描画でローディング状態を解除する。
+                    document.dispatchEvent(new Event('hody:loading-end'));
+                    root.classList.remove('is-loading', 'is-loading-pending');
+                    delete root.dataset.loadingStartedAt;
+                    const loader = document.querySelector('.js-loading');
+                    if (loader) loader.hidden = true;
+                }
+                function visibilityChanged() { if (document.hidden) finish(); }
+                function motionChanged() { if (motion.matches) finish(); }
+                function scrolled() { if (window.scrollX || window.scrollY) finish(); }
+                function restored(event) { if (event.persisted) finish(); else scrolled(); }
+
+                document.addEventListener('hody:loading-finish', finish);
+                document.addEventListener('pointerdown', finish, true);
+                document.addEventListener('keydown', finish, true);
+                document.addEventListener('wheel', finish, { passive: true });
+                document.addEventListener('touchstart', finish, { passive: true });
+                document.addEventListener('visibilitychange', visibilityChanged);
+                window.addEventListener('scroll', scrolled, { passive: true });
+                window.addEventListener('pagehide', finish);
+                window.addEventListener('pageshow', restored);
+                window.addEventListener('hody:reservation-open', finish);
+                motion.addEventListener('change', motionChanged);
+                // 外部JSの取得・実行に失敗しても、このタイマーだけで通常表示に戻す。
+                timeoutId = window.setTimeout(finish, 4500);
+                root.dataset.loadingStartedAt = String(performance.now());
+                root.classList.add('is-loading', 'is-loading-pending');
+            } catch {
+                // ストレージなどが利用できない場合は通常のTOPを表示する。
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -19,10 +83,46 @@
     <script defer src="assets/vendor/flatpickr/ja.js"></script>
     <script defer src="js/reservation.js"></script>
     <script defer src="js/slider.js"></script>
+    <script defer src="js/loading.js"></script>
     <script type="module" src="js/finder.js"></script>
 </head>
 
 <body class="p-top">
+    <!-- 既存ロゴのパスをそのまま使用。装飾なので読み上げとフォーカスの対象外。 -->
+    <div class="p-loading js-loading" aria-hidden="true" hidden>
+        <svg class="p-loading__svg js-loading-svg" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <defs>
+                <mask id="loading-aperture" class="p-loading__mask js-loading-mask" maskUnits="userSpaceOnUse"
+                    maskContentUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                    <rect class="js-loading-mask-base" x="0" y="0" width="100%" height="100%" fill="white"></rect>
+                    <g class="js-loading-hole-position">
+                        <g class="js-loading-hole-scale">
+                            <path class="js-loading-hole" d="M48.1891 24.0687C46.3023 24.0687 44.7739 22.547 44.7739 20.6685C44.7739 18.79 46.3023 17.2683 48.1891 17.2683C50.0759 17.2683 51.6043 18.79 51.6043 20.6685C51.6043 22.547 50.0759 24.0687 48.1891 24.0687Z" fill="black" opacity="0"></path>
+                        </g>
+                    </g>
+                </mask>
+            </defs>
+            <g mask="url(#loading-aperture)">
+                <rect class="p-loading__background js-loading-background" x="0" y="0" width="100%" height="100%"></rect>
+                <g class="p-loading__logo js-loading-logo">
+                    <g class="js-loading-letters">
+                            <path d="M12.8723 10.1621H18.8963V20.4034H28.1178V10.1621H34.1827V36.7645H28.1178V25.6668H18.8963V36.7645H12.8723V10.1621Z"></path>
+                            <path d="M62.1879 10.1621H69.7274C77.8814 10.1621 83.1271 14.202 83.1271 23.3397C83.1271 32.4773 77.8814 36.7619 70.0551 36.7619H62.1879V10.1621ZM69.9757 30.5402C73.7417 30.5402 76.2532 28.7152 76.2532 23.4467C76.2532 18.1783 73.7417 16.5546 69.9757 16.5546H69.0259V30.5402H69.9757Z"></path>
+                            <path d="M90.0318 27.298L81.9597 10.1621H88.4343L90.81 16.2819C91.5474 18.2802 92.2437 20.1179 92.981 22.157H93.1449C93.9231 20.1179 94.6605 18.2802 95.3978 16.2819L97.8145 10.1621H104.125L96.0532 27.298V36.7645H90.0292V27.298H90.0318Z"></path>
+                            <path d="M33.2714 48.2369C33.2714 44.959 35.3118 42.9888 38.0025 42.9888C39.4233 42.9888 40.368 43.6056 40.985 44.2505L40.1504 45.2037C39.6409 44.6812 39.0214 44.3269 38.0485 44.3269C36.131 44.3269 34.8638 45.8053 34.8638 48.191C34.8638 50.5767 36.0081 52.1009 38.0946 52.1009C38.7449 52.1009 39.3619 51.8996 39.7331 51.5784V49.1774H37.708V47.9157H41.1232V52.2564C40.4576 52.9344 39.3158 53.4416 37.9385 53.4416C35.2478 53.4416 33.2714 51.5478 33.2714 48.2394V48.2369Z"></path>
+                            <path d="M43.7063 49.0372V43.1748H45.2526V49.1162C45.2526 51.3796 46.1794 52.1009 47.462 52.1009C48.7446 52.1009 49.7021 51.377 49.7021 49.1162V43.1748H51.187V49.0372C51.187 52.2538 49.6714 53.439 47.462 53.439C45.2526 53.439 43.7063 52.2538 43.7063 49.0372Z"></path>
+                            <path d="M54.1107 43.1748H55.657V53.2555H54.1107V43.1748Z"></path>
+                            <path d="M61.0357 44.4671H58.0378V43.1748H65.5671V44.4671H62.5846V53.2555H61.0383V44.4671H61.0357Z"></path>
+                            <path d="M69.3536 43.1748H71.1303L74.4994 53.2555H72.861L71.9957 50.3626H68.4396L67.559 53.2555H65.9819L69.3511 43.1748H69.3536ZM68.8134 49.1468H71.627L71.2097 47.7627C70.8692 46.6693 70.5594 45.5325 70.2522 44.4084H70.1908C69.881 45.5478 69.5712 46.6718 69.2333 47.7627L68.816 49.1468H68.8134Z"></path>
+                            <path d="M76.4503 43.1748H79.7426C81.8291 43.1748 83.3908 43.914 83.3908 46.083C83.3908 47.6378 82.5408 48.5758 81.2429 48.9607L83.7313 53.2555H82.0007L79.6812 49.1621H77.9966V53.2555H76.4503V43.1748ZM79.5557 47.9157C81.0406 47.9157 81.8598 47.3141 81.8598 46.083C81.8598 44.852 81.0406 44.4059 79.5557 44.4059H77.9941V47.9157H79.5557Z"></path>
+                    </g>
+                    <g class="js-loading-o">
+                        <path d="M55.9898 18.7977C56.0486 17.5462 56.3891 16.3813 56.5555 15.1426C56.8167 13.0169 55.9334 10.8376 53.9007 9.96333C52.5976 9.40258 51.1255 9.38729 49.6304 9.31592L46.8783 9.33886C45.3576 9.41787 43.8599 9.39493 42.4954 9.98627C40.5087 10.8503 39.628 13.0525 39.8789 15.1248C40.053 16.3253 40.3295 17.4264 40.4268 18.632C40.7059 22.027 37.6337 24.5249 37.3342 29.7322C37.1422 33.0789 39.0879 35.7501 42.3802 36.5734C45.1246 37.2615 47.9817 37.2998 50.8644 37.0806C54.7916 36.7798 58.4833 35.3015 58.9825 31.2131C59.6507 25.7305 55.8157 22.4553 55.9898 18.7951V18.7977ZM48.1891 24.0687C46.3023 24.0687 44.7739 22.547 44.7739 20.6685C44.7739 18.79 46.3023 17.2683 48.1891 17.2683C50.0759 17.2683 51.6043 18.79 51.6043 20.6685C51.6043 22.547 50.0759 24.0687 48.1891 24.0687Z"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
     <header class="l-header" id="top">
         <div class="l-header__inner">
             <a href="#top" class="l-header__brand" aria-label="HODY GUITAR トップページ">

@@ -1,0 +1,58 @@
+// 起動からSVGの準備まで、FVが先に見えるのを防ぐ。
+html.is-loading-pending::before {
+    content: "";
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+    background: var(--color-sand);
+    pointer-events: none;
+}
+
+.p-loading {
+    --loading-logo-width: 280px;
+    --loading-background: var(--color-sand);
+    --loading-logo-color: var(--color-charcoal);
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.p-loading__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.p-loading__mask {
+    mask-type: luminance;
+}
+
+.p-loading__background {
+    fill: var(--loading-background);
+}
+
+.p-loading__logo path {
+    fill: var(--loading-logo-color);
+}
+
+// ローディング中は未開始に保ち、解除と同時に0%から動かす。
+html.is-loading .p-hero__progress-bar.is-active::after {
+    animation: none;
+    transform: scaleX(0);
+}
+
+@media (max-width: 768px) {
+    .p-loading {
+        --loading-logo-width: 220px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html.is-loading-pending::before,
+    .p-loading {
+        display: none;
+    }
+}

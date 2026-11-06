@@ -31,6 +31,7 @@
     // バーが100%になるタイミングを、画像切り替えのタイミングにする。
     // これならCSSのアニメーション時間を変えても表示時間がずれない。
     progress.addEventListener('animationend', (event) => {
+        if (document.documentElement.classList.contains('is-loading')) return;
         if (event.animationName !== 'p-hero-progress' || event.pseudoElement !== '::after') return;
         if (event.target !== indicators[currentIndex]) return;
 
@@ -41,6 +42,12 @@
     function updateVisibility() {
         progress.classList.toggle('is-paused', document.hidden);
     }
+
+    // ローディング解除前に先頭へ戻し、解除後のバー開始と写真を揃える。
+    document.addEventListener('hody:loading-end', () => {
+        showSlide(0);
+        updateVisibility();
+    });
 
     document.addEventListener('visibilitychange', updateVisibility);
     updateVisibility();
