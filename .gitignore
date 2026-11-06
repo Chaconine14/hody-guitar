@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+/scss/style.css
+/scss/style.css.map
+/artifacts/_local/

@@ -8,8 +8,8 @@
 | `top_slider02.jpg` | FVスライド2 | PC/SP共通 |
 | `top_slider03.jpg` | FVスライド3 | PC/SP共通 |
 | `top_slider04.jpg` | FVスライド4 | PC/SP共通 |
-| `guitar-outline.png` | おすすめギター診断 | PC/SPの寸法だけ切り替え |
-| `guitar-icon.png` | 固定試奏予約CTA | ボタン内に表示 |
+| `finder/intro.png` | おすすめギター診断 | 旧 `guitar-outline.png` を置換。PC/SPの寸法だけ切り替え |
+| `finder/guitar-pc.svg` / `guide/guitar-ivory.svg` | 固定試奏予約CTA | 旧 `guitar-icon.png` を置換。PC/SP別のアイコンを表示 |
 | `guitar01.jpg` | 商品 Gibson J-45 | PC/SP共通 |
 | `guitar02.jpg` | 商品 Martin D-28 | PC/SP共通 |
 | `guitar03.jpg` | SP商品カード3 Taylor 114ce | SPのみ |
