@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
     <script defer src="js/menu.js"></script>
+    <script defer src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script defer src="assets/vendor/flatpickr/ja.js"></script>
     <script defer src="js/reservation.js"></script>
     <script defer src="js/slider.js"></script>
     <script type="module" src="js/finder.js"></script>
@@ -365,10 +368,26 @@
                         <option value="Taylor 114ce">Taylor 114ce</option>
                     </select>
                 </div>
-                <div class="p-reservation__field p-reservation__field--date">
-                    <label class="p-reservation__label" for="reserve-date">希望日時 <span
-                            class="p-reservation__required">必須</span></label>
-                    <input id="reserve-date" class="p-reservation__control" type="datetime-local" name="date" required>
+                <div class="p-reservation__datetime">
+                    <div class="p-reservation__field p-reservation__field--date">
+                        <label class="p-reservation__label" for="reserve-date">希望日 <span
+                                class="p-reservation__required">必須</span></label>
+                        <div class="p-reservation__date-picker">
+                            <input id="reserve-date" class="p-reservation__control js-reservation-date" type="text"
+                                name="date" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                                inputmode="none" aria-describedby="reserve-date-status" required>
+                        </div>
+                    </div>
+                    <div class="p-reservation__field p-reservation__field--time">
+                        <label class="p-reservation__label" for="reserve-time">希望時間 <span
+                                class="p-reservation__required">必須</span></label>
+                        <select id="reserve-time" class="p-reservation__control p-reservation__select js-reservation-time"
+                            name="time" aria-describedby="reserve-date-status" required>
+                            <option value="">時間を選択</option>
+                        </select>
+                    </div>
+                    <p id="reserve-date-status" class="p-reservation__date-status js-reservation-date-status"
+                        role="status" aria-live="polite"></p>
                 </div>
                 <div class="p-reservation__field p-reservation__field--message">
                     <label class="p-reservation__label" for="reserve-message">相談内容</label>

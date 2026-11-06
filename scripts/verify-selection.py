@@ -7,7 +7,9 @@ The optional snapshot mirrors index.html, guide.html, css/style.css and js/reser
 import argparse
 import csv
 import json
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from PIL import Image, ImageChops, ImageStat
 from playwright.sync_api import expect, sync_playwright
 
@@ -107,6 +109,62 @@ def dialog_fonts(page):
     fonts = session.send('CSS.getPlatformFontsForNode', {'nodeId': node['nodeId']})['fonts']
     session.detach()
     return fonts
+
+
+def reservation_date():
+    day = datetime.now(ZoneInfo('Asia/Tokyo')).date() + timedelta(days=1)
+    while day.weekday() == 2:
+        day += timedelta(days=1)
+    return day.isoformat()
+
+
+def dialog_sections(page, prefix):
+    # 日時欄の変更による高さ差を除き、他の欄の見た目と間隔を維持する。
+    sections = ['eyebrow', 'title', 'lead', 'field--product', 'field--message',
+                'field--name', 'field--email', 'submit', 'note', 'close']
+    metrics = page.evaluate('''names => {
+        const panel = document.querySelector('.p-reservation__panel');
+        const panelBox = panel.getBoundingClientRect();
+        const fields = names.map(name => document.querySelector('.p-reservation__' + name));
+        const round = value => Math.round(value * 1000) / 1000;
+        const boxes = fields.map(node => node.getBoundingClientRect());
+        const styles = node => {
+            const style = getComputedStyle(node);
+            return Object.fromEntries(['fontFamily', 'fontSize', 'fontWeight', 'lineHeight',
+                'color', 'backgroundColor', 'border', 'borderRadius', 'padding', 'gap'].map(key => [key, style[key]]));
+        };
+        return {
+            panel: {width: round(panelBox.width), styles: styles(panel)},
+            sections: Object.fromEntries(fields.map((node, i) => [names[i], {
+                text: node.textContent,
+                x: round(boxes[i].left - panelBox.left),
+                y: i < 4 || names[i] === 'close' ? round(boxes[i].top - panelBox.top) : null,
+                width: round(boxes[i].width), height: round(boxes[i].height),
+                styles: styles(node),
+                controls: [...node.querySelectorAll('input, select, textarea')].map(control => ({
+                    name: control.name, type: control.type, required: control.required,
+                    value: control.value, options: control.options ? [...control.options].map(option => option.textContent) : null,
+                    width: round(control.getBoundingClientRect().width),
+                    height: round(control.getBoundingClientRect().height), styles: styles(control)
+                }))
+            }])),
+            gaps: [1, 2, 3, 5, 6, 7, 8].map(i => round(boxes[i].top - boxes[i - 1].bottom))
+        };
+    }''', sections)
+    shots = {}
+    for name in sections:
+        path = args.output / f'{prefix}-{name}.png'
+        page.locator('.p-reservation__' + name).screenshot(path=str(path))
+        shots[name] = path
+    return {'metrics': metrics, 'shots': shots,
+            'separate_datetime': page.locator('#reserve-time').count() == 1}
+
+
+def compare_dialog_sections(before, after):
+    assert before['metrics'] == after['metrics'], 'Non-datetime reservation fields changed.'
+    errors = {name: image_error(path, after['shots'][name]) for name, path in before['shots'].items()}
+    assert max(errors.values()) < .1, f'Non-datetime reservation visual regression: {errors}'
+    return errors
 
 
 csv_products = list(csv.DictReader((ROOT / 'data/products.csv').open(encoding='utf-8-sig')))
@@ -226,7 +284,9 @@ with sync_playwright() as p:
             assert not page.locator('.js-reservation-form').evaluate('f => f.checkValidity()')
             page.locator('#reserve-name').fill('試奏テスト')
             page.locator('#reserve-email').fill('test@example.com')
-            page.locator('#reserve-date').fill('2026-11-05T14:00')
+            page.locator('#reserve-date').fill(reservation_date())
+            page.locator('#reserve-time').focus()
+            page.locator('#reserve-time').select_option('14:00')
             assert page.locator('.js-reservation-form').evaluate('f => f.checkValidity()')
             page.locator('.p-reservation__submit').click()
             assert page.locator('.js-reservation').get_attribute('aria-hidden') == 'false'
@@ -282,7 +342,7 @@ with sync_playwright() as p:
         for width in (1440, 375):
             report['regression'][str(width)] = {}
             for filename in ('index.html', 'guide.html'):
-                shots, panels, fonts = [], [], []
+                shots, panels, fonts, sections = [], [], [], []
                 for original in (True, False):
                     page = browser.new_page(viewport={'width': width, 'height': 900}, reduced_motion='reduce')
                     if original:
@@ -307,6 +367,7 @@ with sync_playwright() as p:
                     page.locator('.p-reservation__panel').screenshot(path=str(panel))
                     panels.append(panel)
                     fonts.append(dialog_fonts(page))
+                    sections.append(dialog_sections(page, f'{filename[:-5]}-{"before" if original else "after"}-{width}'))
                     # 既存ページの選択肢・閉じる操作・FAQも維持。
                     assert page.locator('#reserve-product option').count() == 4
                     page.keyboard.press('Escape')
@@ -315,11 +376,19 @@ with sync_playwright() as p:
                         page.locator('summary').nth(1).click()
                         assert page.locator('details[open]').count() == 2
                     page.close()
-                visual, modal = image_error(*shots), image_error(*panels)
+                visual = image_error(*shots)
                 assert visual < .1, f'{filename} {width}px changed: {visual}'
-                assert modal < .1, f'{filename} modal {width}px changed: {modal}'
+                section_errors = compare_dialog_sections(*sections)
+                datetime_changed = sections[0]['separate_datetime'] != sections[1]['separate_datetime']
+                modal = None if datetime_changed else image_error(*panels)
+                if modal is not None:
+                    assert modal < .1, f'{filename} modal {width}px changed: {modal}'
                 assert fonts[0] == fonts[1], 'Existing reservation font changed'
-                report['regression'][str(width)][filename] = {'page_mean_channel_error': visual, 'dialog_mean_channel_error': modal, 'threshold_0_to_255': .1, 'fonts_unchanged': True}
+                report['regression'][str(width)][filename] = {
+                    'page_mean_channel_error': visual, 'dialog_mean_channel_error': modal,
+                    'dialog_datetime_ui_intentionally_changed': datetime_changed,
+                    'dialog_non_datetime_section_errors': section_errors,
+                    'threshold_0_to_255': .1, 'fonts_unchanged': True}
                 checkpoint()
                 print(f'{filename} {width}px regression passed.', flush=True)
     page = browser.new_page(viewport={'width': 1440, 'height': 900})

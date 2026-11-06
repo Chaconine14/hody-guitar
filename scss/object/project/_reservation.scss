@@ -146,8 +146,56 @@
     background-size: 10px 6px;
 }
 
-.p-reservation__field--date .p-reservation__control  {
+.p-reservation__datetime  {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 130px);
+    gap: 12px;
+    width: 100%;
     max-width: 342px;
+}
+
+.p-reservation__date-picker,
+.p-reservation__date-picker .flatpickr-wrapper  {
+    width: 100%;
+}
+
+.p-reservation__date-status  {
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.p-reservation__date-status:empty  {
+    display: none;
+}
+
+/* カレンダーをモーダル内に収め、狭い画面でも7列の日付を維持する。 */
+.p-reservation__date-picker .flatpickr-calendar.static  {
+    width: min(308px, calc(100vw - 40px));
+    margin-top: 4px;
+    border: 1px solid var(--color-muted);
+    background: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: inherit;
+}
+
+.p-reservation__date-picker .flatpickr-days,
+.p-reservation__date-picker .dayContainer  {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.p-reservation__date-picker .flatpickr-day  {
+    flex-basis: 14.285714%;
+    max-width: none;
+}
+
+.p-reservation__date-picker .flatpickr-day.selected,
+.p-reservation__date-picker .flatpickr-day.selected:hover,
+.p-reservation__date-picker .flatpickr-day.selected:focus  {
+    border-color: var(--color-blue);
+    background: var(--color-blue);
 }
 
 .p-reservation__textarea  {
@@ -241,7 +289,17 @@
         gap: 20px;
     }
 
-    .p-reservation__field--product .p-reservation__control, .p-reservation__field--date .p-reservation__control, .p-reservation__field--name .p-reservation__control, .p-reservation__field--email .p-reservation__control  {
+    .p-reservation__datetime  {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .p-reservation__field--product .p-reservation__control,
+    .p-reservation__field--date .p-reservation__control,
+    .p-reservation__field--time .p-reservation__control,
+    .p-reservation__field--name .p-reservation__control,
+    .p-reservation__field--email .p-reservation__control  {
         max-width: 100%;
     }
 
@@ -257,16 +315,6 @@
         padding-top: 18px;
     }
 
-}
-
-/* Figmaの日時フィールドは未入力時に空欄。入力操作は残したまま日付書式を非表示にする。 */
-.p-reservation__field--date input:invalid::-webkit-datetime-edit  {
-    color: transparent;
-}
-
-.p-reservation__field--date input::-webkit-calendar-picker-indicator  {
-    opacity: 0;
-    cursor: pointer;
 }
 
 .p-reservation__submit span:last-child  {
