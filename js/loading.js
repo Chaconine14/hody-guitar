@@ -12,18 +12,15 @@
             return;
         }
 
-        // 各区間は通常時のミリ秒。起動が遅れた場合も全体を延長しない。
+        // 準備完了後の最初の描画から、既存の4秒の演出を再生する。
         const motion = {
             duration: 4000,
-            minimumDuration: 3000,
-            finishBy: 4250,
             fadeStart: 750,
             fadeEnd: 1625,
             holeStart: 1375,
             expandStart: 1625
         };
-        const duration = Math.min(motion.duration, motion.finishBy - (performance.now() - Number(root.dataset.loadingStartedAt)));
-        if (!Number.isFinite(duration) || duration < motion.minimumDuration || window.scrollX || window.scrollY) {
+        if (window.scrollX || window.scrollY) {
             finish();
             return;
         }
@@ -51,6 +48,7 @@
         let stopped = false;
         let frameId = 0;
         let resizeObserver;
+        let startedAt = null;
 
         function stop() {
             stopped = true;
@@ -58,12 +56,30 @@
             window.removeEventListener('resize', resize);
             resizeObserver?.disconnect();
             document.removeEventListener('hody:loading-end', stop);
+            document.removeEventListener('visibilitychange', visibilityChanged);
             firstImage.removeEventListener('load', imageLoaded);
             firstImage.removeEventListener('error', finish);
         }
 
         function imageLoaded() {
-            if (!stopped) imageReady = firstImage.naturalWidth > 0;
+            if (stopped) return;
+            imageReady = firstImage.naturalWidth > 0;
+            if (imageReady) prepare();
+            else finish();
+        }
+
+        function prepare() {
+            if (stopped || startedAt !== null || frameId || !imageReady || document.hidden) return;
+            frameId = window.requestAnimationFrame(render);
+        }
+
+        function visibilityChanged() {
+            if (document.hidden && startedAt === null) {
+                window.cancelAnimationFrame(frameId);
+                frameId = 0;
+            } else {
+                prepare();
+            }
         }
 
         function resize() {
@@ -101,18 +117,19 @@
             const t = clamp(value);
             return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
         };
-        const startedAt = performance.now();
-
         function render(now) {
             if (stopped) return;
+            frameId = 0;
             try {
-                const progress = clamp((now - startedAt) / duration);
-                const time = progress * motion.duration;
-                // 画像を待って演出を延長せず、未準備なら通常表示へ戻す。
-                if (time >= motion.holeStart && !imageReady) {
-                    finish();
-                    return;
+                if (startedAt === null) {
+                    if (document.hidden) return;
+                    document.dispatchEvent(new Event('hody:loading-start'));
+                    if (stopped || !root.classList.contains('is-loading')) return;
+                    startedAt = now;
+                    root.classList.remove('is-loading-pending');
                 }
+                const progress = clamp((now - startedAt) / motion.duration);
+                const time = progress * motion.duration;
                 otherLetters.setAttribute('opacity', 1 - ease((time - motion.fadeStart) / (motion.fadeEnd - motion.fadeStart)));
                 soundhole.setAttribute('opacity', ease((time - motion.holeStart) / (motion.expandStart - motion.holeStart)));
                 const scale = 1 + (maximumScale - 1) * ease((time - motion.expandStart) / (motion.duration - motion.expandStart));
@@ -127,16 +144,9 @@
         }
 
         document.addEventListener('hody:loading-end', stop);
+        document.addEventListener('visibilitychange', visibilityChanged);
         window.addEventListener('resize', resize);
         firstImage.addEventListener('error', finish);
-        if (typeof firstImage.decode === 'function') {
-            firstImage.decode().then(imageLoaded, () => { if (!stopped) finish(); });
-        } else if (firstImage.complete) {
-            imageLoaded();
-        } else {
-            firstImage.addEventListener('load', imageLoaded, { once: true });
-        }
-
         loader.hidden = false;
         resize();
         if (stopped) return;
@@ -145,8 +155,13 @@
             resizeObserver = new ResizeObserver(resize);
             resizeObserver.observe(loader);
         }
-        root.classList.remove('is-loading-pending');
-        frameId = window.requestAnimationFrame(render);
+        if (typeof firstImage.decode === 'function') {
+            firstImage.decode().then(imageLoaded, () => { if (!stopped) finish(); });
+        } else if (firstImage.complete) {
+            imageLoaded();
+        } else {
+            firstImage.addEventListener('load', imageLoaded, { once: true });
+        }
     } catch {
         finish();
     }

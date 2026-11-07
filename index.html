@@ -15,19 +15,22 @@
                 const root = document.documentElement;
                 const key = 'hody:top-loading-seen';
                 const seen = sessionStorage.getItem(key);
-                sessionStorage.setItem(key, '1');
                 const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
                 const navigation = performance.getEntriesByType('navigation')[0];
                 const reloading = navigation?.type === 'reload';
-                if ((seen && !reloading) || location.hash || window.scrollX || window.scrollY || document.hidden || motion.matches ||
+                if ((seen && !reloading) || location.hash || window.scrollX || window.scrollY || motion.matches ||
                     navigation?.type === 'back_forward') return;
 
                 let finished = false;
+                let started = false;
                 let timeoutId;
+                let preparationRemaining = 2000;
+                let visibleSince = null;
                 function finish() {
                     if (finished) return;
                     finished = true;
                     window.clearTimeout(timeoutId);
+                    document.removeEventListener('hody:loading-start', loadingStarted);
                     document.removeEventListener('hody:loading-finish', finish);
                     document.removeEventListener('pointerdown', finish, true);
                     document.removeEventListener('keydown', finish, true);
@@ -46,11 +49,53 @@
                     const loader = document.querySelector('.js-loading');
                     if (loader) loader.hidden = true;
                 }
-                function visibilityChanged() { if (document.hidden) finish(); }
+                function pausePreparation() {
+                    window.clearTimeout(timeoutId);
+                    if (visibleSince !== null) {
+                        preparationRemaining -= performance.now() - visibleSince;
+                        visibleSince = null;
+                    }
+                }
+                function resumePreparation() {
+                    if (finished || started || document.hidden || visibleSince !== null) return;
+                    if (location.hash || window.scrollX || window.scrollY || motion.matches || preparationRemaining <= 0) {
+                        finish();
+                        return;
+                    }
+                    visibleSince = performance.now();
+                    timeoutId = window.setTimeout(finish, preparationRemaining);
+                }
+                function loadingStarted() {
+                    if (finished || started || document.hidden) return;
+                    pausePreparation();
+                    if (preparationRemaining <= 0 || location.hash || window.scrollX || window.scrollY || motion.matches) {
+                        finish();
+                        return;
+                    }
+                    try {
+                        sessionStorage.setItem(key, '1');
+                    } catch {
+                        finish();
+                        return;
+                    }
+                    started = true;
+                    root.dataset.loadingStartedAt = String(performance.now());
+                    // 準備待ちとは別に、再生開始後の異常時解除を保証する。
+                    timeoutId = window.setTimeout(finish, 4500);
+                }
+                function visibilityChanged() {
+                    if (document.hidden) {
+                        if (started) finish();
+                        else pausePreparation();
+                    } else {
+                        resumePreparation();
+                    }
+                }
                 function motionChanged() { if (motion.matches) finish(); }
                 function scrolled() { if (window.scrollX || window.scrollY) finish(); }
                 function restored(event) { if (event.persisted) finish(); else scrolled(); }
 
+                document.addEventListener('hody:loading-start', loadingStarted);
                 document.addEventListener('hody:loading-finish', finish);
                 document.addEventListener('pointerdown', finish, true);
                 document.addEventListener('keydown', finish, true);
@@ -62,15 +107,15 @@
                 window.addEventListener('pageshow', restored);
                 window.addEventListener('hody:reservation-open', finish);
                 motion.addEventListener('change', motionChanged);
-                // 外部JSの取得・実行に失敗しても、このタイマーだけで通常表示に戻す。
-                timeoutId = window.setTimeout(finish, 4500);
-                root.dataset.loadingStartedAt = String(performance.now());
                 root.classList.add('is-loading', 'is-loading-pending');
+                // 外部JSが起動しなくても、可視状態の準備待ちは最大2秒で解除する。
+                resumePreparation();
             } catch {
                 // ストレージなどが利用できない場合は通常のTOPを表示する。
             }
         })();
     </script>
+    <link rel="preload" as="image" href="assets/images/top_slider01.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -78,12 +123,12 @@
     <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+    <script defer src="js/loading.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="assets/vendor/flatpickr/flatpickr.min.js"></script>
     <script defer src="assets/vendor/flatpickr/ja.js"></script>
     <script defer src="js/reservation.js"></script>
     <script defer src="js/slider.js"></script>
-    <script defer src="js/loading.js"></script>
     <script type="module" src="js/finder.js"></script>
     <script defer src="js/footer-parallax.js"></script>
 </head>
