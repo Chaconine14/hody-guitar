@@ -1,6 +1,6 @@
 # 画像配置一覧（2026-11-04）
 
-ユーザーが提供したファイルの元のファイル名を保持して `assets/images/` に格納しています。20点すべてを HTML から参照しています。
+ユーザーが提供したファイルの元のファイル名を保持して `assets/images/` に格納しています。旧SP商品カード4の `guitar04.jpg` は未使用のまま保持し、現在は商品マスターのGibson B-25画像を参照しています。
 
 | 添付画像 | 使用位置 | 表示仕様 |
 | --- | --- | --- |
@@ -13,7 +13,8 @@
 | `guitar01.jpg` | 商品 Gibson J-45 | PC/SP共通 |
 | `guitar02.jpg` | 商品 Martin D-28 | PC/SP共通 |
 | `guitar03.jpg` | SP商品カード3 Taylor 114ce | SPのみ |
-| `guitar04.jpg` | SP商品カード4 Taylor 114ce | SPのみ、Figma表記を維持 |
+| `products/gibson-b-25.jpg` | SP商品カード4 Gibson B-25 | SPのみ、商品マスター登録画像 |
+| `guitar04.jpg` | 旧SP商品カード4（未使用） | ファイルは保持 |
 | `about.jpg` | ABOUT | PC/SP共通 |
 | `staff011.jpg` | 飯塚 健（STORE MANAGER） | PC/SP共通 |
 | `staff02.jpg` | 佐藤 芽衣（GUITAR ADVISER） | PC/SP共通 |

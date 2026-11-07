@@ -50,11 +50,13 @@
         let imageReady = false;
         let stopped = false;
         let frameId = 0;
+        let resizeObserver;
 
         function stop() {
             stopped = true;
             window.cancelAnimationFrame(frameId);
             window.removeEventListener('resize', resize);
+            resizeObserver?.disconnect();
             document.removeEventListener('hody:loading-end', stop);
             firstImage.removeEventListener('load', imageLoaded);
             firstImage.removeEventListener('error', finish);
@@ -65,6 +67,7 @@
         }
 
         function resize() {
+            if (stopped) return;
             try {
                 const box = loader.getBoundingClientRect();
                 const logoWidth = parseFloat(getComputedStyle(loader).getPropertyValue('--loading-logo-width'));
@@ -137,6 +140,11 @@
         loader.hidden = false;
         resize();
         if (stopped) return;
+        // Safariでwindow.resizeより先に本体の高さが変わっても、SVGを同じ寸法に揃える。
+        if (typeof ResizeObserver === 'function') {
+            resizeObserver = new ResizeObserver(resize);
+            resizeObserver.observe(loader);
+        }
         root.classList.remove('is-loading-pending');
         frameId = window.requestAnimationFrame(render);
     } catch {

@@ -1,3 +1,15 @@
+// Safariの画面端の背景も、ローディング中だけ同じ色に揃える。
+html.is-loading,
+html.is-loading body {
+    background: var(--color-sand);
+}
+
+// inset: 0を基本に、Safariの表示領域の変化による高さ不足を補う。
+html.is-loading-pending::before,
+.p-loading {
+    min-height: 100dvh;
+}
+
 // 起動からSVGの準備まで、FVが先に見えるのを防ぐ。
 html.is-loading-pending::before {
     content: "";

@@ -988,6 +988,15 @@ body:is(.is-locked, .is-reservation-locked) .c-fixed-reservation picture > img {
     transform: scaleX(1);
   }
 }
+html.is-loading,
+html.is-loading body {
+  background: var(--color-sand);
+}
+
+html.is-loading-pending::before,
+.p-loading {
+  min-height: 100dvh;
+}
 html.is-loading-pending::before {
   content: "";
   position: fixed;
