@@ -4,6 +4,7 @@
 }
 
 .l-footer__visual {
+    --footer-parallax-range: 120px;
     display: block;
     height: 506px;
     overflow: hidden;
@@ -14,6 +15,23 @@
     height: 100%;
     object-fit: cover;
     object-position: center 44%;
+}
+
+// JSが有効な場合だけ写真の上下に余裕を作り、枠内で移動させる。
+.l-footer__visual.is-parallax {
+    position: relative;
+}
+
+.l-footer__visual.is-parallax>img {
+    position: absolute;
+    top: calc(var(--footer-parallax-range) / -2 - 2px);
+    left: 0;
+    height: calc(100% + var(--footer-parallax-range) + 4px);
+    transform: translate3d(0, var(--footer-parallax-y, 0px), 0);
+}
+
+.l-footer__visual.is-parallax-active>img {
+    will-change: transform;
 }
 
 .l-footer__bottom {
@@ -73,6 +91,7 @@
 
 @media (max-width: 768px) {
     .l-footer__visual {
+        --footer-parallax-range: 90px;
         height: 487px;
     }
 
@@ -230,5 +249,14 @@
 
     :is(.p-guide-page__hours--sp, .l-footer__hours--sp) {
         display: inline;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .l-footer__visual.is-parallax>img {
+        position: static;
+        height: 100%;
+        transform: none;
+        will-change: auto;
     }
 }

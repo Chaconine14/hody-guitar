@@ -27,9 +27,50 @@
     transition-delay: 0s;
 }
 
+.c-fixed-reservation picture > img {
+    transform-origin: 50% 75%;
+}
+
+// 表示中だけ、3秒周期の末尾0.9秒でギターを揺らす。
+.c-fixed-reservation.is-visible picture > img {
+    animation: c-fixed-reservation-guitar-wobble 3s ease-in-out infinite;
+}
+
+body:is(.is-locked, .is-reservation-locked) .c-fixed-reservation picture > img {
+    animation: none;
+    transform: none;
+}
+
+@keyframes c-fixed-reservation-guitar-wobble {
+    0%, 70%, 100% {
+        transform: rotate(0deg);
+    }
+
+    76.6667% {
+        transform: rotate(-9deg);
+    }
+
+    83.3333% {
+        transform: rotate(9deg);
+    }
+
+    90% {
+        transform: rotate(-4.5deg);
+    }
+
+    95% {
+        transform: rotate(2.25deg);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .c-fixed-reservation {
         transition: none !important;
+    }
+
+    .c-fixed-reservation.is-visible picture > img {
+        animation: none;
+        transform: none;
     }
 }
 

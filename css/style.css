@@ -248,6 +248,7 @@ address {
 }
 
 .l-footer__visual {
+  --footer-parallax-range: 120px;
   display: block;
   height: 506px;
   overflow: hidden;
@@ -260,6 +261,22 @@ address {
      object-fit: cover;
   -o-object-position: center 44%;
      object-position: center 44%;
+}
+
+.l-footer__visual.is-parallax {
+  position: relative;
+}
+
+.l-footer__visual.is-parallax > img {
+  position: absolute;
+  top: calc(var(--footer-parallax-range) / -2 - 2px);
+  left: 0;
+  height: calc(100% + var(--footer-parallax-range) + 4px);
+  transform: translate3d(0, var(--footer-parallax-y, 0px), 0);
+}
+
+.l-footer__visual.is-parallax-active > img {
+  will-change: transform;
 }
 
 .l-footer__bottom {
@@ -317,6 +334,7 @@ address {
 
 @media (max-width: 768px) {
   .l-footer__visual {
+    --footer-parallax-range: 90px;
     height: 487px;
   }
   .l-footer__visual img {
@@ -453,6 +471,14 @@ address {
   }
   :is(.p-guide-page__hours--sp, .l-footer__hours--sp) {
     display: inline;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .l-footer__visual.is-parallax > img {
+    position: static;
+    height: 100%;
+    transform: none;
+    will-change: auto;
   }
 }
 .c-button {
@@ -673,9 +699,64 @@ address {
   transition-delay: 0s;
 }
 
+.c-fixed-reservation picture > img {
+  transform-origin: 50% 75%;
+}
+
+.c-fixed-reservation.is-visible picture > img {
+  -webkit-animation: c-fixed-reservation-guitar-wobble 3s ease-in-out infinite;
+          animation: c-fixed-reservation-guitar-wobble 3s ease-in-out infinite;
+}
+
+body:is(.is-locked, .is-reservation-locked) .c-fixed-reservation picture > img {
+  -webkit-animation: none;
+          animation: none;
+  transform: none;
+}
+
+@-webkit-keyframes c-fixed-reservation-guitar-wobble {
+  0%, 70%, 100% {
+    transform: rotate(0deg);
+  }
+  76.6667% {
+    transform: rotate(-9deg);
+  }
+  83.3333% {
+    transform: rotate(9deg);
+  }
+  90% {
+    transform: rotate(-4.5deg);
+  }
+  95% {
+    transform: rotate(2.25deg);
+  }
+}
+
+@keyframes c-fixed-reservation-guitar-wobble {
+  0%, 70%, 100% {
+    transform: rotate(0deg);
+  }
+  76.6667% {
+    transform: rotate(-9deg);
+  }
+  83.3333% {
+    transform: rotate(9deg);
+  }
+  90% {
+    transform: rotate(-4.5deg);
+  }
+  95% {
+    transform: rotate(2.25deg);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .c-fixed-reservation {
     transition: none !important;
+  }
+  .c-fixed-reservation.is-visible picture > img {
+    -webkit-animation: none;
+            animation: none;
+    transform: none;
   }
 }
 .c-fixed-reservation picture {
@@ -1967,7 +2048,7 @@ html.is-loading .p-hero__progress-bar.is-active::after {
     inset: 0;
     width: 100%;
     height: 336px;
-    opacity: 0.18;
+    opacity: 0.05;
   }
   .p-guide__image img {
     -o-object-fit: cover;
