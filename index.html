@@ -7,6 +7,22 @@
     <meta name="description" content="長く愛せる一本を。アコースティックギター専門店 HODY GUITAR。あなたにぴったりのギターとの出会いをお手伝いします。">
     <meta name="robots" content="noindex">
     <title>HODY GUITAR | 長く愛せる一本を。</title>
+    <meta property="og:site_name" content="HODY GUITAR">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="HODY GUITAR | 長く愛せる一本を。">
+    <meta property="og:description" content="長く愛せる一本を。アコースティックギター専門店 HODY GUITAR。あなたにぴったりのギターとの出会いをお手伝いします。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/">
+    <meta property="og:image" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/assets/images/ogp.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="632">
+    <meta property="og:image:alt" content="アコースティックギターを弾く写真に重ねたHODY GUITARのロゴ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HODY GUITAR | 長く愛せる一本を。">
+    <meta name="twitter:description" content="長く愛せる一本を。アコースティックギター専門店 HODY GUITAR。あなたにぴったりのギターとの出会いをお手伝いします。">
+    <meta name="twitter:image" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/assets/images/ogp.jpg">
+    <meta name="twitter:image:alt" content="アコースティックギターを弾く写真に重ねたHODY GUITARのロゴ">
     <script>
         (() => {
             'use strict';
@@ -131,9 +147,10 @@
     <script defer src="js/slider.js"></script>
     <script type="module" src="js/finder.js"></script>
     <script defer src="js/footer-parallax.js"></script>
+    <script defer src="js/ink-cursor.js"></script>
 </head>
 
-<body class="p-top">
+<body class="p-top" data-cursor-tone="light">
     <!-- 既存ロゴのパスをそのまま使用。装飾なので読み上げとフォーカスの対象外。 -->
     <div class="p-loading js-loading" aria-hidden="true" hidden>
         <svg class="p-loading__svg js-loading-svg" xmlns="http://www.w3.org/2000/svg" focusable="false">
@@ -169,7 +186,7 @@
             </g>
         </svg>
     </div>
-    <header class="l-header" id="top">
+    <header class="l-header" id="top" data-cursor-tone="dark">
         <div class="l-header__inner">
             <a href="#top" class="l-header__brand" aria-label="HODY GUITAR トップページ">
                 <img class="l-header__logo" src="assets/icons/logo-white.svg" width="117" height="60" alt="HODY GUITAR">
@@ -182,7 +199,7 @@
                     <li><a href="#store">店舗情報</a></li>
                 </ul>
             </nav>
-            <button class="c-button c-button--light l-header__reserve js-open-reservation" type="button">
+            <button class="c-button c-button--light l-header__reserve js-open-reservation c-ink-button js-ink-button" type="button">
                 <span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span>
             </button>
             <button class="l-header__menu-button js-menu-open" type="button" aria-controls="mobile-menu"
@@ -193,7 +210,7 @@
     </header>
 
     <main>
-        <section class="p-hero js-reservation-hero" aria-labelledby="hero-heading">
+        <section class="p-hero js-reservation-hero" aria-labelledby="hero-heading" data-cursor-tone="dark">
             <div class="p-hero__visual" aria-hidden="true">
                 <div class="p-hero__slide is-active"><img src="assets/images/top_slider01.jpg" alt=""
                         fetchpriority="high"></div>
@@ -223,7 +240,7 @@
                             <p class="c-section-heading__ja">おすすめギター診断</p>
                         </div>
                         <p class="p-finder__copy">「どんな音が好き？」などの簡単な質問から、あなたにぴったりなタイプを探します。</p>
-                        <button class="c-button c-button--finder js-finder-start" type="button">
+                        <button class="c-button c-button--finder js-finder-start c-ink-button js-ink-button" type="button">
                             <small>3 QUESTIONS</small><span>おすすめギター診断を始める</span>
                         </button>
                     </div>
@@ -279,14 +296,14 @@
                                 class="p-selection__name">B-25</strong></span>
                     </button>
                 </div>
-                <a href="selection.html" class="c-button c-button--outline p-selection__more"><span>全ての商品を見る</span><span
+                <a href="selection.html" class="c-button c-button--outline p-selection__more c-ink-button js-ink-button"><span>全ての商品を見る</span><span
                         class="c-arrow" aria-hidden="true">→</span></a>
             </div>
         </section>
 
         <section class="p-about" id="about" aria-labelledby="about-heading">
             <div class="p-about__inner">
-                <picture class="p-about__image">
+                <picture class="p-about__image" data-cursor-tone="dark">
                     <source media="(max-width: 768px)" srcset="assets/images/about.jpg">
                     <img src="assets/images/about.jpg" alt="アコースティックギターのサウンドホール" loading="lazy">
                 </picture>
@@ -311,7 +328,7 @@
                 <p class="p-staff__lead">私たちが、あなたのギター選びをお手伝いします。</p>
                 <div class="p-staff__grid">
                     <article class="p-staff__person">
-                        <picture class="p-staff__portrait">
+                        <picture class="p-staff__portrait" data-cursor-tone="dark">
                             <source media="(max-width: 768px)" srcset="assets/images/staff011.jpg"><img
                                 src="assets/images/staff011.jpg" alt="ストアマネージャー 飯塚 健" loading="lazy">
                         </picture>
@@ -321,7 +338,7 @@
                         </div>
                     </article>
                     <article class="p-staff__person">
-                        <picture class="p-staff__portrait">
+                        <picture class="p-staff__portrait" data-cursor-tone="light">
                             <source media="(max-width: 768px)" srcset="assets/images/staff02.jpg"><img
                                 src="assets/images/staff02.jpg" alt="ギターアドバイザー 佐藤 芽衣" loading="lazy">
                         </picture>
@@ -334,7 +351,7 @@
             </div>
         </section>
 
-        <section class="p-guide" id="guide" aria-labelledby="guide-heading">
+        <section class="p-guide" id="guide" aria-labelledby="guide-heading" data-cursor-tone="dark">
             <div class="p-guide__inner">
                 <div class="p-guide__content">
                     <div class="c-section-heading p-guide__heading">
@@ -342,7 +359,7 @@
                         <p class="c-section-heading__ja">はじめての試奏ガイド</p>
                     </div>
                     <p class="p-guide__copy">試奏は、音を確かめるための時間です。スタッフがギターの持ち方から、音の違いまで、丁寧にご案内します。</p>
-                    <a href="guide.html" class="c-button c-button--light p-guide__more"><span>はじめての試奏ガイドへ</span><span
+                    <a href="guide.html" class="c-button c-button--light p-guide__more c-ink-button js-ink-button"><span>はじめての試奏ガイドへ</span><span
                             class="c-arrow" aria-hidden="true">→</span></a>
                 </div>
                 <picture class="p-guide__image">
@@ -384,7 +401,7 @@
                         </div>
                     </dl>
                 </div>
-                <button class="c-button c-button--outline p-store__reserve js-open-reservation"
+                <button class="c-button c-button--outline p-store__reserve js-open-reservation c-ink-button js-ink-button"
                     type="button"><span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span></button>
             </div>
         </section>
@@ -396,58 +413,58 @@
                         <h2 class="c-section-heading__en" id="instagram-heading">Instagram</h2>
                         <p class="c-section-heading__ja">インスタグラム</p>
                     </div>
-                    <a class="c-button c-button--outline p-instagram__more p-instagram__more--pc"
+                    <a class="c-button c-button--outline p-instagram__more p-instagram__more--pc c-ink-button js-ink-button"
                         href="https://www.instagram.com/" target="_blank"
                         rel="noopener noreferrer"><span>すべての投稿を見る</span><span class="c-arrow"
                             aria-hidden="true">→</span></a>
                 </div>
                 <div class="p-instagram__photos">
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor-tone="dark">
                         <picture>
                             <source media="(max-width: 768px)" srcset="assets/images/instagram01.jpg"><img
                                 src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 1" loading="lazy">
                         </picture>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor-tone="dark">
                         <picture>
                             <source media="(max-width: 768px)" srcset="assets/images/instagram02.jpg"><img
                                 src="assets/images/instagram02.jpg" alt="アコースティックギターの写真 2" loading="lazy">
                         </picture>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor-tone="light">
                         <picture>
                             <source media="(max-width: 768px)" srcset="assets/images/instagram04.jpg"><img
                                 src="assets/images/instagram04.jpg" alt="アコースティックギターの写真 3" loading="lazy">
                         </picture>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor-tone="dark">
                         <picture>
                             <source media="(max-width: 768px)" srcset="assets/images/instagram03.jpg"><img
                                 src="assets/images/instagram03.jpg" alt="アコースティックギターの写真 4" loading="lazy">
                         </picture>
                     </a>
                     <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" data-cursor-tone="light">
                         <picture><img src="assets/images/instagram05.jpg" alt="アコースティックギターの写真 5" loading="lazy">
                         </picture>
                     </a>
                     <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" data-cursor-tone="dark">
                         <picture><img src="assets/images/instagram06.jpg" alt="アコースティックギターの写真 6" loading="lazy">
                         </picture>
                     </a>
                     <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" data-cursor-tone="light">
                         <picture><img src="assets/images/instagram07.jpg" alt="アコースティックギターの写真 6" loading="lazy">
                         </picture>
                     </a>
                     <a class="p-instagram__photo-extra" href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" data-cursor-tone="dark">
                         <picture><img src="assets/images/instagram01.jpg" alt="アコースティックギターの写真 6" loading="lazy">
                         </picture>
                     </a>
                 </div>
-                <a class="c-button c-button--outline p-instagram__more p-instagram__more--sp"
+                <a class="c-button c-button--outline p-instagram__more p-instagram__more--sp c-ink-button js-ink-button"
                     href="https://www.instagram.com/" target="_blank"
                     rel="noopener noreferrer"><span>すべての投稿を見る</span><span class="c-arrow"
                         aria-hidden="true">→</span></a>
@@ -455,8 +472,8 @@
         </section>
     </main>
 
-    <footer class="l-footer js-reservation-footer">
-        <picture class="l-footer__visual js-footer-parallax">
+    <footer class="l-footer js-reservation-footer" data-cursor-tone="dark">
+        <picture class="l-footer__visual js-footer-parallax" data-cursor-tone="light">
             <source media="(max-width: 768px)" srcset="assets/images/footer_shop-sp.jpg"><img
                 src="assets/images/footer_shop-pc.jpg" alt="HODY GUITARの店舗外観" loading="lazy">
         </picture>
@@ -480,8 +497,8 @@
         </div>
     </footer>
 
-    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation" type="button" aria-label="試奏予約をする"
-        inert>
+    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation c-ink-button js-ink-button" type="button" aria-label="試奏予約をする"
+        inert data-cursor-tone="dark">
         <picture>
             <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
                 src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">

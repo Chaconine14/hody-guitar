@@ -7,6 +7,22 @@
     <meta name="description" content="HODY GUITARの取り扱い商品一覧。価格帯やボディサイズ、弾き方、音の印象、アンプ接続から、気になる一本を探して試奏できます。">
     <meta name="robots" content="noindex">
     <title>取り扱い商品一覧 | HODY GUITAR</title>
+    <meta property="og:site_name" content="HODY GUITAR">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="取り扱い商品一覧 | HODY GUITAR">
+    <meta property="og:description" content="HODY GUITARの取り扱い商品一覧。価格帯やボディサイズ、弾き方、音の印象、アンプ接続から、気になる一本を探して試奏できます。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/selection.html">
+    <meta property="og:image" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/assets/images/ogp.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="632">
+    <meta property="og:image:alt" content="アコースティックギターを弾く写真に重ねたHODY GUITARのロゴ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="取り扱い商品一覧 | HODY GUITAR">
+    <meta name="twitter:description" content="HODY GUITARの取り扱い商品一覧。価格帯やボディサイズ、弾き方、音の印象、アンプ接続から、気になる一本を探して試奏できます。">
+    <meta name="twitter:image" content="https://tokyo-designplex.jp/~26G_miyauchi/practice/assets/images/ogp.jpg">
+    <meta name="twitter:image:alt" content="アコースティックギターを弾く写真に重ねたHODY GUITARのロゴ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -20,9 +36,10 @@
     <script defer src="js/reservation.js"></script>
     <script type="module" src="js/selection.js"></script>
     <script defer src="js/footer-parallax.js"></script>
+    <script defer src="js/ink-cursor.js"></script>
 </head>
 
-<body class="p-selection-page">
+<body class="p-selection-page" data-cursor-tone="light">
     <header class="l-header l-header--subpage" id="top">
         <div class="l-header__inner">
             <a href="index.html" class="l-header__brand" aria-label="HODY GUITAR トップページ">
@@ -37,7 +54,7 @@
                     <li><a href="index.html#store">店舗情報</a></li>
                 </ul>
             </nav>
-            <button class="c-button c-button--outline l-header__reserve js-open-reservation" type="button">
+            <button class="c-button c-button--outline l-header__reserve js-open-reservation c-ink-button js-ink-button" type="button">
                 <span>試奏予約をする</span><span class="c-arrow" aria-hidden="true">→</span>
             </button>
             <button class="l-header__menu-button js-menu-open" type="button" aria-controls="mobile-menu"
@@ -131,13 +148,13 @@
             </section>
         </div>
 
-        <section class="c-trial-invite" aria-labelledby="invite-heading">
+        <section class="c-trial-invite" aria-labelledby="invite-heading" data-cursor-tone="dark">
             <div class="p-selection-page__container c-trial-invite__inner">
                 <div class="c-trial-invite__content">
                     <h2 id="invite-heading">まずは、<br>気になる一本を弾いてみませんか。</h2>
                     <p>「ちょっと気になる」くらいの気持ちで大丈夫です。ギターが決まっていない方も、試奏の予約をお待ちしています。</p>
                 </div>
-                <button class="c-trial-invite__button js-open-reservation" type="button">
+                <button class="c-trial-invite__button js-open-reservation c-ink-button js-ink-button" type="button" data-cursor-tone="light">
                     <img src="assets/images/guide/guitar-blue.svg" width="32" height="32" alt="">
                     <span>試奏予約をする</span>
                     <img class="c-trial-invite__arrow" src="assets/images/guide/arrow-blue.svg" width="10.5"
@@ -147,8 +164,8 @@
         </section>
     </main>
 
-    <footer class="l-footer l-footer--subpage js-reservation-footer">
-        <picture class="l-footer__visual js-footer-parallax">
+    <footer class="l-footer l-footer--subpage js-reservation-footer" data-cursor-tone="dark">
+        <picture class="l-footer__visual js-footer-parallax" data-cursor-tone="light">
             <source media="(max-width: 768px)" srcset="assets/images/guide/shop-sp.png"><img
                 src="assets/images/guide/shop-pc.png" alt="HODY GUITARの店舗外観" loading="lazy">
         </picture>
@@ -175,8 +192,8 @@
         </div>
     </footer>
 
-    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation" type="button"
-        aria-label="試奏予約をする" inert>
+    <button class="c-fixed-reservation js-fixed-reservation js-open-reservation c-ink-button js-ink-button" type="button"
+        aria-label="試奏予約をする" inert data-cursor-tone="dark">
         <picture>
             <source media="(max-width: 768px)" srcset="assets/images/guide/guitar-ivory.svg"><img
                 src="assets/images/finder/guitar-pc.svg" alt="" width="52" height="52">
