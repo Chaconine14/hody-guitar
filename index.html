@@ -150,7 +150,7 @@
     <script defer src="js/ink-cursor.js"></script>
 </head>
 
-<body class="p-top" data-cursor-tone="light">
+<body class="p-top" id="top" data-cursor-tone="light">
     <!-- 既存ロゴのパスをそのまま使用。装飾なので読み上げとフォーカスの対象外。 -->
     <div class="p-loading js-loading" aria-hidden="true" hidden>
         <svg class="p-loading__svg js-loading-svg" xmlns="http://www.w3.org/2000/svg" focusable="false">
@@ -186,7 +186,7 @@
             </g>
         </svg>
     </div>
-    <header class="l-header" id="top" data-cursor-tone="dark">
+    <header class="l-header js-header" data-cursor-tone="dark">
         <div class="l-header__inner">
             <a href="#top" class="l-header__brand" aria-label="HODY GUITAR トップページ">
                 <img class="l-header__logo" src="assets/icons/logo-white.svg" width="117" height="60" alt="HODY GUITAR">

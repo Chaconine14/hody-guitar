@@ -242,6 +242,24 @@ address {
     visibility: hidden;
   }
 }
+@media (max-width: 768px) {
+  .l-header {
+    position: fixed;
+    transition: transform 0.25s ease;
+  }
+  .l-header.is-scroll-hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+  body:is(.p-guide-page, .p-selection-page) {
+    padding-top: 81px;
+  }
+}
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .l-header {
+    transition: none;
+  }
+}
 .l-footer {
   background: var(--color-charcoal);
   color: var(--color-ivory);

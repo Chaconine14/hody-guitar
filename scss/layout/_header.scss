@@ -179,3 +179,27 @@
         visibility: hidden;
     }
 }
+
+// SPだけを固定配置にし、PC・タブレットは従来の配置を維持する。
+@media (max-width: 768px) {
+    .l-header {
+        position: fixed;
+        transition: transform .25s ease;
+    }
+
+    .l-header.is-scroll-hidden {
+        transform: translateY(-100%);
+        pointer-events: none;
+    }
+
+    // 下層の既存ヘッダー高（80px＋境界線1px）を文書先頭に残す。
+    body:is(.p-guide-page, .p-selection-page) {
+        padding-top: 81px;
+    }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+    .l-header {
+        transition: none;
+    }
+}
