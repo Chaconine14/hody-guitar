@@ -25,7 +25,6 @@
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 1.45;
-    -webkit-text-stroke: 2px #000;
     paint-order: stroke fill;
 }
 
@@ -86,7 +85,6 @@
         font-size: 2rem;
         font-weight: 500;
         line-height: 34px;
-        -webkit-text-stroke: 0;
     }
 
     :is(.p-guide-page__invitation, .c-trial-invite__content) p {
@@ -96,8 +94,6 @@
     }
 
     :is(.p-guide-page__reserve, .c-trial-invite__button) {
-        // width: 100%;
-        // margin-top: 32px;
         margin: 40px auto 0;
     }
 }

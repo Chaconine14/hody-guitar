@@ -620,7 +620,6 @@ address {
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.45;
-  -webkit-text-stroke: 2px #000;
   paint-order: stroke fill;
 }
 
@@ -677,7 +676,6 @@ address {
     font-size: 2rem;
     font-weight: 500;
     line-height: 34px;
-    -webkit-text-stroke: 0;
   }
   :is(.p-guide-page__invitation, .c-trial-invite__content) p {
     min-height: 0;
@@ -3224,8 +3222,8 @@ body.is-reservation-locked {
   }
   .p-guide-page__step-copy {
     margin: 0;
-    font-size: 1.4rem;
-    line-height: 23.8px;
+    font-size: 1.6rem;
+    line-height: 1.7;
   }
   .p-guide-page__connector {
     display: none;

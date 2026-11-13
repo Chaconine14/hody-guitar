@@ -260,11 +260,6 @@
         padding-right: 46px;
     }
 
-    // .p-guide-page__step:nth-child(odd) .p-guide-page__step-title,
-    // .p-guide-page__step:nth-child(odd) .p-guide-page__step-copy {
-    //     max-width: calc(50% - 107px);
-    // }
-
     .p-guide-page__step-icon {
         left: calc(50% - 55px);
     }
@@ -393,8 +388,8 @@
 
     .p-guide-page__step-copy {
         margin: 0;
-        font-size: 1.4rem;
-        line-height: 23.8px;
+        font-size: 1.6rem;
+        line-height: 1.7;
     }
 
     .p-guide-page__connector {
